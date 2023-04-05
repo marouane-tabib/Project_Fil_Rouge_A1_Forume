@@ -3,10 +3,18 @@
 namespace App\Http\Controllers\Admine;
 
 use App\Http\Controllers\Controller;
+use App\Services\BaseCrudService\BaseCrudService;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    protected BaseCrudService $baseCrudService;
+
+    public function __construct(BaseCrudService $baseCrudService)
+    {
+      $this->baseCrudService = $baseCrudService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+      return view('default-view', ['data' => $this->baseCrudService->all()]);
     }
 
     /**
