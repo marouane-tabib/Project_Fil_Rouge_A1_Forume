@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Admine;
 
 use App\Http\Controllers\Controller;
-use App\Services\BaseCrudService;
+use App\Services\ProductService;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    protected BaseCrudService $baseCrudService;
+    protected ProductService $productService;
 
-    public function __construct(BaseCrudService $baseCrudService)
+    public function __construct(ProductService $productService)
     {
-      $this->baseCrudService = $baseCrudService;
+      $this->productService = $productService;
     }
 
     /**
@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return view('default-view', ['data' => $this->baseCrudService->all()]);
+      return view('content.admine.default', ['data' => $this->productService->all()]);
     }
 
     /**
