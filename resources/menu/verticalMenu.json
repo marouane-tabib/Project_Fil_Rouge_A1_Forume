@@ -13,6 +13,12 @@
       "slug": "pages-page-2"
     },
     {
+      "url": "/test",
+      "icon": "menu-icon tf-icons ti ti-file",
+      "name": "Test Page",
+      "slug": "test-page"
+    },
+    {
       "url": "/pages/misc-error",
       "name": "Error",
       "icon": "menu-icon tf-icons ti ti-alert-triangle",
