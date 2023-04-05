@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admine;
 
 use App\Http\Controllers\Controller;
-use App\Services\BaseCrudService\BaseCrudService;
+use App\Services\BaseCrudService;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
