@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\BaseCrudService;
+namespace App\Services;
 
-use App\BaseRepositoryInterface\BaseRepositoryInterface;
+use App\Interfaces\BaseRepositoryInterface;
 
 class BaseCrudService
 {
