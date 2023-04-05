@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admine\ProductController;
 use App\Http\Controllers\Test\test;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,6 @@ Route::get('/pages/misc-error', $controller_path . '\pages\MiscError@index')->na
 // authentication
 Route::get('/auth/login-basic', $controller_path . '\authentications\LoginBasic@index')->name('auth-login-basic');
 Route::get('/auth/register-basic', $controller_path . '\authentications\RegisterBasic@index')->name('auth-register-basic');
+
+// admine
+Route::get('default', [ProductController::class, 'index']);
