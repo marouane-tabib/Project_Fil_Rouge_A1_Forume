@@ -50,16 +50,16 @@
       </tr>
     </thead>
     <tbody class="table-border-bottom-0">
-      @foreach ($data as $item)
+      @foreach ($products as $product)
         <tr>
-          <td>{{ $item->title }}</td>
-          <td>{{ $item->category_id }}</td>
-          <td>{{ $item->price }}</td>
-          <td>{{ $item->quantity }}</td>
-          <td>{{ $item->SKU }}</td>
-          <td>{{ $item->primary_color_id }}</td>
-          <td>{{ $item->secondary_color_id }}</td>
-          <td>{{ $item->home_style_id }}</td>
+          <td>{{ $product->title }}</td>
+          <td>{{ $product->category_id }}</td>
+          <td>{{ $product->price }}</td>
+          <td>{{ $product->quantity }}</td>
+          <td>{{ $product->SKU }}</td>
+          <td>{{ $product->primary_color_id }}</td>
+          <td>{{ $product->secondary_color_id }}</td>
+          <td>{{ $product->home_style_id }}</td>
           <td>
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
