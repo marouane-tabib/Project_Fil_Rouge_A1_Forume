@@ -30,6 +30,10 @@
 @endsection
 
 @section('page-script')
+{{-- <script>
+  var data = {!! $data !!}
+  console.log(data);
+</script> --}}
 <script src="{{asset('assets/js/tables-datatables-basic.js')}}"></script>
 @endsection
 
