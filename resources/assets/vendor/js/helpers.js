@@ -1,82 +1,37 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(self, function() {
-return /******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-/*!***********************************************!*\
-  !*** ./resources/assets/vendor/js/helpers.js ***!
-  \***********************************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Helpers": function() { return /* binding */ Helpers; }
-/* harmony export */ });
-function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest(); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 // Constants
-var TRANS_EVENTS = ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd'];
-var TRANS_PROPERTIES = ['transition', 'MozTransition', 'webkitTransition', 'WebkitTransition', 'OTransition'];
-var INLINE_STYLES = "\n.layout-menu-fixed .layout-navbar-full .layout-menu,\n.layout-menu-fixed-offcanvas .layout-navbar-full .layout-menu {\n  top: {navbarHeight}px !important;\n}\n.layout-page {\n  padding-top: {navbarHeight}px !important;\n}\n.content-wrapper {\n  padding-bottom: {footerHeight}px !important;\n}";
+const TRANS_EVENTS = ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd']
+const TRANS_PROPERTIES = ['transition', 'MozTransition', 'webkitTransition', 'WebkitTransition', 'OTransition']
+const INLINE_STYLES = `
+.layout-menu-fixed .layout-navbar-full .layout-menu,
+.layout-menu-fixed-offcanvas .layout-navbar-full .layout-menu {
+  top: {navbarHeight}px !important;
+}
+.layout-page {
+  padding-top: {navbarHeight}px !important;
+}
+.content-wrapper {
+  padding-bottom: {footerHeight}px !important;
+}`
 
 // Guard
 function requiredParam(name) {
-  throw new Error("Parameter required".concat(name ? ": `".concat(name, "`") : ''));
+  throw new Error(`Parameter required${name ? `: \`${name}\`` : ''}`)
 }
-var Helpers = {
+
+const Helpers = {
   // Root Element
   ROOT_EL: typeof window !== 'undefined' ? document.documentElement : null,
+
   // Large screens breakpoint
   LAYOUT_BREAKPOINT: 1200,
+
   // Resize delay in milliseconds
   RESIZE_DELAY: 200,
+
   menuPsScroll: null,
+
   mainMenu: null,
+
   // Internal variables
   _curStyle: null,
   _styleEl: null,
@@ -88,899 +43,1007 @@ var Helpers = {
   _initialized: false,
   _autoUpdate: false,
   _lastWindowHeight: 0,
+
   // *******************************************************************************
   // * Utilities
+
   // ---
   // Scroll To Active Menu Item
-  _scrollToActive: function _scrollToActive() {
-    var animate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
-    var layoutMenu = this.getLayoutMenu();
-    if (!layoutMenu) return;
-    var activeEl = layoutMenu.querySelector('li.menu-item.active:not(.open)');
+  _scrollToActive(animate = false, duration = 500) {
+    const layoutMenu = this.getLayoutMenu()
+
+    if (!layoutMenu) return
+
+    let activeEl = layoutMenu.querySelector('li.menu-item.active:not(.open)')
+
     if (activeEl) {
       // t = current time
       // b = start value
       // c = change in value
       // d = duration
-      var easeInOutQuad = function easeInOutQuad(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t -= 1;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      };
-      var element = this.getLayoutMenu().querySelector('.menu-inner');
+      const easeInOutQuad = (t, b, c, d) => {
+        t /= d / 2
+        if (t < 1) return (c / 2) * t * t + b
+        t -= 1
+        return (-c / 2) * (t * (t - 2) - 1) + b
+      }
+
+      const element = this.getLayoutMenu().querySelector('.menu-inner')
+
       if (typeof activeEl === 'string') {
-        activeEl = document.querySelector(activeEl);
+        activeEl = document.querySelector(activeEl)
       }
       if (typeof activeEl !== 'number') {
-        activeEl = activeEl.getBoundingClientRect().top + element.scrollTop;
+        activeEl = activeEl.getBoundingClientRect().top + element.scrollTop
       }
 
       // If active element's top position is less than 2/3 (66%) of menu height than do not scroll
-      if (activeEl < parseInt(element.clientHeight * 2 / 3, 10)) return;
-      var start = element.scrollTop;
-      var change = activeEl - start - parseInt(element.clientHeight / 2, 10);
-      var startDate = +new Date();
+      if (activeEl < parseInt((element.clientHeight * 2) / 3, 10)) return
+
+      const start = element.scrollTop
+      const change = activeEl - start - parseInt(element.clientHeight / 2, 10)
+      const startDate = +new Date()
+
       if (animate === true) {
-        var animateScroll = function animateScroll() {
-          var currentDate = +new Date();
-          var currentTime = currentDate - startDate;
-          var val = easeInOutQuad(currentTime, start, change, duration);
-          element.scrollTop = val;
+        const animateScroll = () => {
+          const currentDate = +new Date()
+          const currentTime = currentDate - startDate
+          const val = easeInOutQuad(currentTime, start, change, duration)
+          element.scrollTop = val
           if (currentTime < duration) {
-            requestAnimationFrame(animateScroll);
+            requestAnimationFrame(animateScroll)
           } else {
-            element.scrollTop = change;
+            element.scrollTop = change
           }
-        };
-        animateScroll();
+        }
+        animateScroll()
       } else {
-        element.scrollTop = change;
+        element.scrollTop = change
       }
     }
   },
+
   // ---
   // Swipe In Gesture
-  _swipeIn: function _swipeIn(targetEl, callback) {
-    var _window = window,
-      Hammer = _window.Hammer;
+  _swipeIn(targetEl, callback) {
+    const { Hammer } = window
     if (typeof Hammer !== 'undefined' && typeof targetEl === 'string') {
       // Swipe menu gesture
-      var swipeInElement = document.querySelector(targetEl);
+      const swipeInElement = document.querySelector(targetEl)
+
       if (swipeInElement) {
-        var hammerInstance = new Hammer(swipeInElement);
-        hammerInstance.on('panright', callback);
+        const hammerInstance = new Hammer(swipeInElement)
+
+        hammerInstance.on('panright', callback)
       }
     }
   },
+
   // ---
   // Swipe Out Gesture
-  _swipeOut: function _swipeOut(targetEl, callback) {
-    var _window2 = window,
-      Hammer = _window2.Hammer;
+  _swipeOut(targetEl, callback) {
+    const { Hammer } = window
     if (typeof Hammer !== 'undefined' && typeof targetEl === 'string') {
-      setTimeout(function () {
+      setTimeout(() => {
         // Swipe menu gesture
-        var swipeOutElement = document.querySelector(targetEl);
+        const swipeOutElement = document.querySelector(targetEl)
+
         if (swipeOutElement) {
-          var hammerInstance = new Hammer(swipeOutElement);
-          hammerInstance.get('pan').set({
-            direction: Hammer.DIRECTION_ALL,
-            threshold: 250
-          });
-          hammerInstance.on('panleft', callback);
+          const hammerInstance = new Hammer(swipeOutElement)
+
+          hammerInstance.get('pan').set({ direction: Hammer.DIRECTION_ALL, threshold: 250 })
+          hammerInstance.on('panleft', callback)
         }
-      }, 500);
+      }, 500)
     }
   },
+
   // ---
   // Swipe Out On Overlay Tap
-  _overlayTap: function _overlayTap(targetEl, callback) {
-    var _window3 = window,
-      Hammer = _window3.Hammer;
+  _overlayTap(targetEl, callback) {
+    const { Hammer } = window
+
     if (typeof Hammer !== 'undefined' && typeof targetEl === 'string') {
       // Swipe out overlay element
-      var swipeOutOverlayElement = document.querySelector(targetEl);
+      const swipeOutOverlayElement = document.querySelector(targetEl)
+
       if (swipeOutOverlayElement) {
-        var hammerInstance = new Hammer(swipeOutOverlayElement);
-        hammerInstance.on('tap', callback);
+        const hammerInstance = new Hammer(swipeOutOverlayElement)
+
+        hammerInstance.on('tap', callback)
       }
     }
   },
+
   // ---
   // Add classes
-  _addClass: function _addClass(cls) {
-    var el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.ROOT_EL;
+  _addClass(cls, el = this.ROOT_EL) {
     if (el.length !== undefined) {
       // Add classes to multiple elements
-      el.forEach(function (e) {
-        cls.split(' ').forEach(function (c) {
-          return e.classList.add(c);
-        });
-      });
+      el.forEach(e => {
+        cls.split(' ').forEach(c => e.classList.add(c))
+      })
     } else {
       // Add classes to single element
-      cls.split(' ').forEach(function (c) {
-        return el.classList.add(c);
-      });
+      cls.split(' ').forEach(c => el.classList.add(c))
     }
   },
+
   // ---
   // Remove classes
-  _removeClass: function _removeClass(cls) {
-    var el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.ROOT_EL;
+  _removeClass(cls, el = this.ROOT_EL) {
     if (el.length !== undefined) {
       // Remove classes to multiple elements
-      el.forEach(function (e) {
-        cls.split(' ').forEach(function (c) {
-          return e.classList.remove(c);
-        });
-      });
+      el.forEach(e => {
+        cls.split(' ').forEach(c => e.classList.remove(c))
+      })
     } else {
       // Remove classes to single element
-      cls.split(' ').forEach(function (c) {
-        return el.classList.remove(c);
-      });
+      cls.split(' ').forEach(c => el.classList.remove(c))
     }
   },
+
   // Toggle classes
-  _toggleClass: function _toggleClass() {
-    var el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.ROOT_EL;
-    var cls1 = arguments.length > 1 ? arguments[1] : undefined;
-    var cls2 = arguments.length > 2 ? arguments[2] : undefined;
+  _toggleClass(el = this.ROOT_EL, cls1, cls2) {
     if (el.classList.contains(cls1)) {
-      el.classList.replace(cls1, cls2);
+      el.classList.replace(cls1, cls2)
     } else {
-      el.classList.replace(cls2, cls1);
+      el.classList.replace(cls2, cls1)
     }
   },
+
   // ---
   // Has class
-  _hasClass: function _hasClass(cls) {
-    var el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.ROOT_EL;
-    var result = false;
-    cls.split(' ').forEach(function (c) {
-      if (el.classList.contains(c)) result = true;
-    });
-    return result;
+  _hasClass(cls, el = this.ROOT_EL) {
+    let result = false
+
+    cls.split(' ').forEach(c => {
+      if (el.classList.contains(c)) result = true
+    })
+
+    return result
   },
-  _findParent: function _findParent(el, cls) {
-    if (el && el.tagName.toUpperCase() === 'BODY' || el.tagName.toUpperCase() === 'HTML') return null;
-    el = el.parentNode;
+
+  _findParent(el, cls) {
+    if ((el && el.tagName.toUpperCase() === 'BODY') || el.tagName.toUpperCase() === 'HTML') return null
+    el = el.parentNode
     while (el && el.tagName.toUpperCase() !== 'BODY' && !el.classList.contains(cls)) {
-      el = el.parentNode;
+      el = el.parentNode
     }
-    el = el && el.tagName.toUpperCase() !== 'BODY' ? el : null;
-    return el;
+    el = el && el.tagName.toUpperCase() !== 'BODY' ? el : null
+    return el
   },
+
   // ---
   // Trigger window event
-  _triggerWindowEvent: function _triggerWindowEvent(name) {
-    if (typeof window === 'undefined') return;
+  _triggerWindowEvent(name) {
+    if (typeof window === 'undefined') return
+
     if (document.createEvent) {
-      var event;
+      let event
+
       if (typeof Event === 'function') {
-        event = new Event(name);
+        event = new Event(name)
       } else {
-        event = document.createEvent('Event');
-        event.initEvent(name, false, true);
+        event = document.createEvent('Event')
+        event.initEvent(name, false, true)
       }
-      window.dispatchEvent(event);
+
+      window.dispatchEvent(event)
     } else {
-      window.fireEvent("on".concat(name), document.createEventObject());
+      window.fireEvent(`on${name}`, document.createEventObject())
     }
   },
+
   // ---
   // Trigger event
-  _triggerEvent: function _triggerEvent(name) {
-    this._triggerWindowEvent("layout".concat(name));
-    this._listeners.filter(function (listener) {
-      return listener.event === name;
-    }).forEach(function (listener) {
-      return listener.callback.call(null);
-    });
+  _triggerEvent(name) {
+    this._triggerWindowEvent(`layout${name}`)
+
+    this._listeners.filter(listener => listener.event === name).forEach(listener => listener.callback.call(null))
   },
+
   // ---
   // Update style
-  _updateInlineStyle: function _updateInlineStyle() {
-    var navbarHeight = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    var footerHeight = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  _updateInlineStyle(navbarHeight = 0, footerHeight = 0) {
     if (!this._styleEl) {
-      this._styleEl = document.createElement('style');
-      this._styleEl.type = 'text/css';
-      document.head.appendChild(this._styleEl);
+      this._styleEl = document.createElement('style')
+      this._styleEl.type = 'text/css'
+      document.head.appendChild(this._styleEl)
     }
-    var newStyle = INLINE_STYLES.replace(/\{navbarHeight\}/gi, navbarHeight).replace(/\{footerHeight\}/gi, footerHeight);
+
+    const newStyle = INLINE_STYLES.replace(/\{navbarHeight\}/gi, navbarHeight).replace(
+      /\{footerHeight\}/gi,
+      footerHeight
+    )
+
     if (this._curStyle !== newStyle) {
-      this._curStyle = newStyle;
-      this._styleEl.textContent = newStyle;
+      this._curStyle = newStyle
+      this._styleEl.textContent = newStyle
     }
   },
+
   // ---
   // Remove style
-  _removeInlineStyle: function _removeInlineStyle() {
-    if (this._styleEl) document.head.removeChild(this._styleEl);
-    this._styleEl = null;
-    this._curStyle = null;
+  _removeInlineStyle() {
+    if (this._styleEl) document.head.removeChild(this._styleEl)
+    this._styleEl = null
+    this._curStyle = null
   },
+
   // ---
   // Redraw layout menu (Safari bugfix)
-  _redrawLayoutMenu: function _redrawLayoutMenu() {
-    var layoutMenu = this.getLayoutMenu();
+  _redrawLayoutMenu() {
+    const layoutMenu = this.getLayoutMenu()
+
     if (layoutMenu && layoutMenu.querySelector('.menu')) {
-      var inner = layoutMenu.querySelector('.menu-inner');
-      var scrollTop = inner.scrollTop;
-      var pageScrollTop = document.documentElement.scrollTop;
-      layoutMenu.style.display = 'none';
+      const inner = layoutMenu.querySelector('.menu-inner')
+      const { scrollTop } = inner
+      const pageScrollTop = document.documentElement.scrollTop
+
+      layoutMenu.style.display = 'none'
       // layoutMenu.offsetHeight
-      layoutMenu.style.display = '';
-      inner.scrollTop = scrollTop;
-      document.documentElement.scrollTop = pageScrollTop;
-      return true;
+      layoutMenu.style.display = ''
+      inner.scrollTop = scrollTop
+      document.documentElement.scrollTop = pageScrollTop
+
+      return true
     }
-    return false;
+
+    return false
   },
+
   // ---
   // Check for transition support
-  _supportsTransitionEnd: function _supportsTransitionEnd() {
-    if (window.QUnit) return false;
-    var el = document.body || document.documentElement;
-    if (!el) return false;
-    var result = false;
-    TRANS_PROPERTIES.forEach(function (evnt) {
-      if (typeof el.style[evnt] !== 'undefined') result = true;
-    });
-    return result;
+  _supportsTransitionEnd() {
+    if (window.QUnit) return false
+
+    const el = document.body || document.documentElement
+
+    if (!el) return false
+
+    let result = false
+    TRANS_PROPERTIES.forEach(evnt => {
+      if (typeof el.style[evnt] !== 'undefined') result = true
+    })
+
+    return result
   },
+
   // ---
   // Calculate current navbar height
-  _getNavbarHeight: function _getNavbarHeight() {
-    var _this2 = this;
-    var layoutNavbar = this.getLayoutNavbar();
-    if (!layoutNavbar) return 0;
-    if (!this.isSmallScreen()) return layoutNavbar.getBoundingClientRect().height;
+  _getNavbarHeight() {
+    const layoutNavbar = this.getLayoutNavbar()
+
+    if (!layoutNavbar) return 0
+    if (!this.isSmallScreen()) return layoutNavbar.getBoundingClientRect().height
 
     // Needs some logic to get navbar height on small screens
 
-    var clonedEl = layoutNavbar.cloneNode(true);
-    clonedEl.id = null;
-    clonedEl.style.visibility = 'hidden';
-    clonedEl.style.position = 'absolute';
-    Array.prototype.slice.call(clonedEl.querySelectorAll('.collapse.show')).forEach(function (el) {
-      return _this2._removeClass('show', el);
-    });
-    layoutNavbar.parentNode.insertBefore(clonedEl, layoutNavbar);
-    var navbarHeight = clonedEl.getBoundingClientRect().height;
-    clonedEl.parentNode.removeChild(clonedEl);
-    return navbarHeight;
+    const clonedEl = layoutNavbar.cloneNode(true)
+    clonedEl.id = null
+    clonedEl.style.visibility = 'hidden'
+    clonedEl.style.position = 'absolute'
+
+    Array.prototype.slice.call(clonedEl.querySelectorAll('.collapse.show')).forEach(el => this._removeClass('show', el))
+
+    layoutNavbar.parentNode.insertBefore(clonedEl, layoutNavbar)
+
+    const navbarHeight = clonedEl.getBoundingClientRect().height
+
+    clonedEl.parentNode.removeChild(clonedEl)
+
+    return navbarHeight
   },
+
   // ---
   // Get current footer height
-  _getFooterHeight: function _getFooterHeight() {
-    var layoutFooter = this.getLayoutFooter();
-    if (!layoutFooter) return 0;
-    return layoutFooter.getBoundingClientRect().height;
+  _getFooterHeight() {
+    const layoutFooter = this.getLayoutFooter()
+
+    if (!layoutFooter) return 0
+
+    return layoutFooter.getBoundingClientRect().height
   },
+
   // ---
   // Get animation duration of element
-  _getAnimationDuration: function _getAnimationDuration(el) {
-    var duration = window.getComputedStyle(el).transitionDuration;
-    return parseFloat(duration) * (duration.indexOf('ms') !== -1 ? 1 : 1000);
+  _getAnimationDuration(el) {
+    const duration = window.getComputedStyle(el).transitionDuration
+
+    return parseFloat(duration) * (duration.indexOf('ms') !== -1 ? 1 : 1000)
   },
+
   // ---
   // Set menu hover state
-  _setMenuHoverState: function _setMenuHoverState(hovered) {
-    this[hovered ? '_addClass' : '_removeClass']('layout-menu-hover');
+  _setMenuHoverState(hovered) {
+    this[hovered ? '_addClass' : '_removeClass']('layout-menu-hover')
   },
+
   // ---
   // Toggle collapsed
-  _setCollapsed: function _setCollapsed(collapsed) {
-    var _this3 = this;
+  _setCollapsed(collapsed) {
     if (this.isSmallScreen()) {
       if (collapsed) {
-        this._removeClass('layout-menu-expanded');
+        this._removeClass('layout-menu-expanded')
       } else {
-        setTimeout(function () {
-          _this3._addClass('layout-menu-expanded');
-        }, this._redrawLayoutMenu() ? 5 : 0);
+        setTimeout(
+          () => {
+            this._addClass('layout-menu-expanded')
+          },
+          this._redrawLayoutMenu() ? 5 : 0
+        )
       }
     } else {
-      this[collapsed ? '_addClass' : '_removeClass']('layout-menu-collapsed');
+      this[collapsed ? '_addClass' : '_removeClass']('layout-menu-collapsed')
     }
   },
+
   // ---
   // Add layout sivenav toggle animationEnd event
-  _bindLayoutAnimationEndEvent: function _bindLayoutAnimationEndEvent(modifier, cb) {
-    var _this4 = this;
-    var menu = this.getMenu();
-    var duration = menu ? this._getAnimationDuration(menu) + 50 : 0;
+  _bindLayoutAnimationEndEvent(modifier, cb) {
+    const menu = this.getMenu()
+    const duration = menu ? this._getAnimationDuration(menu) + 50 : 0
+
     if (!duration) {
-      modifier.call(this);
-      cb.call(this);
-      return;
+      modifier.call(this)
+      cb.call(this)
+      return
     }
-    this._transitionCallback = function (e) {
-      if (e.target !== menu) return;
-      _this4._unbindLayoutAnimationEndEvent();
-      cb.call(_this4);
-    };
-    TRANS_EVENTS.forEach(function (e) {
-      menu.addEventListener(e, _this4._transitionCallback, false);
-    });
-    modifier.call(this);
-    this._transitionCallbackTimeout = setTimeout(function () {
-      _this4._transitionCallback.call(_this4, {
-        target: menu
-      });
-    }, duration);
+
+    this._transitionCallback = e => {
+      if (e.target !== menu) return
+      this._unbindLayoutAnimationEndEvent()
+      cb.call(this)
+    }
+
+    TRANS_EVENTS.forEach(e => {
+      menu.addEventListener(e, this._transitionCallback, false)
+    })
+
+    modifier.call(this)
+
+    this._transitionCallbackTimeout = setTimeout(() => {
+      this._transitionCallback.call(this, { target: menu })
+    }, duration)
   },
+
   // ---
   // Remove layout sivenav toggle animationEnd event
-  _unbindLayoutAnimationEndEvent: function _unbindLayoutAnimationEndEvent() {
-    var _this5 = this;
-    var menu = this.getMenu();
+  _unbindLayoutAnimationEndEvent() {
+    const menu = this.getMenu()
+
     if (this._transitionCallbackTimeout) {
-      clearTimeout(this._transitionCallbackTimeout);
-      this._transitionCallbackTimeout = null;
+      clearTimeout(this._transitionCallbackTimeout)
+      this._transitionCallbackTimeout = null
     }
+
     if (menu && this._transitionCallback) {
-      TRANS_EVENTS.forEach(function (e) {
-        menu.removeEventListener(e, _this5._transitionCallback, false);
-      });
+      TRANS_EVENTS.forEach(e => {
+        menu.removeEventListener(e, this._transitionCallback, false)
+      })
     }
+
     if (this._transitionCallback) {
-      this._transitionCallback = null;
+      this._transitionCallback = null
     }
   },
+
   // ---
   // Bind delayed window resize event
-  _bindWindowResizeEvent: function _bindWindowResizeEvent() {
-    var _this6 = this;
-    this._unbindWindowResizeEvent();
-    var cb = function cb() {
-      if (_this6._resizeTimeout) {
-        clearTimeout(_this6._resizeTimeout);
-        _this6._resizeTimeout = null;
+  _bindWindowResizeEvent() {
+    this._unbindWindowResizeEvent()
+
+    const cb = () => {
+      if (this._resizeTimeout) {
+        clearTimeout(this._resizeTimeout)
+        this._resizeTimeout = null
       }
-      _this6._triggerEvent('resize');
-    };
-    this._resizeCallback = function () {
-      if (_this6._resizeTimeout) clearTimeout(_this6._resizeTimeout);
-      _this6._resizeTimeout = setTimeout(cb, _this6.RESIZE_DELAY);
-    };
-    window.addEventListener('resize', this._resizeCallback, false);
+      this._triggerEvent('resize')
+    }
+
+    this._resizeCallback = () => {
+      if (this._resizeTimeout) clearTimeout(this._resizeTimeout)
+      this._resizeTimeout = setTimeout(cb, this.RESIZE_DELAY)
+    }
+
+    window.addEventListener('resize', this._resizeCallback, false)
   },
+
   // ---
   // Unbind delayed window resize event
-  _unbindWindowResizeEvent: function _unbindWindowResizeEvent() {
+  _unbindWindowResizeEvent() {
     if (this._resizeTimeout) {
-      clearTimeout(this._resizeTimeout);
-      this._resizeTimeout = null;
+      clearTimeout(this._resizeTimeout)
+      this._resizeTimeout = null
     }
+
     if (this._resizeCallback) {
-      window.removeEventListener('resize', this._resizeCallback, false);
-      this._resizeCallback = null;
+      window.removeEventListener('resize', this._resizeCallback, false)
+      this._resizeCallback = null
     }
   },
-  _bindMenuMouseEvents: function _bindMenuMouseEvents() {
-    var _this7 = this;
-    if (this._menuMouseEnter && this._menuMouseLeave && this._windowTouchStart) return;
-    var layoutMenu = this.getLayoutMenu();
-    if (!layoutMenu) return this._unbindMenuMouseEvents();
+
+  _bindMenuMouseEvents() {
+    if (this._menuMouseEnter && this._menuMouseLeave && this._windowTouchStart) return
+
+    const layoutMenu = this.getLayoutMenu()
+    if (!layoutMenu) return this._unbindMenuMouseEvents()
+
     if (!this._menuMouseEnter) {
-      this._menuMouseEnter = function () {
-        if (_this7.isSmallScreen() || !_this7._hasClass('layout-menu-collapsed') || _this7.isOffcanvas() || _this7._hasClass('layout-transitioning')) {
-          return _this7._setMenuHoverState(false);
+      this._menuMouseEnter = () => {
+        if (
+          this.isSmallScreen() ||
+          !this._hasClass('layout-menu-collapsed') ||
+          this.isOffcanvas() ||
+          this._hasClass('layout-transitioning')
+        ) {
+          return this._setMenuHoverState(false)
         }
-        return _this7._setMenuHoverState(true);
-      };
-      layoutMenu.addEventListener('mouseenter', this._menuMouseEnter, false);
-      layoutMenu.addEventListener('touchstart', this._menuMouseEnter, false);
+
+        return this._setMenuHoverState(true)
+      }
+      layoutMenu.addEventListener('mouseenter', this._menuMouseEnter, false)
+      layoutMenu.addEventListener('touchstart', this._menuMouseEnter, false)
     }
+
     if (!this._menuMouseLeave) {
-      this._menuMouseLeave = function () {
-        _this7._setMenuHoverState(false);
-      };
-      layoutMenu.addEventListener('mouseleave', this._menuMouseLeave, false);
+      this._menuMouseLeave = () => {
+        this._setMenuHoverState(false)
+      }
+      layoutMenu.addEventListener('mouseleave', this._menuMouseLeave, false)
     }
+
     if (!this._windowTouchStart) {
-      this._windowTouchStart = function (e) {
-        if (!e || !e.target || !_this7._findParent(e.target, '.layout-menu')) {
-          _this7._setMenuHoverState(false);
+      this._windowTouchStart = e => {
+        if (!e || !e.target || !this._findParent(e.target, '.layout-menu')) {
+          this._setMenuHoverState(false)
         }
-      };
-      window.addEventListener('touchstart', this._windowTouchStart, true);
+      }
+      window.addEventListener('touchstart', this._windowTouchStart, true)
     }
   },
-  _unbindMenuMouseEvents: function _unbindMenuMouseEvents() {
-    if (!this._menuMouseEnter && !this._menuMouseLeave && !this._windowTouchStart) return;
-    var layoutMenu = this.getLayoutMenu();
+
+  _unbindMenuMouseEvents() {
+    if (!this._menuMouseEnter && !this._menuMouseLeave && !this._windowTouchStart) return
+
+    const layoutMenu = this.getLayoutMenu()
+
     if (this._menuMouseEnter) {
       if (layoutMenu) {
-        layoutMenu.removeEventListener('mouseenter', this._menuMouseEnter, false);
-        layoutMenu.removeEventListener('touchstart', this._menuMouseEnter, false);
+        layoutMenu.removeEventListener('mouseenter', this._menuMouseEnter, false)
+        layoutMenu.removeEventListener('touchstart', this._menuMouseEnter, false)
       }
-      this._menuMouseEnter = null;
+      this._menuMouseEnter = null
     }
+
     if (this._menuMouseLeave) {
       if (layoutMenu) {
-        layoutMenu.removeEventListener('mouseleave', this._menuMouseLeave, false);
+        layoutMenu.removeEventListener('mouseleave', this._menuMouseLeave, false)
       }
-      this._menuMouseLeave = null;
+      this._menuMouseLeave = null
     }
+
     if (this._windowTouchStart) {
       if (layoutMenu) {
-        window.addEventListener('touchstart', this._windowTouchStart, true);
+        window.addEventListener('touchstart', this._windowTouchStart, true)
       }
-      this._windowTouchStart = null;
+      this._windowTouchStart = null
     }
-    this._setMenuHoverState(false);
+
+    this._setMenuHoverState(false)
   },
+
   // *******************************************************************************
   // * Methods
-  scrollToActive: function scrollToActive() {
-    var animate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-    this._scrollToActive(animate);
+
+  scrollToActive(animate = false) {
+    this._scrollToActive(animate)
   },
-  swipeIn: function swipeIn(el, callback) {
-    this._swipeIn(el, callback);
+
+  swipeIn(el, callback) {
+    this._swipeIn(el, callback)
   },
-  swipeOut: function swipeOut(el, callback) {
-    this._swipeOut(el, callback);
+
+  swipeOut(el, callback) {
+    this._swipeOut(el, callback)
   },
-  overlayTap: function overlayTap(el, callback) {
-    this._overlayTap(el, callback);
+
+  overlayTap(el, callback) {
+    this._overlayTap(el, callback)
   },
-  scrollPageTo: function scrollPageTo(to) {
-    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+
+  scrollPageTo(to, duration = 500) {
     // t = current time
     // b = start value
     // c = change in value
     // d = duration
-    var easeInOutQuad = function easeInOutQuad(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t -= 1;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    };
-    var element = document.scrollingElement;
+    const easeInOutQuad = (t, b, c, d) => {
+      t /= d / 2
+      if (t < 1) return (c / 2) * t * t + b
+      t -= 1
+      return (-c / 2) * (t * (t - 2) - 1) + b
+    }
+
+    const element = document.scrollingElement
+
     if (typeof to === 'string') {
-      to = document.querySelector(to);
+      to = document.querySelector(to)
     }
     if (typeof to !== 'number') {
-      to = to.getBoundingClientRect().top + element.scrollTop;
+      to = to.getBoundingClientRect().top + element.scrollTop
     }
-    var start = element.scrollTop;
-    var change = to - start;
-    var startDate = +new Date();
+
+    const start = element.scrollTop
+    const change = to - start
+    const startDate = +new Date()
     // const increment = 20
 
-    var animateScroll = function animateScroll() {
-      var currentDate = +new Date();
-      var currentTime = currentDate - startDate;
-      var val = easeInOutQuad(currentTime, start, change, duration);
-      element.scrollTop = val;
+    const animateScroll = () => {
+      const currentDate = +new Date()
+      const currentTime = currentDate - startDate
+      const val = easeInOutQuad(currentTime, start, change, duration)
+      element.scrollTop = val
       if (currentTime < duration) {
-        requestAnimationFrame(animateScroll);
+        requestAnimationFrame(animateScroll)
       } else {
-        element.scrollTop = to;
+        element.scrollTop = to
       }
-    };
-    animateScroll();
+    }
+    animateScroll()
   },
+
   // ---
   // Collapse / expand layout
-  setCollapsed: function setCollapsed() {
-    var _this8 = this;
-    var collapsed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('collapsed');
-    var animate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-    var layoutMenu = this.getLayoutMenu();
-    if (!layoutMenu) return;
-    this._unbindLayoutAnimationEndEvent();
+  setCollapsed(collapsed = requiredParam('collapsed'), animate = true) {
+    const layoutMenu = this.getLayoutMenu()
+
+    if (!layoutMenu) return
+
+    this._unbindLayoutAnimationEndEvent()
+
     if (animate && this._supportsTransitionEnd()) {
-      this._addClass('layout-transitioning');
-      if (collapsed) this._setMenuHoverState(false);
-      this._bindLayoutAnimationEndEvent(function () {
-        // Collapse / Expand
-        _this8._setCollapsed(collapsed);
-      }, function () {
-        _this8._removeClass('layout-transitioning');
-        _this8._triggerWindowEvent('resize');
-        _this8._triggerEvent('toggle');
-        _this8._setMenuHoverState(false);
-      });
+      this._addClass('layout-transitioning')
+      if (collapsed) this._setMenuHoverState(false)
+
+      this._bindLayoutAnimationEndEvent(
+        () => {
+          // Collapse / Expand
+          this._setCollapsed(collapsed)
+        },
+        () => {
+          this._removeClass('layout-transitioning')
+          this._triggerWindowEvent('resize')
+          this._triggerEvent('toggle')
+          this._setMenuHoverState(false)
+        }
+      )
     } else {
-      this._addClass('layout-no-transition');
-      if (collapsed) this._setMenuHoverState(false);
+      this._addClass('layout-no-transition')
+      if (collapsed) this._setMenuHoverState(false)
 
       // Collapse / Expand
-      this._setCollapsed(collapsed);
-      setTimeout(function () {
-        _this8._removeClass('layout-no-transition');
-        _this8._triggerWindowEvent('resize');
-        _this8._triggerEvent('toggle');
-        _this8._setMenuHoverState(false);
-      }, 1);
+      this._setCollapsed(collapsed)
+
+      setTimeout(() => {
+        this._removeClass('layout-no-transition')
+        this._triggerWindowEvent('resize')
+        this._triggerEvent('toggle')
+        this._setMenuHoverState(false)
+      }, 1)
     }
   },
+
   // ---
   // Toggle layout
-  toggleCollapsed: function toggleCollapsed() {
-    var animate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-    this.setCollapsed(!this.isCollapsed(), animate);
+  toggleCollapsed(animate = true) {
+    this.setCollapsed(!this.isCollapsed(), animate)
   },
+
   // ---
   // Set layout positioning
-  setPosition: function setPosition() {
-    var fixed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('fixed');
-    var offcanvas = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : requiredParam('offcanvas');
-    this._removeClass('layout-menu-offcanvas layout-menu-fixed layout-menu-fixed-offcanvas');
+  setPosition(fixed = requiredParam('fixed'), offcanvas = requiredParam('offcanvas')) {
+    this._removeClass('layout-menu-offcanvas layout-menu-fixed layout-menu-fixed-offcanvas')
+
     if (!fixed && offcanvas) {
-      this._addClass('layout-menu-offcanvas');
+      this._addClass('layout-menu-offcanvas')
     } else if (fixed && !offcanvas) {
-      this._addClass('layout-menu-fixed');
-      this._redrawLayoutMenu();
+      this._addClass('layout-menu-fixed')
+      this._redrawLayoutMenu()
     } else if (fixed && offcanvas) {
-      this._addClass('layout-menu-fixed-offcanvas');
-      this._redrawLayoutMenu();
+      this._addClass('layout-menu-fixed-offcanvas')
+      this._redrawLayoutMenu()
     }
-    this.update();
+
+    this.update()
   },
+
   // *******************************************************************************
   // * Getters
-  getLayoutMenu: function getLayoutMenu() {
-    return document.querySelector('.layout-menu');
+
+  getLayoutMenu() {
+    return document.querySelector('.layout-menu')
   },
-  getMenu: function getMenu() {
-    var layoutMenu = this.getLayoutMenu();
-    if (!layoutMenu) return null;
-    return !this._hasClass('menu', layoutMenu) ? layoutMenu.querySelector('.menu') : layoutMenu;
+
+  getMenu() {
+    const layoutMenu = this.getLayoutMenu()
+
+    if (!layoutMenu) return null
+
+    return !this._hasClass('menu', layoutMenu) ? layoutMenu.querySelector('.menu') : layoutMenu
   },
-  getLayoutNavbar: function getLayoutNavbar() {
-    return document.querySelector('.layout-navbar');
+
+  getLayoutNavbar() {
+    return document.querySelector('.layout-navbar')
   },
-  getLayoutFooter: function getLayoutFooter() {
-    return document.querySelector('.content-footer');
+
+  getLayoutFooter() {
+    return document.querySelector('.content-footer')
   },
-  getLayoutContainer: function getLayoutContainer() {
-    return document.querySelector('.layout-page');
+
+  getLayoutContainer() {
+    return document.querySelector('.layout-page')
   },
+
   // *******************************************************************************
   // * Setters
-  setNavbarFixed: function setNavbarFixed() {
-    var fixed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('fixed');
-    this[fixed ? '_addClass' : '_removeClass']('layout-navbar-fixed');
-    this.update();
+
+  setNavbarFixed(fixed = requiredParam('fixed')) {
+    this[fixed ? '_addClass' : '_removeClass']('layout-navbar-fixed')
+    this.update()
   },
-  setFooterFixed: function setFooterFixed() {
-    var fixed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('fixed');
-    this[fixed ? '_addClass' : '_removeClass']('layout-footer-fixed');
-    this.update();
+
+  setFooterFixed(fixed = requiredParam('fixed')) {
+    this[fixed ? '_addClass' : '_removeClass']('layout-footer-fixed')
+    this.update()
   },
-  setFlipped: function setFlipped() {
-    var reversed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('reversed');
-    this[reversed ? '_addClass' : '_removeClass']('layout-menu-flipped');
+
+  setFlipped(reversed = requiredParam('reversed')) {
+    this[reversed ? '_addClass' : '_removeClass']('layout-menu-flipped')
   },
+
   // *******************************************************************************
   // * Update
-  update: function update() {
-    if (this.getLayoutNavbar() && (!this.isSmallScreen() && this.isLayoutNavbarFull() && this.isFixed() || this.isNavbarFixed()) || this.getLayoutFooter() && this.isFooterFixed()) {
-      this._updateInlineStyle(this._getNavbarHeight(), this._getFooterHeight());
+
+  update() {
+    if (
+      (this.getLayoutNavbar() &&
+        ((!this.isSmallScreen() && this.isLayoutNavbarFull() && this.isFixed()) || this.isNavbarFixed())) ||
+      (this.getLayoutFooter() && this.isFooterFixed())
+    ) {
+      this._updateInlineStyle(this._getNavbarHeight(), this._getFooterHeight())
     }
-    this._bindMenuMouseEvents();
+
+    this._bindMenuMouseEvents()
   },
-  setAutoUpdate: function setAutoUpdate() {
-    var _this9 = this;
-    var enable = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('enable');
+
+  setAutoUpdate(enable = requiredParam('enable')) {
     if (enable && !this._autoUpdate) {
-      this.on('resize.Helpers:autoUpdate', function () {
-        return _this9.update();
-      });
-      this._autoUpdate = true;
+      this.on('resize.Helpers:autoUpdate', () => this.update())
+      this._autoUpdate = true
     } else if (!enable && this._autoUpdate) {
-      this.off('resize.Helpers:autoUpdate');
-      this._autoUpdate = false;
+      this.off('resize.Helpers:autoUpdate')
+      this._autoUpdate = false
     }
   },
+
   // Update custom option based on element
-  updateCustomOptionCheck: function updateCustomOptionCheck(el) {
+  updateCustomOptionCheck(el) {
     if (el.checked) {
       // If custom option element is radio, remove checked from the siblings (closest `.row`)
       if (el.type === 'radio') {
-        var customRadioOptionList = [].slice.call(el.closest('.row').querySelectorAll('.custom-option'));
+        const customRadioOptionList = [].slice.call(el.closest('.row').querySelectorAll('.custom-option'))
         customRadioOptionList.map(function (customRadioOptionEL) {
-          customRadioOptionEL.closest('.custom-option').classList.remove('checked');
-        });
+          customRadioOptionEL.closest('.custom-option').classList.remove('checked')
+        })
       }
-      el.closest('.custom-option').classList.add('checked');
+      el.closest('.custom-option').classList.add('checked')
     } else {
-      el.closest('.custom-option').classList.remove('checked');
+      el.closest('.custom-option').classList.remove('checked')
     }
   },
+
   // *******************************************************************************
   // * Tests
-  isRtl: function isRtl() {
-    return document.querySelector('body').getAttribute('dir') === 'rtl' || document.querySelector('html').getAttribute('dir') === 'rtl';
+
+  isRtl() {
+    return (
+      document.querySelector('body').getAttribute('dir') === 'rtl' ||
+      document.querySelector('html').getAttribute('dir') === 'rtl'
+    )
   },
-  isMobileDevice: function isMobileDevice() {
-    return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1;
+
+  isMobileDevice() {
+    return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1
   },
-  isSmallScreen: function isSmallScreen() {
-    return (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) < this.LAYOUT_BREAKPOINT;
+
+  isSmallScreen() {
+    return (
+      (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) < this.LAYOUT_BREAKPOINT
+    )
   },
-  isLayoutNavbarFull: function isLayoutNavbarFull() {
-    return !!document.querySelector('.layout-wrapper.layout-navbar-full');
+
+  isLayoutNavbarFull() {
+    return !!document.querySelector('.layout-wrapper.layout-navbar-full')
   },
-  isCollapsed: function isCollapsed() {
+
+  isCollapsed() {
     if (this.isSmallScreen()) {
-      return !this._hasClass('layout-menu-expanded');
+      return !this._hasClass('layout-menu-expanded')
     }
-    return this._hasClass('layout-menu-collapsed');
+    return this._hasClass('layout-menu-collapsed')
   },
-  isFixed: function isFixed() {
-    return this._hasClass('layout-menu-fixed layout-menu-fixed-offcanvas');
+
+  isFixed() {
+    return this._hasClass('layout-menu-fixed layout-menu-fixed-offcanvas')
   },
-  isOffcanvas: function isOffcanvas() {
-    return this._hasClass('layout-menu-offcanvas layout-menu-fixed-offcanvas');
+
+  isOffcanvas() {
+    return this._hasClass('layout-menu-offcanvas layout-menu-fixed-offcanvas')
   },
-  isNavbarFixed: function isNavbarFixed() {
-    return this._hasClass('layout-navbar-fixed') || !this.isSmallScreen() && this.isFixed() && this.isLayoutNavbarFull();
+
+  isNavbarFixed() {
+    return (
+      this._hasClass('layout-navbar-fixed') || (!this.isSmallScreen() && this.isFixed() && this.isLayoutNavbarFull())
+    )
   },
-  isFooterFixed: function isFooterFixed() {
-    return this._hasClass('layout-footer-fixed');
+
+  isFooterFixed() {
+    return this._hasClass('layout-footer-fixed')
   },
-  isFlipped: function isFlipped() {
-    return this._hasClass('layout-menu-flipped');
+
+  isFlipped() {
+    return this._hasClass('layout-menu-flipped')
   },
-  isLightStyle: function isLightStyle() {
-    return document.documentElement.classList.contains('light-style');
+
+  isLightStyle() {
+    return document.documentElement.classList.contains('light-style')
   },
-  isDarkStyle: function isDarkStyle() {
-    return document.documentElement.classList.contains('dark-style');
+
+  isDarkStyle() {
+    return document.documentElement.classList.contains('dark-style')
   },
+
   // *******************************************************************************
   // * Events
-  on: function on() {
-    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('event');
-    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : requiredParam('callback');
-    var _event$split = event.split('.'),
-      _event$split2 = _slicedToArray(_event$split, 1),
-      _event = _event$split2[0];
-    var _event$split3 = event.split('.'),
-      _event$split4 = _toArray(_event$split3),
-      namespace = _event$split4.slice(1);
+
+  on(event = requiredParam('event'), callback = requiredParam('callback')) {
+    const [_event] = event.split('.')
+    let [, ...namespace] = event.split('.')
     // let [_event, ...namespace] = event.split('.')
-    namespace = namespace.join('.') || null;
-    this._listeners.push({
-      event: _event,
-      namespace: namespace,
-      callback: callback
-    });
+    namespace = namespace.join('.') || null
+
+    this._listeners.push({ event: _event, namespace, callback })
   },
-  off: function off() {
-    var _this10 = this;
-    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : requiredParam('event');
-    var _event$split5 = event.split('.'),
-      _event$split6 = _slicedToArray(_event$split5, 1),
-      _event = _event$split6[0];
-    var _event$split7 = event.split('.'),
-      _event$split8 = _toArray(_event$split7),
-      namespace = _event$split8.slice(1);
-    namespace = namespace.join('.') || null;
-    this._listeners.filter(function (listener) {
-      return listener.event === _event && listener.namespace === namespace;
-    }).forEach(function (listener) {
-      return _this10._listeners.splice(_this10._listeners.indexOf(listener), 1);
-    });
+
+  off(event = requiredParam('event')) {
+    const [_event] = event.split('.')
+    let [, ...namespace] = event.split('.')
+    namespace = namespace.join('.') || null
+
+    this._listeners
+      .filter(listener => listener.event === _event && listener.namespace === namespace)
+      .forEach(listener => this._listeners.splice(this._listeners.indexOf(listener), 1))
   },
+
   // *******************************************************************************
   // * Life cycle
-  init: function init() {
-    var _this11 = this;
-    if (this._initialized) return;
-    this._initialized = true;
+
+  init() {
+    if (this._initialized) return
+    this._initialized = true
 
     // Initialize `style` element
-    this._updateInlineStyle(0);
+    this._updateInlineStyle(0)
 
     // Bind window resize event
-    this._bindWindowResizeEvent();
+    this._bindWindowResizeEvent()
 
     // Bind init event
-    this.off('init._Helpers');
-    this.on('init._Helpers', function () {
-      _this11.off('resize._Helpers:redrawMenu');
-      _this11.on('resize._Helpers:redrawMenu', function () {
+    this.off('init._Helpers')
+    this.on('init._Helpers', () => {
+      this.off('resize._Helpers:redrawMenu')
+      this.on('resize._Helpers:redrawMenu', () => {
         // eslint-disable-next-line no-unused-expressions
-        _this11.isSmallScreen() && !_this11.isCollapsed() && _this11._redrawLayoutMenu();
-      });
+        this.isSmallScreen() && !this.isCollapsed() && this._redrawLayoutMenu()
+      })
 
       // Force repaint in IE 10
       if (typeof document.documentMode === 'number' && document.documentMode < 11) {
-        _this11.off('resize._Helpers:ie10RepaintBody');
-        _this11.on('resize._Helpers:ie10RepaintBody', function () {
-          if (_this11.isFixed()) return;
-          var scrollTop = document.documentElement.scrollTop;
-          document.body.style.display = 'none';
+        this.off('resize._Helpers:ie10RepaintBody')
+        this.on('resize._Helpers:ie10RepaintBody', () => {
+          if (this.isFixed()) return
+          const { scrollTop } = document.documentElement
+          document.body.style.display = 'none'
           // document.body.offsetHeight
-          document.body.style.display = 'block';
-          document.documentElement.scrollTop = scrollTop;
-        });
+          document.body.style.display = 'block'
+          document.documentElement.scrollTop = scrollTop
+        })
       }
-    });
-    this._triggerEvent('init');
+    })
+
+    this._triggerEvent('init')
   },
-  destroy: function destroy() {
-    var _this12 = this;
-    if (!this._initialized) return;
-    this._initialized = false;
-    this._removeClass('layout-transitioning');
-    this._removeInlineStyle();
-    this._unbindLayoutAnimationEndEvent();
-    this._unbindWindowResizeEvent();
-    this._unbindMenuMouseEvents();
-    this.setAutoUpdate(false);
-    this.off('init._Helpers');
+
+  destroy() {
+    if (!this._initialized) return
+    this._initialized = false
+
+    this._removeClass('layout-transitioning')
+    this._removeInlineStyle()
+    this._unbindLayoutAnimationEndEvent()
+    this._unbindWindowResizeEvent()
+    this._unbindMenuMouseEvents()
+    this.setAutoUpdate(false)
+
+    this.off('init._Helpers')
 
     // Remove all listeners except `init`
-    this._listeners.filter(function (listener) {
-      return listener.event !== 'init';
-    }).forEach(function (listener) {
-      return _this12._listeners.splice(_this12._listeners.indexOf(listener), 1);
-    });
+    this._listeners
+      .filter(listener => listener.event !== 'init')
+      .forEach(listener => this._listeners.splice(this._listeners.indexOf(listener), 1))
   },
+
   // ---
   // Init Password Toggle
-  initPasswordToggle: function initPasswordToggle() {
-    var toggler = document.querySelectorAll('.form-password-toggle i');
+  initPasswordToggle() {
+    const toggler = document.querySelectorAll('.form-password-toggle i')
     if (typeof toggler !== 'undefined' && toggler !== null) {
-      toggler.forEach(function (el) {
-        el.addEventListener('click', function (e) {
-          e.preventDefault();
-          var formPasswordToggle = el.closest('.form-password-toggle');
-          var formPasswordToggleIcon = formPasswordToggle.querySelector('i');
-          var formPasswordToggleInput = formPasswordToggle.querySelector('input');
+      toggler.forEach(el => {
+        el.addEventListener('click', e => {
+          e.preventDefault()
+          const formPasswordToggle = el.closest('.form-password-toggle')
+          const formPasswordToggleIcon = formPasswordToggle.querySelector('i')
+          const formPasswordToggleInput = formPasswordToggle.querySelector('input')
+
           if (formPasswordToggleInput.getAttribute('type') === 'text') {
-            formPasswordToggleInput.setAttribute('type', 'password');
-            formPasswordToggleIcon.classList.replace('ti-eye', 'ti-eye-off');
+            formPasswordToggleInput.setAttribute('type', 'password')
+            formPasswordToggleIcon.classList.replace('ti-eye', 'ti-eye-off')
           } else if (formPasswordToggleInput.getAttribute('type') === 'password') {
-            formPasswordToggleInput.setAttribute('type', 'text');
-            formPasswordToggleIcon.classList.replace('ti-eye-off', 'ti-eye');
+            formPasswordToggleInput.setAttribute('type', 'text')
+            formPasswordToggleIcon.classList.replace('ti-eye-off', 'ti-eye')
           }
-        });
-      });
+        })
+      })
     }
   },
+
   //--
   // Init custom option check
-  initCustomOptionCheck: function initCustomOptionCheck() {
-    var _this = this;
-    var custopOptionList = [].slice.call(document.querySelectorAll('.custom-option .form-check-input'));
+  initCustomOptionCheck() {
+    const _this = this
+
+    const custopOptionList = [].slice.call(document.querySelectorAll('.custom-option .form-check-input'))
     custopOptionList.map(function (customOptionEL) {
       // Update custom options check on page load
-      _this.updateCustomOptionCheck(customOptionEL);
+      _this.updateCustomOptionCheck(customOptionEL)
 
       // Update custom options check on click
-      customOptionEL.addEventListener('click', function (e) {
-        _this.updateCustomOptionCheck(customOptionEL);
-      });
-    });
+      customOptionEL.addEventListener('click', e => {
+        _this.updateCustomOptionCheck(customOptionEL)
+      })
+    })
   },
+
   // ---
   // Init Speech To Text
-  initSpeechToText: function initSpeechToText() {
-    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    var speechToText = document.querySelectorAll('.speech-to-text');
+  initSpeechToText() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+    const speechToText = document.querySelectorAll('.speech-to-text')
     if (SpeechRecognition !== undefined && SpeechRecognition !== null) {
       if (typeof speechToText !== 'undefined' && speechToText !== null) {
-        var recognition = new SpeechRecognition();
-        var toggler = document.querySelectorAll('.speech-to-text i');
-        toggler.forEach(function (el) {
-          var listening = false;
-          el.addEventListener('click', function () {
-            el.closest('.input-group').querySelector('.form-control').focus();
-            recognition.onspeechstart = function () {
-              listening = true;
-            };
-            if (listening === false) {
-              recognition.start();
+        const recognition = new SpeechRecognition()
+        const toggler = document.querySelectorAll('.speech-to-text i')
+        toggler.forEach(el => {
+          let listening = false
+          el.addEventListener('click', () => {
+            el.closest('.input-group').querySelector('.form-control').focus()
+            recognition.onspeechstart = () => {
+              listening = true
             }
-            recognition.onerror = function () {
-              listening = false;
-            };
-            recognition.onresult = function (event) {
-              el.closest('.input-group').querySelector('.form-control').value = event.results[0][0].transcript;
-            };
-            recognition.onspeechend = function () {
-              listening = false;
-              recognition.stop();
-            };
-          });
-        });
+            if (listening === false) {
+              recognition.start()
+            }
+            recognition.onerror = () => {
+              listening = false
+            }
+            recognition.onresult = event => {
+              el.closest('.input-group').querySelector('.form-control').value = event.results[0][0].transcript
+            }
+            recognition.onspeechend = () => {
+              listening = false
+              recognition.stop()
+            }
+          })
+        })
       }
     }
   },
+
   // ---
   // Init Navbar Dropdown (i.e notification) PerfectScrollbar
-  initNavbarDropdownScrollbar: function initNavbarDropdownScrollbar() {
-    var scrollbarContainer = document.querySelectorAll('.navbar-dropdown .scrollable-container');
-    var _window4 = window,
-      PerfectScrollbar = _window4.PerfectScrollbar;
+  initNavbarDropdownScrollbar() {
+    const scrollbarContainer = document.querySelectorAll('.navbar-dropdown .scrollable-container')
+    const { PerfectScrollbar } = window
+
     if (PerfectScrollbar !== undefined) {
       if (typeof scrollbarContainer !== 'undefined' && scrollbarContainer !== null) {
-        scrollbarContainer.forEach(function (el) {
+        scrollbarContainer.forEach(el => {
           // eslint-disable-next-line no-new
           new PerfectScrollbar(el, {
             wheelPropagation: false,
             suppressScrollX: true
-          });
-        });
+          })
+        })
       }
     }
   },
+
   // Ajax Call Promise
-  ajaxCall: function ajaxCall(url) {
-    return new Promise(function (resolve, reject) {
-      var req = new XMLHttpRequest();
-      req.open('GET', url);
-      req.onload = function () {
-        return req.status === 200 ? resolve(req.response) : reject(Error(req.statusText));
-      };
-      req.onerror = function (e) {
-        return reject(Error("Network Error: ".concat(e)));
-      };
-      req.send();
-    });
+  ajaxCall(url) {
+    return new Promise((resolve, reject) => {
+      const req = new XMLHttpRequest()
+      req.open('GET', url)
+      req.onload = () => (req.status === 200 ? resolve(req.response) : reject(Error(req.statusText)))
+      req.onerror = e => reject(Error(`Network Error: ${e}`))
+      req.send()
+    })
   },
+
   // ---
   // SidebarToggle (Used in Apps)
-  initSidebarToggle: function initSidebarToggle() {
-    var sidebarToggler = document.querySelectorAll('[data-bs-toggle="sidebar"]');
-    sidebarToggler.forEach(function (el) {
-      el.addEventListener('click', function () {
-        var target = el.getAttribute('data-target');
-        var overlay = el.getAttribute('data-overlay');
-        var appOverlay = document.querySelectorAll('.app-overlay');
-        var targetEl = document.querySelectorAll(target);
-        targetEl.forEach(function (tel) {
-          tel.classList.toggle('show');
-          if (typeof overlay !== 'undefined' && overlay !== null && overlay !== false && typeof appOverlay !== 'undefined') {
+  initSidebarToggle() {
+    const sidebarToggler = document.querySelectorAll('[data-bs-toggle="sidebar"]')
+
+    sidebarToggler.forEach(el => {
+      el.addEventListener('click', () => {
+        const target = el.getAttribute('data-target')
+        const overlay = el.getAttribute('data-overlay')
+        const appOverlay = document.querySelectorAll('.app-overlay')
+        const targetEl = document.querySelectorAll(target)
+
+        targetEl.forEach(tel => {
+          tel.classList.toggle('show')
+          if (
+            typeof overlay !== 'undefined' &&
+            overlay !== null &&
+            overlay !== false &&
+            typeof appOverlay !== 'undefined'
+          ) {
             if (tel.classList.contains('show')) {
-              appOverlay[0].classList.add('show');
+              appOverlay[0].classList.add('show')
             } else {
-              appOverlay[0].classList.remove('show');
+              appOverlay[0].classList.remove('show')
             }
-            appOverlay[0].addEventListener('click', function (e) {
-              e.currentTarget.classList.remove('show');
-              tel.classList.remove('show');
-            });
+            appOverlay[0].addEventListener('click', e => {
+              e.currentTarget.classList.remove('show')
+              tel.classList.remove('show')
+            })
           }
-        });
-      });
-    });
+        })
+      })
+    })
   }
-};
+}
 
 // *******************************************************************************
 // * Initialization
 
 if (typeof window !== 'undefined') {
-  Helpers.init();
+  Helpers.init()
+
   if (Helpers.isMobileDevice() && window.chrome) {
-    document.documentElement.classList.add('layout-menu-100vh');
+    document.documentElement.classList.add('layout-menu-100vh')
   }
 
   // Update layout after page load
-  if (document.readyState === 'complete') Helpers.update();else document.addEventListener('DOMContentLoaded', function onContentLoaded() {
-    Helpers.update();
-    document.removeEventListener('DOMContentLoaded', onContentLoaded);
-  });
+  if (document.readyState === 'complete') Helpers.update()
+  else
+    document.addEventListener('DOMContentLoaded', function onContentLoaded() {
+      Helpers.update()
+      document.removeEventListener('DOMContentLoaded', onContentLoaded)
+    })
 }
 
 // ---
-
-/******/ 	return __webpack_exports__;
-/******/ })()
-;
-});
+export { Helpers }

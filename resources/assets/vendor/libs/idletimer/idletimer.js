@@ -1,19 +1,3 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(self, function() {
-return /******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
-/*!*************************************************************!*\
-  !*** ./resources/assets/vendor/libs/idletimer/idletimer.js ***!
-  \*************************************************************/
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 /*! Idle Timer - v1.1.1 - 2020-06-25
  * https://github.com/thorst/jquery-idletimer
  * Copyright (c) 2020 Paul Irish; Licensed MIT */
@@ -33,13 +17,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 (function ($) {
   $.idleTimer = function (firstParam, elem) {
     var opts;
-    if (_typeof(firstParam) === 'object') {
+    if (typeof firstParam === 'object') {
       opts = firstParam;
       firstParam = null;
     } else if (typeof firstParam === 'number') {
-      opts = {
-        timeout: firstParam
-      };
+      opts = { timeout: firstParam };
       firstParam = null;
     }
 
@@ -47,20 +29,23 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     elem = elem || document;
 
     // defaults that are to be stored as instance props on the elem
-    opts = $.extend({
-      idle: false,
-      // indicates if the user is idle
-      timeout: 30000,
-      // the amount of time (ms) before the user is considered idle
-      events: 'mousemove keydown wheel DOMMouseScroll mousewheel mousedown touchstart touchmove MSPointerDown MSPointerMove' // define active events
-    }, opts);
+    opts = $.extend(
+      {
+        idle: false, // indicates if the user is idle
+        timeout: 30000, // the amount of time (ms) before the user is considered idle
+        events:
+          'mousemove keydown wheel DOMMouseScroll mousewheel mousedown touchstart touchmove MSPointerDown MSPointerMove' // define active events
+      },
+      opts
+    );
+
     var jqElem = $(elem),
       obj = jqElem.data('idleTimerObj') || {},
       /* (intentionally not documented)
        * Toggles the idle state and fires an appropriate event.
        * @return {void}
        */
-      toggleIdleState = function toggleIdleState(e) {
+      toggleIdleState = function (e) {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         // toggle the state
@@ -81,7 +66,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
        * @method event
        * @static
        */
-      handleEvent = function handleEvent(e) {
+      handleEvent = function (e) {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         // ignore writting to storage unless related to idleTimer
@@ -147,7 +132,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
        * @method reset
        * @static
        */
-      reset = function reset() {
+      reset = function () {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         // reset settings
@@ -169,7 +154,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
        * @method pause
        * @static
        */
-      pause = function pause() {
+      pause = function () {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         // this is already paused
@@ -189,7 +174,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
        * @method resume
        * @static
        */
-      resume = function resume() {
+      resume = function () {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         // this isn't paused yet
@@ -212,7 +197,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
        * @method destroy
        * @static
        */
-      destroy = function destroy() {
+      destroy = function () {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         //clear any pending timeouts
@@ -230,7 +215,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
        * @method remainingtime
        * @static
        */
-      remainingtime = function remainingtime() {
+      remainingtime = function () {
         var obj = $.data(elem, 'idleTimerObj') || {};
 
         //If idle there is no time remaining
@@ -298,7 +283,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           });
           window.addEventListener("test", null, Popts);
       } catch (e) {}
-    */
+*/
 
     /* (intentionally not documented)
      * Handles a user event indicating that the user isn't idle. namespaced with internal idleTimer
@@ -316,27 +301,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
     // Internal Object Properties, This isn't all necessary, but we
     // explicitly define all keys here so we know what we are working with
-    obj = $.extend({}, {
-      olddate: +new Date(),
-      // the last time state changed
-      lastActive: +new Date(),
-      // the last time timer was active
-      idle: opts.idle,
-      // current state
-      idleBackup: opts.idle,
-      // backup of idle parameter since it gets modified
-      timeout: opts.timeout,
-      // the interval to change state
-      remaining: null,
-      // how long until state changes
-      timerSyncId: opts.timerSyncId,
-      // localStorage key to use for syncing this timer
-      tId: null,
-      // the idle timer setTimeout
-      pageX: null,
-      // used to store the mouse coord
-      pageY: null
-    });
+    obj = $.extend(
+      {},
+      {
+        olddate: +new Date(), // the last time state changed
+        lastActive: +new Date(), // the last time timer was active
+        idle: opts.idle, // current state
+        idleBackup: opts.idle, // backup of idle parameter since it gets modified
+        timeout: opts.timeout, // the interval to change state
+        remaining: null, // how long until state changes
+        timerSyncId: opts.timerSyncId, // localStorage key to use for syncing this timer
+        tId: null, // the idle timer setTimeout
+        pageX: null, // used to store the mouse coord
+        pageY: null
+      }
+    );
 
     // set a timeout to toggle state. May wish to omit this in some situations
     if (!obj.idle) {
@@ -345,6 +324,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
     // store our instance on the object
     $.data(elem, 'idleTimerObj', obj);
+
     return jqElem;
   };
 
@@ -353,10 +333,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     if (this[0]) {
       return $.idleTimer(firstParam, this[0]);
     }
+
     return this;
   };
 })(jQuery);
-/******/ 	return __webpack_exports__;
-/******/ })()
-;
-});
