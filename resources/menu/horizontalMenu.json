@@ -7,6 +7,12 @@
       "slug": "pages-home"
     },
     {
+      "url": "/products",
+      "icon": "menu-icon tf-icons ti ti-box",
+      "name": "Products",
+      "slug": "product.index"
+    },
+    {
       "url": "/page-2",
       "icon": "menu-icon tf-icons ti ti-file",
       "name": "Page 2",
