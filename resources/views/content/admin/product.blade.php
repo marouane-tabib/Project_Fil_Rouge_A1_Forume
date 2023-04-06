@@ -53,7 +53,7 @@
       @foreach ($products as $product)
         <tr>
           <td>{{ $product->title }}</td>
-          <td>{{ $product->category_id }}</td>
+          <td>{{ $product->category->name }}</td>
           <td>{{ $product->price }}</td>
           <td>{{ $product->quantity }}</td>
           <td>{{ $product->SKU }}</td>
