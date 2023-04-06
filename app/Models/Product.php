@@ -16,4 +16,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function primaryColor(): BelongsTo
+    {
+        return $this->belongsTo(Color::class, 'primary_color_id', 'id');
+    }
 }
