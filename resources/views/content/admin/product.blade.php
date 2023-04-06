@@ -59,7 +59,7 @@
           <td>{{ $product->SKU }}</td>
           <td>{{ $product->primaryColor->name }}</td>
           <td>{{ $product->secondaryColor->name }}</td>
-          <td>{{ $product->home_style_id }}</td>
+          <td>{{ $product->homeStyle->name }}</td>
           <td>
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>

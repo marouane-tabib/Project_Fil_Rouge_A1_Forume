@@ -26,4 +26,9 @@ class Product extends Model
     {
         return $this->belongsTo(Color::class, 'secondary_color_id', 'id');
     }
+
+    public function homeStyle(): BelongsTo
+    {
+        return $this->belongsTo(HomeStyle::class);
+    }
 }
