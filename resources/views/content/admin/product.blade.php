@@ -38,41 +38,39 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Project</th>
-        <th>Client</th>
-        <th>Users</th>
-        <th>Status</th>
+        <th>Title</th>
+        <th>Category </th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>SKU</th>
+        <th>Primary Color</th>
+        <th>Secodary Color</th>
+        <th>Home Style</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody class="table-border-bottom-0">
-      <tr>
-        <td><i class="ti ti-brand-angular ti-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
-        <td>Albert Cook</td>
-        <td>
-          <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
-              <img src="assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-              <img src="assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Christina Parker">
-              <img src="assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
-            </li>
-          </ul>
-        </td>
-        <td><span class="badge bg-label-primary me-1">Active</span></td>
-        <td>
-          <div class="dropdown">
-            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-pencil me-1"></i>Edit</a>
-              <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-trash me-1"></i>Delete</a>
+      @foreach ($data as $item)
+        <tr>
+          <td>{{ $item->title }}</td>
+          <td>{{ $item->category_id }}</td>
+          <td>{{ $item->price }}</td>
+          <td>{{ $item->quantity }}</td>
+          <td>{{ $item->SKU }}</td>
+          <td>{{ $item->primary_color_id }}</td>
+          <td>{{ $item->secondary_color_id }}</td>
+          <td>{{ $item->home_style_id }}</td>
+          <td>
+            <div class="dropdown">
+              <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-pencil me-1"></i>Edit</a>
+                <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-trash me-1"></i>Delete</a>
+              </div>
             </div>
-          </div>
-        </td>
-      </tr>
+          </td>
+        </tr>
+      @endforeach
     </tbody>
   </table>
 </div>
