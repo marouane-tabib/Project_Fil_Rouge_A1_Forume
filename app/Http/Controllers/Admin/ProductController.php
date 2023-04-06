@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return view('content.admin.product', ['data' => $this->productService->all()]);
+      return view('content.admin.product', ['products' => $this->productService->all()]);
     }
 
     /**
