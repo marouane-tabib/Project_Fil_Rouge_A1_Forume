@@ -30,4 +30,4 @@ Route::get('/auth/login-basic', $controller_path . '\authentications\LoginBasic@
 Route::get('/auth/register-basic', $controller_path . '\authentications\RegisterBasic@index')->name('auth-register-basic');
 
 // admine
-Route::get('default', [ProductController::class, 'index']);
+Route::resource('/product', ProductController::class);
