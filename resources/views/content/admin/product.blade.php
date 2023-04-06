@@ -58,7 +58,7 @@
           <td>{{ $product->quantity }}</td>
           <td>{{ $product->SKU }}</td>
           <td>{{ $product->primaryColor->name }}</td>
-          <td>{{ $product->secondary_color_id }}</td>
+          <td>{{ $product->secondaryColor->name }}</td>
           <td>{{ $product->home_style_id }}</td>
           <td>
             <div class="dropdown">
