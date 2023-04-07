@@ -47,4 +47,39 @@
     </tbody>
   </table>
 </div>
+
+      <!-- Slide from Top Modal -->
+      <div class="col-lg-4 col-md-6">
+        <small class="text-light fw-semibold">Slide from Top</small>
+        <div class="mt-3">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">
+            Launch modal
+          </button>
+
+          <!-- Modal -->
+          <div class="modal modal-top fade" id="modalDelete" tabindex="-1">
+            <div class="modal-dialog">
+              <form class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalDeleteTitle">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    ...
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var urlRealy = {{ route('name') }}
+      </script>
 @endsection
