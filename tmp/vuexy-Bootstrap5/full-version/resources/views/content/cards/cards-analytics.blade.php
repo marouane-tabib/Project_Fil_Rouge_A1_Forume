@@ -1,4 +1,4 @@
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Cards Analytics- UI elements'
 )

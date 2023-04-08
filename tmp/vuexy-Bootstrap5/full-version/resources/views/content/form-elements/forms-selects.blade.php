@@ -1,4 +1,4 @@
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Selects and tags - Forms')
 

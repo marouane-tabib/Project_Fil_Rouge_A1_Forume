@@ -5,7 +5,7 @@
 $configData = Helper::appClasses();
 @endphp
 
-@extends('layouts/commonMaster' )
+@extends('admin.layouts.commonMaster' )
 @php
 
 $menuHorizontal = true;
@@ -37,7 +37,7 @@ $containerNav = ($containerNav ?? 'container-xxl');
 
     <!-- BEGIN: Navbar-->
     @if ($isNavbar)
-    @include('layouts/sections/navbar/navbar')
+    @extends('admin/layouts/sections/navbar/navbar')
     @endif
     <!-- END: Navbar-->
 
@@ -49,7 +49,7 @@ $containerNav = ($containerNav ?? 'container-xxl');
       <div class="content-wrapper">
 
         @if ($isMenu)
-        @include('layouts/sections/menu/horizontalMenu')
+        @extends('admin/layouts/sections/menu/horizontalMenu')
         @endif
 
         <!-- Content -->
@@ -63,7 +63,7 @@ $containerNav = ($containerNav ?? 'container-xxl');
 
             <!-- pricingModal -->
             @if ($pricingModal)
-            @include('_partials/_modals/modal-pricing')
+            @include('admin/partials/_modals/modal-pricing')
             @endif
             <!--/ pricingModal -->
           </div>
@@ -71,7 +71,7 @@ $containerNav = ($containerNav ?? 'container-xxl');
 
           <!-- Footer -->
           @if ($isFooter)
-          @include('layouts/sections/footer/footer')
+          @extends('admin/layouts/sections/footer/footer')
           @endif
           <!-- / Footer -->
           <div class="content-backdrop fade"></div>

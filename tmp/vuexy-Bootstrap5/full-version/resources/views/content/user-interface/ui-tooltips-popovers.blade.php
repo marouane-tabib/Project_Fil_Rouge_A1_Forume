@@ -1,4 +1,4 @@
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Tooltips and popovers - UI elements')
 

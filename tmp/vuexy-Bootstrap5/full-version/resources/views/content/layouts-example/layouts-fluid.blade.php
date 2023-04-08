@@ -4,7 +4,7 @@ $container = 'container-fluid';
 $containerNav = 'container-fluid';
 @endphp
 
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Fluid - Layouts')
 

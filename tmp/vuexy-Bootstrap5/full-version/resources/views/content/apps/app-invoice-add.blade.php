@@ -1,4 +1,4 @@
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Add - Invoice')
 
@@ -31,7 +31,7 @@
         <div class="row m-sm-4 m-0">
           <div class="col-md-7 mb-md-0 mb-4 ps-0">
             <div class="d-flex svg-illustration mb-4 gap-2 align-items-center">
-              @include('_partials.macros',["height"=>20,"withbg"=>''])
+              @include('admin.partials.macros',["height"=>20,"withbg"=>''])
               <span class="app-brand-text fw-bold fs-4">
                 {{ config('variables.templateName') }}
               </span>
@@ -298,6 +298,6 @@
 </div>
 
 <!-- Offcanvas -->
-@include('_partials/_offcanvas/offcanvas-send-invoice')
+@include('admin/partials/_offcanvas/offcanvas-send-invoice')
 <!-- /Offcanvas -->
 @endsection
