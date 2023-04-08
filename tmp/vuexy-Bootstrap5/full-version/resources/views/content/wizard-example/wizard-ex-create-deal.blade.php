@@ -1,7 +1,7 @@
 @php
 $configData = Helper::appClasses();
 @endphp
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Create Deal - Wizard Examples')
 

@@ -1,4 +1,4 @@
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Preview - Invoice')
 
@@ -32,7 +32,7 @@
         <div class="d-flex justify-content-between flex-xl-row flex-md-column flex-sm-row flex-column m-sm-3 m-0">
           <div class="mb-xl-0 mb-4">
             <div class="d-flex svg-illustration mb-4 gap-2 align-items-center">
-              @include('_partials.macros',["height"=>20,"withbg"=>''])
+              @include('admin.partials.macros',["height"=>20,"withbg"=>''])
               <span class="app-brand-text fw-bold fs-4">
                 {{ config('variables.templateName') }}
               </span>
@@ -198,7 +198,7 @@
 </div>
 
 <!-- Offcanvas -->
-@include('_partials/_offcanvas/offcanvas-send-invoice')
-@include('_partials/_offcanvas/offcanvas-add-payment')
+@include('admin/partials/_offcanvas/offcanvas-send-invoice')
+@include('admin/partials/_offcanvas/offcanvas-add-payment')
 <!-- /Offcanvas -->
 @endsection

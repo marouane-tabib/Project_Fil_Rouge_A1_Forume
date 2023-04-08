@@ -4,7 +4,7 @@ $isMenu = false;
 $navbarHideToggle = false;
 @endphp
 
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Without menu - Layouts')
 

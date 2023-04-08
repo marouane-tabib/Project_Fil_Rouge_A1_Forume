@@ -3,7 +3,7 @@ $customizerHidden = 'customizer-hide';
 $configData = Helper::appClasses();
 @endphp
 
-@extends('layouts/layoutMaster')
+@extends('admin.layouts.layoutMaster')
 
 @section('title', 'Verify Email Cover - Pages')
 
@@ -31,7 +31,7 @@ $configData = Helper::appClasses();
       <div class="w-px-400 mx-auto">
         <div class="app-brand mb-4">
           <a href="{{url('/')}}" class="app-brand-link gap-2">
-            <span class="app-brand-logo demo">@include('_partials.macros',['height'=>20,'withbg' => "fill: #fff;"])</span>
+            <span class="app-brand-logo demo">@include('admin.partials.macros',['height'=>20,'withbg' => "fill: #fff;"])</span>
           </a>
         </div>
         <h3 class="mb-1 fw-bold">Verify your email ✉️</h3>
