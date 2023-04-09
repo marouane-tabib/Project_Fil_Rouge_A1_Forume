@@ -2,7 +2,7 @@
 $configData = Helper::appClasses();
 @endphp
 
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Roles - Apps')
 
@@ -238,6 +238,6 @@ $configData = Helper::appClasses();
 <!--/ Role cards -->
 
 <!-- Add Role Modal -->
-@include('admin/partials/_modals/modal-add-role')
+@include('_partials/_modals/modal-add-role')
 <!-- / Add Role Modal -->
 @endsection

@@ -1,10 +1,29 @@
 {
   "menu": [
     {
-      "url": "/",
-      "name": "Home",
+      "name": "Dashboards",
       "icon": "menu-icon tf-icons ti ti-smart-home",
-      "slug": "pages-home"
+      "slug": "dashboard",
+      "submenu": [
+        {
+          "url": "/",
+          "icon": "menu-icon tf-icons ti ti-chart-pie-2",
+          "name": "Analytics",
+          "slug": "dashboard-analytics"
+        },
+        {
+          "url": "/dashboard/crm",
+          "name": "CRM",
+          "icon": "menu-icon tf-icons ti ti-3d-cube-sphere",
+          "slug": "dashboard-crm"
+        },
+        {
+          "url": "/dashboard/ecommerce",
+          "name": "eCommerce",
+          "icon": "menu-icon tf-icons ti ti-atom-2",
+          "slug": "dashboard-ecommerce"
+        }
+      ]
     },
     {
       "url": "/product",

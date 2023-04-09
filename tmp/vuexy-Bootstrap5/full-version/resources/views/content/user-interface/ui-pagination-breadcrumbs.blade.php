@@ -1,4 +1,4 @@
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Pagination and breadcrumbs - UI elements')
 

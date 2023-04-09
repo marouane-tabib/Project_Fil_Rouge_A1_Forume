@@ -2,7 +2,7 @@
 $configData = Helper::appClasses();
 @endphp
 
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Account settings - Security')
 
@@ -103,7 +103,7 @@ $configData = Helper::appClasses();
       </div>
     </div>
     <!-- Modal -->
-    @include('admin/partials/_modals/modal-enable-otp')
+    @include('_partials/_modals/modal-enable-otp')
     <!-- /Modal -->
 
     <!--/ Two-steps verification -->

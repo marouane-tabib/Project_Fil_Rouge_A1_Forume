@@ -1,4 +1,4 @@
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Property Listing - Wizard Examples')
 

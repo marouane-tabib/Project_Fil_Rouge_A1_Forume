@@ -2,7 +2,7 @@
 $pricingModal = true;
 @endphp
 
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Account settings - Pages')
 
@@ -191,7 +191,7 @@ $pricingModal = true;
               </div>
             </div>
             <!-- Modal -->
-            @include('admin/partials/_modals/modal-edit-cc')
+            @include('_partials/_modals/modal-edit-cc')
             <!--/ Modal -->
           </div>
         </div>

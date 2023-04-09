@@ -4,7 +4,7 @@ $container = 'container-xxl';
 $containerNav = 'container-xxl';
 @endphp
 
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Container - Layouts')
 

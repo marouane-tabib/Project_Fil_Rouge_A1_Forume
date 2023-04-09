@@ -1,4 +1,4 @@
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Drag and Drop - Extended UI')
 

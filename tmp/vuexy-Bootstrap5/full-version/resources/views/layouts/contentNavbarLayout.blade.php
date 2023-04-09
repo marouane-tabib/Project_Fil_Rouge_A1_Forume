@@ -4,7 +4,7 @@
 @php
 $configData = Helper::appClasses();
 @endphp
-@extends('admin.layouts.commonMaster' )
+@extends('layouts/commonMaster' )
 
 @php
 /* Display elements */
@@ -34,7 +34,7 @@ $container = ($container ?? 'container-xxl');
   <div class="layout-container">
 
     @if ($isMenu)
-    @extends('admin/layouts/sections/menu/verticalMenu')
+    @include('layouts/sections/menu/verticalMenu')
     @endif
 
 
@@ -42,7 +42,7 @@ $container = ($container ?? 'container-xxl');
     <div class="layout-page">
       <!-- BEGIN: Navbar-->
       @if ($isNavbar)
-      @extends('admin/layouts/sections/navbar/navbar')
+      @include('layouts/sections/navbar/navbar')
       @endif
       <!-- END: Navbar-->
 
@@ -61,7 +61,7 @@ $container = ($container ?? 'container-xxl');
 
             <!-- pricingModal -->
             @if ($pricingModal)
-            @include('admin/partials/_modals/modal-pricing')
+            @include('_partials/_modals/modal-pricing')
             @endif
             <!--/ pricingModal -->
 
@@ -70,7 +70,7 @@ $container = ($container ?? 'container-xxl');
 
           <!-- Footer -->
           @if ($isFooter)
-          @extends('admin/layouts/sections/footer/footer')
+          @include('layouts/sections/footer/footer')
           @endif
           <!-- / Footer -->
           <div class="content-backdrop fade"></div>

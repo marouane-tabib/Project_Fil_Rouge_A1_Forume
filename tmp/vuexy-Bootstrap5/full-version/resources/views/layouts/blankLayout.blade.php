@@ -9,7 +9,7 @@ $customizerHidden = ($customizerHidden ?? '');
 
 @endphp
 
-@extends('admin.layouts.commonMaster' )
+@extends('layouts/commonMaster' )
 
 @section('layoutContent')
 

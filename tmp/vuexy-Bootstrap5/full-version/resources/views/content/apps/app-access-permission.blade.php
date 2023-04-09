@@ -1,4 +1,4 @@
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Permission - Apps')
 
@@ -50,7 +50,7 @@
 
 
 <!-- Modal -->
-@include('admin/partials/_modals/modal-add-permission')
-@include('admin/partials/_modals/modal-edit-permission')
+@include('_partials/_modals/modal-add-permission')
+@include('_partials/_modals/modal-edit-permission')
 <!-- /Modal -->
 @endsection

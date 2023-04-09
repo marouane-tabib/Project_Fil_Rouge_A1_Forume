@@ -3,7 +3,7 @@ $configData = Helper::appClasses();
 $isNavbar = false;
 @endphp
 
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Without navbar - Layouts')
 

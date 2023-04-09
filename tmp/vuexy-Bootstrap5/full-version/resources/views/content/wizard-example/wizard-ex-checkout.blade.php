@@ -1,4 +1,4 @@
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Checkout - Wizard Examples')
 
@@ -637,5 +637,5 @@
 <!--/ Checkout Wizard -->
 
 <!-- Add new address modal -->
-@include('admin/partials/_modals/modal-add-new-address')
+@include('_partials/_modals/modal-add-new-address')
 @endsection

@@ -42,8 +42,11 @@ $configData = Helper::appClasses();
         </a>
 
         {{-- submenu --}}
+      @php
+      dd($menu)
+  @endphp
         @isset($menu->submenu)
-          @extends('admin.layouts.sections.menu.submenu',['menu' => $menu->submenu])
+          @include('layouts.sections.menu.submenu',['menu' => $menu->submenu])
         @endisset
       </li>
       @endforeach

@@ -2,7 +2,7 @@
 $pricingModal = true;
 @endphp
 
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'Modals - UI elements')
 
@@ -156,12 +156,12 @@ $pricingModal = true;
 </div>
 
 <!-- All Modals -->
-@include('admin/partials/_modals/modal-add-new-cc')
-@include('admin/partials/_modals/modal-add-new-address')
-@include('admin/partials/_modals/modal-refer-earn')
-@include('admin/partials/_modals/modal-edit-user')
-@include('admin/partials/_modals/modal-enable-otp')
-@include('admin/partials/_modals/modal-share-project')
-@include('admin/partials/_modals/modal-create-app')
-@include('admin/partials/_modals/modal-two-factor-auth')
+@include('_partials/_modals/modal-add-new-cc')
+@include('_partials/_modals/modal-add-new-address')
+@include('_partials/_modals/modal-refer-earn')
+@include('_partials/_modals/modal-edit-user')
+@include('_partials/_modals/modal-enable-otp')
+@include('_partials/_modals/modal-share-project')
+@include('_partials/_modals/modal-create-app')
+@include('_partials/_modals/modal-two-factor-auth')
 @endsection

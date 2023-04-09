@@ -1,4 +1,4 @@
-@extends('admin.layouts.layoutMaster')
+@extends('layouts/layoutMaster')
 
 @section('title', 'User View - Pages')
 
@@ -264,9 +264,9 @@
 </div>
 
 <!-- Modals -->
-@include('admin/partials/_modals/modal-edit-user')
-@include('admin/partials/_modals/modal-enable-otp')
-@include('admin/partials/_modals/modal-upgrade-plan')
+@include('_partials/_modals/modal-edit-user')
+@include('_partials/_modals/modal-enable-otp')
+@include('_partials/_modals/modal-upgrade-plan')
 <!-- /Modals -->
 
 @endsection
