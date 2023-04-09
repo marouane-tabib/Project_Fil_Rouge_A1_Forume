@@ -38,9 +38,13 @@
             <a href="{{ URL::previous() }}">
             <span class="align-middle"> Back</span></a>
           </button>
-          <button class="btn btn-primary">
-            Place Order
-          </button>
+          <form action="{{ route('product.update', $product->id)}}" method="post">
+            @csrf
+            @method('PUT')
+            <button class="btn btn-primary" type="submit">
+              Update
+            </button>
+          </form>
         </div>
       </div>
       <div class="card-body">
