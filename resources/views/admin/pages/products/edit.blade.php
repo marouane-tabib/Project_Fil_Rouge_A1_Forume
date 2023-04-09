@@ -33,19 +33,19 @@
     <div class="card">
       <div class="card-header sticky-element bg-label-secondary d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
         <h5 class="card-title mb-sm-0 me-2">{{ $product->title }}</h5>
-        <div class="action-btns">
-          <button class="btn btn-label-primary me-3">
-            <a href="{{ URL::previous() }}">
-            <span class="align-middle"> Back</span></a>
-          </button>
-          <form action="{{ route('product.update', $product->id)}}" method="post">
-            @csrf
-            @method('PUT')
-            <button class="btn btn-primary" type="submit">
-              Update
+        <form action="{{ route('product.update', $product->id)}}" method="post">
+          @csrf
+          @method('PUT')
+          <div class="action-btns">
+            <button class="btn btn-label-primary me-3">
+              <a href="{{ URL::previous() }}">
+              <span class="align-middle"> Back</span></a>
             </button>
-          </form>
-        </div>
+              <button class="btn btn-primary" type="submit">
+                Update
+              </button>
+          </div>
+        </form>
       </div>
       <div class="card-body">
         <div class="row">
