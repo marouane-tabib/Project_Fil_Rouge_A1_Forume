@@ -65,7 +65,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.products.edit', ["product" => $this->productService->find($id)]);
     }
 
     /**
