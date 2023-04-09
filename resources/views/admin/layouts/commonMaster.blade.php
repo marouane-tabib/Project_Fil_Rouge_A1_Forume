@@ -18,23 +18,23 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
 
-  
+
 
   <!-- Include Styles -->
-  @include('layouts/sections/styles')
+  @include('admin/layouts/sections/styles')
 
   <!-- Include Scripts for customizer, helper, analytics, config -->
-  @include('layouts/sections/scriptsIncludes')
+  @include('admin/layouts/sections/scriptsIncludes')
 </head>
 
 <body>
-  
+
 
   <!-- Layout Content -->
   @yield('layoutContent')
   <!--/ Layout Content -->
 
-  
+
 
   <!-- Include Scripts -->
   @include('layouts/sections/scripts')

@@ -9,7 +9,7 @@ $configData = Helper::appClasses();
   <div class="app-brand demo">
     <a href="{{url('/')}}" class="app-brand-link">
       <span class="app-brand-logo demo">
-        @include('_partials.macros',["height"=>20])
+        @include('admin/partials.macros',["height"=>20])
       </span>
       <span class="app-brand-text demo menu-text fw-bold">{{config('variables.templateName')}}</span>
     </a>
@@ -77,7 +77,7 @@ $configData = Helper::appClasses();
 
       {{-- submenu --}}
       @isset($menu->submenu)
-      @include('layouts.sections.menu.submenu',['menu' => $menu->submenu])
+      @include('admin.layouts.sections.menu.submenu',['menu' => $menu->submenu])
       @endisset
     </li>
     @endif
