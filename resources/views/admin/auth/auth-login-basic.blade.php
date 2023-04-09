@@ -2,7 +2,7 @@
 $customizerHidden = 'customizer-hide';
 @endphp
 
-@extends('layouts/layoutMaster')
+@extends('admin/layouts/layoutMaster')
 
 @section('title', 'Login Basic - Pages')
 
