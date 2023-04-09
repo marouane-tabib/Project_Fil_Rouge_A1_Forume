@@ -21,10 +21,10 @@
 
 
   <!-- Include Styles -->
-  @extends('admin/layouts/sections/styles')
+  @include('admin/layouts/sections/styles')
 
   <!-- Include Scripts for customizer, helper, analytics, config -->
-  @extends('admin/layouts/sections/scriptsIncludes')
+  @include('admin/layouts/sections/scriptsIncludes')
 </head>
 
 <body>
@@ -37,7 +37,7 @@
 
 
   <!-- Include Scripts -->
-  @extends('admin/layouts/sections/scripts')
+  @include('admin/layouts/sections/scripts')
 
 </body>
 
