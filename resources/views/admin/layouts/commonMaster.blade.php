@@ -37,7 +37,7 @@
 
 
   <!-- Include Scripts -->
-  @include('layouts/sections/scripts')
+  @include('admin/layouts/sections/scripts')
 
 </body>
 
