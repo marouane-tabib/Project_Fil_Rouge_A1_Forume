@@ -46,9 +46,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-      $data = $request->all();
-      $data['image'] = $this->uploadImage($request['image'], "products");
-      $this->productService->create($data);
+      $this->productService->create($request->all());
       return redirect()->route('product.index');
     }
 
