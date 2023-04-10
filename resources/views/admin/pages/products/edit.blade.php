@@ -30,25 +30,25 @@
   <div class="col-xl">
     <div class="card mb-4">
       <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0">Basic Layout</h5> <small class="text-muted float-end">Default label</small>
+        <h5 class="mb-0">Edit {{ $product->title }}</h5>
       </div>
       <div class="card-body">
         <form>
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
-            <input type="text" class="form-control" id="title" placeholder="Add your product title" />
+            <input type="text" class="form-control" id="title" value="{{ $product->title }}" placeholder="Add your product title" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="price">Price</label>
-            <input type="number" class="form-control" id="price" placeholder="Add your product price" />
+            <input type="number" class="form-control" id="price" value="{{ $product->price }}" placeholder="Add your product price" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="quantity">Quantity</label>
-            <input type="number" class="form-control" id="quantity" placeholder="Add your product quantity" />
+            <input type="number" class="form-control" id="quantity" value="{{ $product->quantity }}" placeholder="Add your product quantity" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="sku">SKU</label>
-            <input type="number" class="form-control" id="sku" placeholder="Add your product sku" />
+            <input type="number" class="form-control" id="sku" value="{{ $product->SKU }}" placeholder="Add your product sku" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="categories">Categories</label>
