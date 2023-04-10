@@ -43,7 +43,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->productService->create($request->all());
+      return redirect()->route('product.index');
     }
 
     /**
