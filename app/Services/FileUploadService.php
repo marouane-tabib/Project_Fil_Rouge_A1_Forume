@@ -21,9 +21,9 @@ class FileUploadService
 
   public function deleteFile($path)
   {
-    if (Storage::exists($path)) {
-        // Delete the file using Laravel's Storage facade
-        return Storage::delete($path);
+    if (Storage::disk('public')->exists($path)) {
+        // Delete the file using the Storage facade
+        return Storage::disk('public')->delete($path);
     }
     return false;
   }
