@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\ProductService;
+use App\Traits\ImageUploaderTrait;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    use ImageUploaderTrait;
+
     protected ProductService $productService;
 
     public function __construct(ProductService $productService)
@@ -43,7 +46,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-      $this->productService->create($request->all());
+      $data = $request->all();
+      $data['image'] = $this->uploadImage($request['image'], "products");
+      $this->productService->create($data);
       return redirect()->route('product.index');
     }
 
