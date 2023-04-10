@@ -8,7 +8,7 @@ class FileUploadService
     // Generate file name
     $filename = date('YmdHi').$file->getClientOriginalName();
     // Create the storage derictory link
-    $storagePath = public_path($baseDerictory.$childDerictory.'/'.date('m-Y'));
+    $storagePath = public_path($baseDerictory.$childDerictory.date('m-Y'));
     // Generate the storage derictory child link to this file
     $storagePathChild = date('m-Y').'/'.$filename;
     // Move to store the file
