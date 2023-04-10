@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use Illuminate\Support\Facades\Storage;
+
 class FileUploadService
 {
   public function uploadFile($file, $baseDerictory, $childDerictory){
@@ -17,10 +19,15 @@ class FileUploadService
     return $storagePathChild;
   }
 
-  public function deleteFile(){
-    //
+  public function deleteFile($path)
+  {
+      if (Storage::exists($path)) {
+          // Delete the file using Laravel's Storage facade
+          return Storage::delete($path);
+      }
+      return false;
   }
-
+  
   public function updateFile(){
     //
   }
