@@ -29,7 +29,7 @@
           <td>{{ $product->category->name }}</td>
           <td>{{ $product->price }}</td>
           <td>{{ $product->quantity }}</td>
-          <td>{{ $product->SKU }}</td>
+          <td>{{ $product->sku }}</td>
           <td>{{ $product->primaryColor->name }}</td>
           <td>{{ $product->secondaryColor->name }}</td>
           <td>{{ $product->homeStyle->name }}</td>
