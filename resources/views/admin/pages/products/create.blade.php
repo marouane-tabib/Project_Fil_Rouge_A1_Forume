@@ -38,18 +38,18 @@
         <form method="POST" action="{{ route('product.store') }}">
           @csrf
           <!-- Image  -->
-              <h5 class="card-header">Image</h5>
-              <div class="card-body">
-                <div action="/upload" class="dropzone needsclick" id="dropzone-basic">
-                  <div class="dz-message needsclick">
-                    Drop files here or click to upload
-                    {{-- <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span> --}}
-                  </div>
-                  <div class="fallback">
-                    <input name="file" type="file" />
-                  </div>
+            <h5 class="card-header">Image</h5>
+            <div class="card-body">
+              <div action="/upload" class="dropzone needsclick" id="dropzone-basic">
+                <div class="dz-message needsclick">
+                  Drop files here or click to upload
+                  {{-- <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span> --}}
+                </div>
+                <div class="fallback">
+                  <input name="file" type="file" />
                 </div>
               </div>
+            </div>
 
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
