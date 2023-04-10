@@ -35,22 +35,12 @@
         <h5 class="mb-0">Create Product</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.store') }}">
+        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
           @csrf
-          <!-- Image  -->
-            <h5 class="card-header">Image</h5>
-            <div class="card-body">
-              <div action="/upload" class="dropzone needsclick" id="dropzone-basic">
-                <div class="dz-message needsclick">
-                  Drop files here or click to upload
-                  {{-- <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span> --}}
-                </div>
-                <div class="fallback">
-                  <input name="file" type="file" />
-                </div>
-              </div>
-            </div>
-
+          <div class="mb-3">
+            <label class="form-label" for="image">Image</label>
+            <input type="file" class="form-control" id="image" name="image" placeholder="Add your product image" />
+          </div>
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Add your product title" />
@@ -68,52 +58,55 @@
             <input type="number" class="form-control" id="sku" name="sku" placeholder="Add your product sku" />
           </div>
           <div class="mb-3">
+            <label class="form-label" for="width">Width</label>
+            <input type="number" class="form-control" id="width" name="width" placeholder="Add your product width" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="length">Length</label>
+            <input type="number" class="form-control" id="length" name="length" placeholder="Add your product length" />
+          </div>
+          <div class="mb-3">
             <label class="form-label" for="categories">Categories</label>
             <select id="categories" class="select2 form-select" name="category_id" data-allow-clear="true">
               <option value="">Select</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
+              <option value="1">Alabama</option>
+              <option value="2">Alaska</option>
+              <option value="3">Wyoming</option>
             </select>
           </div>
           <div class="mb-3">
             <label class="form-label" for="primary-color">Primary Color</label>
             <select id="primary-color" class="select2 form-select" name="primary_color_id" data-allow-clear="true">
               <option value="">Select</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
+              <option value="1">Alabama</option>
+              <option value="2">Wisconsin</option>
+              <option value="3">Wyoming</option>
             </select>
           </div>
           <div class="mb-3">
             <label class="form-label" for="secondary-color">Secondary Color</label>
             <select id="secondary-color" class="select2 form-select" name="secondary_color_id" data-allow-clear="true">
               <option value="">Select</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
+              <option value="1">Alabama</option>
+              <option value="2">Alaska</option>
+              <option value="3">Arizona</option>
+              <option value="4">Wyoming</option>
             </select>
           </div>
           <div class="mb-3">
             <label class="form-label" for="home-style">Home Style</label>
             <select id="home-style" class="select2 form-select" name="home_style_id" data-allow-clear="true">
               <option value="">Select</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
+              <option value="1">Alabama</option>
+              <option value="2">Alaska</option>
+              <option value="3">Wisconsin</option>
+              <option value="4">Wyoming</option>
             </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Description</label>
+            {{-- <input type="number" class="form-control" id="description" name="description" placeholder="Add your product description" /> --}}
+            <textarea name="description" id="description" class="form-control" cols="30" rows="6" placeholder="Add your product description..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Create</button>
         </form>
