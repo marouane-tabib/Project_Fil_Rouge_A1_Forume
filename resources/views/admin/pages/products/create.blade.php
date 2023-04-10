@@ -4,7 +4,7 @@
 
 @extends('admin/layouts/layoutMaster')
 
-@section('title', 'Products Edit'. $product->name)
+@section('title', 'Product Create')
 
 @section('vendor-style')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
