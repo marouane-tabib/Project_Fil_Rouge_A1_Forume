@@ -19,11 +19,11 @@ class FileUploadService
     return $storagePathChild;
   }
 
-  public function deleteFile($path)
+  public function deleteFile($derictory)
   {
-    if (Storage::disk('public')->exists($path)) {
+    if (Storage::disk('public')->exists($derictory)) {
         // Delete the file using the Storage facade
-        return Storage::disk('public')->delete($path);
+        return Storage::disk('public')->delete($derictory);
     }
     return false;
   }
