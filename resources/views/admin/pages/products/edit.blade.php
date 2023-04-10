@@ -51,7 +51,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="sku">SKU</label>
-            <input type="number" class="form-control" id="sku" value="{{ $product->SKU }}" name="sku" placeholder="Add your product sku" />
+            <input type="number" class="form-control" id="sku" value="{{ $product->sku }}" name="sku" placeholder="Add your product sku" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="categories">Categories</label>

@@ -29,7 +29,7 @@ return new class extends Migration
             $table->text('description', 5000);
             $table->float('price', 11, 2);
             $table->unsignedBigInteger('quantity');
-            $table->unsignedBigInteger('SKU');
+            $table->unsignedBigInteger('sku');
             $table->timestamps();
         });
     }
