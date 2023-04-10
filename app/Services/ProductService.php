@@ -7,10 +7,12 @@ use App\Interfaces\ProductRepositoryInterface;
 class ProductService
 {
   protected ProductRepositoryInterface $productRepository;
+  protected FileUploadService $fileUpload;
 
-  public function __construct(ProductRepositoryInterface $productRepository)
+  public function __construct(ProductRepositoryInterface $productRepository, FileUploadService $fileUpload)
   {
     $this->productRepository = $productRepository;
+    $this->fileUpload = $fileUpload;
   }
 
   public function all()
@@ -25,6 +27,7 @@ class ProductService
 
   public function create(array $data)
   {
+    $data['image'] = $this->fileUpload->uploadFile($data['image'], 'storage/image/', 'product/');
     return $this->productRepository->create($data);
   }
 
