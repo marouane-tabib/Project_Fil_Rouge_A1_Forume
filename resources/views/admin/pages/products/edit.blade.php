@@ -25,7 +25,6 @@
 
 @section('content')
 
-<!-- Basic Layout -->
 <div class="row">
   <div class="col-xl">
     <div class="card mb-4">
@@ -36,7 +35,6 @@
         <form method="POST" action="{{ route('product.update', $product->id)}}">
           @csrf
           @method('PUT')
-          <input type="text" name="test" id="" value="test">
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input type="text" class="form-control" id="title" value="{{ $product->title }}" name="title" placeholder="Add your product title" />
