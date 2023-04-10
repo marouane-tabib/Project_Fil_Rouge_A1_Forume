@@ -35,10 +35,23 @@
       <div class="card-body">
         <form>
           <div class="mb-3">
-            <label class="form-label" for="basic-default-fullname">Full Name</label>
-            <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
+            <label class="form-label" for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Add your product title" />
           </div>
           <div class="mb-3">
+            <label class="form-label" for="price">Price</label>
+            <input type="number" class="form-control" id="price" placeholder="Add your product price" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Add your product quantity" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="sku">SKU</label>
+            <input type="number" class="form-control" id="sku" placeholder="Add your product sku" />
+          </div>
+
+          {{-- <div class="mb-3">
             <label class="form-label" for="basic-default-company">Company</label>
             <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc." />
           </div>
@@ -57,7 +70,7 @@
           <div class="mb-3">
             <label class="form-label" for="basic-default-message">Message</label>
             <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"></textarea>
-          </div>
+          </div> --}}
           <button type="submit" class="btn btn-primary">Send</button>
         </form>
       </div>
