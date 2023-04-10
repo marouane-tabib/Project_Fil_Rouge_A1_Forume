@@ -50,7 +50,55 @@
             <label class="form-label" for="sku">SKU</label>
             <input type="number" class="form-control" id="sku" placeholder="Add your product sku" />
           </div>
-          <button type="submit" class="btn btn-primary">Send</button>
+          <div class="mb-3">
+            <label class="form-label" for="categories">Categories</label>
+            <select id="categories" class="select2 form-select" data-allow-clear="true">
+              <option value="">Select</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="primary-color">Primary Color</label>
+            <select id="primary-color" class="select2 form-select" data-allow-clear="true">
+              <option value="">Select</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="secondary-color">Secondary Color</label>
+            <select id="secondary-color" class="select2 form-select" data-allow-clear="true">
+              <option value="">Select</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="home-style">Home Style</label>
+            <select id="home-style" class="select2 form-select" data-allow-clear="true">
+              <option value="">Select</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
         </form>
       </div>
     </div>
