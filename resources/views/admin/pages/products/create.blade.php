@@ -32,9 +32,8 @@
         <h5 class="mb-0">Create Product</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.create') }}">
+        <form method="POST" action="{{ route('product.store') }}">
           @csrf
-          @method('PUT')
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Add your product title" />
