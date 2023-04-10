@@ -32,7 +32,7 @@
         <h5 class="mb-0">Create Product</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.create')}}">
+        <form method="POST" action="{{ route('product.create') }}">
           @csrf
           @method('PUT')
           <div class="mb-3">
