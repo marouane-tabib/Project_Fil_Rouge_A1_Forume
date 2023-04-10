@@ -28,7 +28,9 @@ class FileUploadService
     return false;
   }
 
-  public function updateFile(){
-    //
+  public function updateFile($oldFilePath, $file, $baseDerictory, $childDerictory){
+    $deleteFile = $this->deleteFile($oldFilePath);
+    $uploadFile = $this->uploadFile($file, $baseDerictory, $childDerictory);
+    return $uploadFile;
   }
 }
