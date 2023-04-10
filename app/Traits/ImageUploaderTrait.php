@@ -8,8 +8,8 @@ trait ImageUploaderTrait
     {
         if ($file) {
             $filename= date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('storage/Image/'.$parent.'/'.date('Y-m-d')), $filename);
-            return $filename;
+            $file->move(public_path('storage/Image/'.$parent.'/'.date('m-Y')), $filename);
+            return date('m-Y').'/'.$filename;
         }
     }
 }
