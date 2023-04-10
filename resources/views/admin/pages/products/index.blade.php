@@ -7,6 +7,13 @@
 @section('title', 'Products')
 
 @section('content')
+<div class="d-flex justify-content-end">
+  <a href="{{ route('product.create') }}">
+    <button type="button" class="btn btn-primary">
+      Add Product
+    </button>
+  </a>
+</div><br>
 <div class="table-responsive">
   <table class="table">
     <thead>
