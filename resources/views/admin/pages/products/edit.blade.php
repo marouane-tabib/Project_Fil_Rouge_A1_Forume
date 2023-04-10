@@ -33,7 +33,9 @@
         <h5 class="mb-0">Edit {{ $product->title }}</h5>
       </div>
       <div class="card-body">
-        <form>
+        <form method="POST" action="{{ route('product.update', $product->id)}}">
+          @csrf
+          @method('PUT')
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input type="text" class="form-control" id="title" value="{{ $product->title }}" placeholder="Add your product title" />
