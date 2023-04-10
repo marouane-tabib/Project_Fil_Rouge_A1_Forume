@@ -52,7 +52,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="categories">Categories</label>
-            <select id="categories" class="select2 form-select" name="categories" data-allow-clear="true">
+            <select id="categories" class="select2 form-select" name="category_id" data-allow-clear="true">
               <option value="">Select</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -64,7 +64,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="primary-color">Primary Color</label>
-            <select id="primary-color" class="select2 form-select" name="primary_color" data-allow-clear="true">
+            <select id="primary-color" class="select2 form-select" name="primary_color_id" data-allow-clear="true">
               <option value="">Select</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -76,7 +76,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="secondary-color">Secondary Color</label>
-            <select id="secondary-color" class="select2 form-select" name="secondary_color" data-allow-clear="true">
+            <select id="secondary-color" class="select2 form-select" name="secondary_color_id" data-allow-clear="true">
               <option value="">Select</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -88,7 +88,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="home-style">Home Style</label>
-            <select id="home-style" class="select2 form-select" name="home_style" data-allow-clear="true">
+            <select id="home-style" class="select2 form-select" name="home_style_id" data-allow-clear="true">
               <option value="">Select</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
