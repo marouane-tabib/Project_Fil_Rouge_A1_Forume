@@ -38,8 +38,6 @@
         <form method="POST" action="{{ route('product.store') }}">
           @csrf
           <!-- Image  -->
-          <div class="col-12">
-            <div class="card mb-4">
               <h5 class="card-header">Image</h5>
               <div class="card-body">
                 <div action="/upload" class="dropzone needsclick" id="dropzone-basic">
@@ -52,8 +50,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
