@@ -9,6 +9,7 @@
 @section('vendor-style')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/dropzone/dropzone.css')}}" />
 @endsection
 
 @section('vendor-script')
@@ -17,10 +18,12 @@
 <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
 <script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
 <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/dropzone/dropzone.js')}}"></script>
 @endsection
 
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
+<script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
 @endsection
 
 @section('content')
@@ -34,6 +37,24 @@
       <div class="card-body">
         <form method="POST" action="{{ route('product.store') }}">
           @csrf
+          <!-- Image  -->
+          <div class="col-12">
+            <div class="card mb-4">
+              <h5 class="card-header">Image</h5>
+              <div class="card-body">
+                <div action="/upload" class="dropzone needsclick" id="dropzone-basic">
+                  <div class="dz-message needsclick">
+                    Drop files here or click to upload
+                    {{-- <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span> --}}
+                  </div>
+                  <div class="fallback">
+                    <input name="file" type="file" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Add your product title" />
