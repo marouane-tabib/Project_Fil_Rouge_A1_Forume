@@ -4,7 +4,7 @@
 
 @extends('admin/layouts/layoutMaster')
 
-@section('title', 'Products Edit'. $product->name)
+@section('title', 'Products Edit')
 
 @section('vendor-style')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
@@ -32,13 +32,13 @@
         <h5 class="mb-0">Edit {{ $product->title }}</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.update', $product->id)}}">
+        <form method="POST" action="{{ route('product.update', $product->id)}}" enctype="multipart/form-data">
           @csrf
           @method('PUT')
-          {{-- <div class="mb-3">
+          <div class="mb-3">
             <label class="form-label" for="image">Image</label>
             <input type="file" class="form-control" id="image" name="image" placeholder="Add your product image" />
-          </div> --}}
+          </div>
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input type="text" class="form-control" id="title" name="title" value="{{ $product->title }}" placeholder="Add your product title" />
