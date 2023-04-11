@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
             greaterThan: {
               message: 'The value of product length must be greater than or equal to 0',
-              min: 0,
+              min: 1,
             },
           }
         },
