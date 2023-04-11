@@ -152,6 +152,23 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
+        length: {
+          validators: {
+            integer: {
+              message: 'The product length value is not an integer',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+            notEmpty: {
+              message: 'Please enter your product length'
+            },
+            greaterThan: {
+              message: 'The value of product length must be greater than or equal to 0',
+              min: 0,
+            },
+          }
+        },
         formValidationFile: {
           validators: {
             notEmpty: {
