@@ -169,17 +169,24 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
-        formValidationFile: {
+        category_id: {
           validators: {
             notEmpty: {
-              message: 'Please select the file'
-            }
+              message: 'Please enter your product category'
+            },
           }
         },
         formValidationSelect2: {
           validators: {
             notEmpty: {
               message: 'Please select your country'
+            }
+          }
+        },
+        formValidationFile: {
+          validators: {
+            notEmpty: {
+              message: 'Please select the file'
             }
           }
         },
