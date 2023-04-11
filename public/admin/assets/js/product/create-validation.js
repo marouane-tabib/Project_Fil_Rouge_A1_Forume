@@ -190,6 +190,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
+        home_style_id: {
+          validators: {
+            notEmpty: {
+              message: 'Please enter your product home style'
+            },
+          }
+        },
         formValidationSelect2: {
           validators: {
             notEmpty: {
