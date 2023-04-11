@@ -132,8 +132,12 @@
 
 <form id="formValidationExamples" class="row g-3">
   <div class="col-md-6">
-    <label class="form-label" for="formValidationName">Full Name</label>
-    <input type="text" id="formValidationName" class="form-control" placeholder="John Doe" name="formValidationName" />
+    <label class="form-label" for="title">Full Name</label>
+    <input type="text" id="title" class="form-control" placeholder="John Doe" name="title" />
+  </div>
+  <div class="col-md-6">
+    <label class="form-label" for="price">Full Name</label>
+    <input type="text" id="price" class="form-control" placeholder="John Doe" name="price" />
   </div>
 
   <div class="col-md-6">

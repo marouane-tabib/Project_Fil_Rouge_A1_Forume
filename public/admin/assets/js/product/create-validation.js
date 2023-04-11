@@ -84,6 +84,23 @@ document.addEventListener('DOMContentLoaded', function (e) {
             }
           }
         },
+        price: {
+          validators: {
+            integer: {
+              message: 'The value is not an integer',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+            notEmpty: {
+              message: 'Please enter your product price'
+            },
+            greaterThan: {
+              message: 'The value must be greater than or equal to 18',
+              min: 50,
+            },
+          }
+        },
         formValidationFile: {
           validators: {
             notEmpty: {
