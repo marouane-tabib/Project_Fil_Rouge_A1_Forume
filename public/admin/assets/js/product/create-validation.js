@@ -183,6 +183,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
+        secondary_color_id: {
+          validators: {
+            notEmpty: {
+              message: 'Please enter your product secondary color'
+            },
+          }
+        },
         formValidationSelect2: {
           validators: {
             notEmpty: {
