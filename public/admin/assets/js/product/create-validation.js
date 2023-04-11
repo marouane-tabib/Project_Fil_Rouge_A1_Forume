@@ -176,6 +176,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
+        primary_color_id: {
+          validators: {
+            notEmpty: {
+              message: 'Please enter your product primary color'
+            },
+          }
+        },
         formValidationSelect2: {
           validators: {
             notEmpty: {
