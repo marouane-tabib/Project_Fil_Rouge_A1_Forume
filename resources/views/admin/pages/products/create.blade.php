@@ -137,22 +137,22 @@
 
   <!-- Account Details -->
 
-  <div class="col-12">
+  {{-- <div class="col-12">
     <h5 class="fw-semibold">1. Account Details</h5>
     <hr class="mt-0" />
-  </div>
+  </div> --}}
 
 
   <div class="col-md-6">
     <label class="form-label" for="formValidationName">Full Name</label>
     <input type="text" id="formValidationName" class="form-control" placeholder="John Doe" name="formValidationName" />
   </div>
-  <div class="col-md-6">
+  {{-- <div class="col-md-6">
     <label class="form-label" for="formValidationEmail">Email</label>
     <input class="form-control" type="email" id="formValidationEmail" name="formValidationEmail" placeholder="john.doe" />
-  </div>
+  </div> --}}
 
-  <div class="col-md-6">
+  {{-- <div class="col-md-6">
     <div class="form-password-toggle">
       <label class="form-label" for="formValidationPass">Password</label>
       <div class="input-group input-group-merge">
@@ -169,78 +169,42 @@
         <span class="input-group-text cursor-pointer" id="multicol-confirm-password2"><i class="ti ti-eye-off"></i></span>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
   <!-- Personal Info -->
 
-  <div class="col-12">
+  {{-- <div class="col-12">
     <h5 class="mt-2 fw-semibold">2. Personal Info</h5>
     <hr class="mt-0" />
-  </div>
+  </div> --}}
 
   <div class="col-md-6">
     <label for="formValidationFile" class="form-label">Profile Pic</label>
     <input class="form-control" type="file" id="formValidationFile" name="formValidationFile" placeholder="Choose profile pic">
   </div>
-  <div class="col-md-6">
+  {{-- <div class="col-md-6">
     <label class="form-label" for="formValidationDob">DOB</label>
     <input type="text" class="form-control flatpickr-validation" name="formValidationDob" id="formValidationDob" required />
-  </div>
+  </div> --}}
 
   <div class="col-md-6">
     <label class="form-label" for="formValidationSelect2">Country</label>
     <select id="formValidationSelect2" name="formValidationSelect2" class="form-select select2" data-allow-clear="true">
       <option value="">Select</option>
-      <option value="Australia">Australia</option>
-      <option value="Bangladesh">Bangladesh</option>
-      <option value="Belarus">Belarus</option>
       <option value="Brazil">Brazil</option>
-      <option value="Canada">Canada</option>
-      <option value="China">China</option>
-      <option value="France">France</option>
-      <option value="Germany">Germany</option>
-      <option value="India">India</option>
-      <option value="Indonesia">Indonesia</option>
-      <option value="Israel">Israel</option>
-      <option value="Italy">Italy</option>
-      <option value="Japan">Japan</option>
-      <option value="Korea">Korea, Republic of</option>
-      <option value="Mexico">Mexico</option>
-      <option value="Philippines">Philippines</option>
-      <option value="Russia">Russian Federation</option>
-      <option value="South Africa">South Africa</option>
-      <option value="Thailand">Thailand</option>
-      <option value="Turkey">Turkey</option>
-      <option value="Ukraine">Ukraine</option>
       <option value="United Arab Emirates">United Arab Emirates</option>
       <option value="United Kingdom">United Kingdom</option>
       <option value="United States">United States</option>
     </select>
   </div>
-  <div class="col-md-6">
-    <label class="form-label" for="formValidationLang">Languages</label>
-    <input type="text" value="" class="form-control" name="formValidationLang" id="formValidationLang" />
-  </div>
 
-  <div class="col-md-6">
-    <label class="form-label" for="formValidationTech">Tech</label>
-    <input class="form-control typeahead" type="text" id="formValidationTech" name="formValidationTech" autocomplete="off" />
-  </div>
-  <div class="col-md-6">
-    <label class="form-label" for="formValidationHobbies">Hobbies</label>
-    <select class="selectpicker hobbies-select w-100" id="formValidationHobbies" data-style="btn-default" data-icon-base="ti" data-tick-icon="ti-check text-white" name="formValidationHobbies" multiple>
-      <option>Sports</option>
-      <option>Movies</option>
-      <option>Books</option>
-    </select>
-  </div>
 
   <div class="col-md-6">
     <label class="form-label" for="formValidationBio">Bio</label>
     <textarea class="form-control" id="formValidationBio" name="formValidationBio" rows="3"></textarea>
   </div>
-  <div class="col-md-6">
+  {{-- <div class="col-md-6">
     <label class="form-label">Gender</label>
     <div class="form-check custom mb-2">
       <input type="radio" id="formValidationGender" name="formValidationGender" class="form-check-input" />
@@ -251,7 +215,7 @@
       <input type="radio" id="formValidationGender2" name="formValidationGender" class="form-check-input" />
       <label class="form-check-label" for="formValidationGender2">Female</label>
     </div>
-  </div>
+  </div> --}}
 
 
   <!-- Choose Your Plan -->
@@ -260,7 +224,7 @@
     <h5 class="mt-2 fw-semibold">3. Choose Your Plan</h5>
     <hr class="mt-0" />
   </div>
-  <div class="row">
+  {{-- <div class="row">
     <div class="col-xl-3 col-md-5 col-sm-6 col-12">
       <div class="form-check custom-option custom-option-icon">
         <label class="form-check-label custom-option-content" for="basicPlanMain1">
@@ -297,9 +261,9 @@
         </label>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <div class="col-12">
+  {{-- <div class="col-12">
     <label class="switch switch-primary">
       <input type="checkbox" class="switch-input" name="formValidationSwitch" />
       <span class="switch-toggle-slider">
@@ -308,13 +272,13 @@
       </span>
       <span class="switch-label">Send me related emails</span>
     </label>
-  </div>
-  <div class="col-12">
+  </div> --}}
+  {{-- <div class="col-12">
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="formValidationCheckbox" name="formValidationCheckbox" />
       <label class="form-check-label" for="formValidationCheckbox">Agree to our terms and conditions</label>
     </div>
-  </div>
+  </div> --}}
   <div class="col-12">
     <button type="submit" name="submitButton" class="btn btn-primary">Submit</button>
   </div>
