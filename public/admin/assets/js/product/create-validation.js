@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
-        lengthValue: {
+        length_value: {
           validators: {
             integer: {
               message: 'The product length value is not an integer',
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               case 'quantity':
               case 'sku':
               case 'width':
-              case 'lengthValue':
+              case 'length_value':
               case 'category_id':
               case 'primary_color_id':
               case 'secondary_color_id':

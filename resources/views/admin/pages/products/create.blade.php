@@ -77,8 +77,8 @@
             <input type="number" class="form-control" id="width" name="width" placeholder="Add your product width" />
           </div>
           <div class="col-12 mb-3">
-            <label class="form-label" for="lengthValue">Length</label>
-            <input type="number" class="form-control" id="lengthValue" name="lengthValue" placeholder="Add your product length" />
+            <label class="form-label" for="length_value">Length</label>
+            <input type="number" class="form-control" id="length_value" name="length_value" placeholder="Add your product length" />
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="categories">Categories</label>
