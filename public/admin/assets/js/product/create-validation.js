@@ -166,23 +166,23 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
-        // length: {
-        //   validators: {
-        //     integer: {
-        //       message: 'The product length value is not an integer',
-        //       // The default separators
-        //       thousandsSeparator: '',
-        //       decimalSeparator: '.',
-        //     },
-        //     notEmpty: {
-        //       message: 'Please enter your product length'
-        //     },
-        //     greaterThan: {
-        //       message: 'The value of product length must be greater than or equal to 0',
-        //       min: 0,
-        //     },
-        //   }
-        // },
+        lengthValue: {
+          validators: {
+            integer: {
+              message: 'The product length value is not an integer',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+            notEmpty: {
+              message: 'Please enter your product length'
+            },
+            greaterThan: {
+              message: 'The value of product length must be greater than or equal to 0',
+              min: 0,
+            },
+          }
+        },
         category_id: {
           validators: {
             notEmpty: {
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               case 'quantity':
               case 'sku':
               case 'width':
-              // case 'length':
+              case 'lengthValue':
               case 'category_id':
               case 'primary_color_id':
               case 'secondary_color_id':
