@@ -50,7 +50,7 @@
         <h5 class="mb-0">Create Product</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data"  id="formValidationExamples">
           @csrf
           <div class="mb-3">
             <label class="form-label" for="image">Image</label>
@@ -129,40 +129,4 @@
     </div>
   </div>
 </div>
-
-<form id="formValidationExamples" class="row g-3">
-  <div class="col-md-6">
-    <label class="form-label" for="title">Full Name</label>
-    <input type="text" id="title" class="form-control" placeholder="John Doe" name="title" />
-  </div>
-  <div class="col-md-6">
-    <label class="form-label" for="price">Full Name</label>
-    <input type="text" id="price" class="form-control" placeholder="John Doe" name="price" />
-  </div>
-
-  <div class="col-md-6">
-    <label for="formValidationFile" class="form-label">Profile Pic</label>
-    <input class="form-control" type="file" id="formValidationFile" name="formValidationFile" placeholder="Choose profile pic">
-  </div>
-
-  <div class="col-md-6">
-    <label class="form-label" for="formValidationSelect2">Country</label>
-    <select id="formValidationSelect2" name="formValidationSelect2" class="form-select select2" data-allow-clear="true">
-      <option value="">Select</option>
-      <option value="Brazil">Brazil</option>
-      <option value="United Arab Emirates">United Arab Emirates</option>
-      <option value="United Kingdom">United Kingdom</option>
-      <option value="United States">United States</option>
-    </select>
-  </div>
-
-  <div class="col-md-6">
-    <label class="form-label" for="formValidationBio">Bio</label>
-    <textarea class="form-control" id="formValidationBio" name="formValidationBio" rows="3"></textarea>
-  </div>
-
-  <div class="col-12">
-    <button type="submit" name="submitButton" class="btn btn-primary">Submit</button>
-  </div>
-</form>
 @endsection
