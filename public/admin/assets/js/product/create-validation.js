@@ -84,36 +84,36 @@ document.addEventListener('DOMContentLoaded', function (e) {
             }
           }
         },
-        formValidationEmail: {
-          validators: {
-            notEmpty: {
-              message: 'Please enter your email'
-            },
-            emailAddress: {
-              message: 'The value is not a valid email address'
-            }
-          }
-        },
-        formValidationPass: {
-          validators: {
-            notEmpty: {
-              message: 'Please enter your password'
-            }
-          }
-        },
-        formValidationConfirmPass: {
-          validators: {
-            notEmpty: {
-              message: 'Please confirm password'
-            },
-            identical: {
-              compare: function compare() {
-                return formValidationExamples.querySelector('[name="formValidationPass"]').value;
-              },
-              message: 'The password and its confirm are not the same'
-            }
-          }
-        },
+        // formValidationEmail: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please enter your email'
+        //     },
+        //     emailAddress: {
+        //       message: 'The value is not a valid email address'
+        //     }
+        //   }
+        // },
+        // formValidationPass: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please enter your password'
+        //     }
+        //   }
+        // },
+        // formValidationConfirmPass: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please confirm password'
+        //     },
+        //     identical: {
+        //       compare: function compare() {
+        //         return formValidationExamples.querySelector('[name="formValidationPass"]').value;
+        //       },
+        //       message: 'The password and its confirm are not the same'
+        //     }
+        //   }
+        // },
         formValidationFile: {
           validators: {
             notEmpty: {
@@ -121,17 +121,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
             }
           }
         },
-        formValidationDob: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your DOB'
-            },
-            date: {
-              format: 'YYYY/MM/DD',
-              message: 'The value is not a valid date'
-            }
-          }
-        },
+        // formValidationDob: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please select your DOB'
+        //     },
+        //     date: {
+        //       format: 'YYYY/MM/DD',
+        //       message: 'The value is not a valid date'
+        //     }
+        //   }
+        // },
         formValidationSelect2: {
           validators: {
             notEmpty: {
@@ -139,27 +139,27 @@ document.addEventListener('DOMContentLoaded', function (e) {
             }
           }
         },
-        formValidationLang: {
-          validators: {
-            notEmpty: {
-              message: 'Please add your language'
-            }
-          }
-        },
-        formValidationTech: {
-          validators: {
-            notEmpty: {
-              message: 'Please select technology'
-            }
-          }
-        },
-        formValidationHobbies: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your hobbies'
-            }
-          }
-        },
+        // formValidationLang: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please add your language'
+        //     }
+        //   }
+        // },
+        // formValidationTech: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please select technology'
+        //     }
+        //   }
+        // },
+        // formValidationHobbies: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please select your hobbies'
+        //     }
+        //   }
+        // },
         formValidationBio: {
           validators: {
             notEmpty: {
@@ -172,34 +172,34 @@ document.addEventListener('DOMContentLoaded', function (e) {
             }
           }
         },
-        formValidationGender: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your gender'
-            }
-          }
-        },
-        formValidationPlan: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your preferred plan'
-            }
-          }
-        },
-        formValidationSwitch: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your preference'
-            }
-          }
-        },
-        formValidationCheckbox: {
-          validators: {
-            notEmpty: {
-              message: 'Please confirm our T&C'
-            }
-          }
-        }
+        // formValidationGender: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please select your gender'
+        //     }
+        //   }
+        // },
+        // formValidationPlan: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please select your preferred plan'
+        //     }
+        //   }
+        // },
+        // formValidationSwitch: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please select your preference'
+        //     }
+        //   }
+        // },
+        // formValidationCheckbox: {
+        //   validators: {
+        //     notEmpty: {
+        //       message: 'Please confirm our T&C'
+        //     }
+        //   }
+        // }
       },
       plugins: {
         trigger: new FormValidation.plugins.Trigger(),
