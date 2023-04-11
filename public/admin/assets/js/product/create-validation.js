@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
         title: {
           validators: {
             notEmpty: {
-              message: 'Please enter your name'
+              message: 'Please enter your product title'
             },
             stringLength: {
-              min: 6,
-              max: 30,
-              message: 'The name must be more than 6 and less than 30 characters long'
+              min: 4,
+              max: 50,
+              message: 'The title must be more than 4 and less than 50 characters long'
             },
             regexp: {
               regexp: /^[a-zA-Z0-9 ]+$/,
@@ -138,8 +138,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
               // case 'formValidationSwitch':
               // case 'formValidationCheckbox':
               //   return '.col-12';
-              // default:
-              //   return '.row';
+              default:
+                return '.row';
             }
           }
         }),
