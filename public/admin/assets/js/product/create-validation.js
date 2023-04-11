@@ -118,6 +118,23 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
+        sku: {
+          validators: {
+            integer: {
+              message: 'The product sku value is not an integer',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+            notEmpty: {
+              message: 'Please enter your product sku'
+            },
+            greaterThan: {
+              message: 'The value of product sku must be greater than or equal to 50',
+              min: 50,
+            },
+          }
+        },
         formValidationFile: {
           validators: {
             notEmpty: {
