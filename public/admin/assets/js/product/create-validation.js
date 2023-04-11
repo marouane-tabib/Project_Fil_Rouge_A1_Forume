@@ -210,14 +210,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
-        formValidationBio: {
+        description: {
           validators: {
             notEmpty: {
-              message: 'Please enter your bio'
+              message: 'Please enter your product description'
             },
             stringLength: {
-              min: 100,
-              max: 500,
+              min: 10,
+              max: 5000,
               message: 'The bio must be more than 100 and less than 500 characters long'
             }
           }
