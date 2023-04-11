@@ -30,7 +30,7 @@ class CreateProductRequest extends FormRequest
         'quantity' => 'required|numeric|min:1',
         'sku' => 'required|numeric|min:1',
         'width' => 'required|numeric|min:0',
-        'length' => 'required|numeric|min:0',
+        'length_value' => 'required|numeric|min:0',
         'category_id' => 'required|numeric|exists:categories,id',
         'primary_color_id' => 'required|numeric|exists:colors,id',
         'secondary_color_id' => 'required|numeric|exists:colors,id',
