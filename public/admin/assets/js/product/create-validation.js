@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       // formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
       // formValidationHobbiesEle = jQuery(formValidationExamples.querySelector('.selectpicker'));
       // tech = ['ReactJS', 'Angular', 'VueJS', 'Html', 'Css', 'Sass', 'Pug', 'Gulp', 'Php', 'Laravel', 'Python', 'Bootstrap', 'Material Design', 'NodeJS'];
+
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
         image: {
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
           eleValidClass: '',
           rowSelector: function rowSelector(field, ele) {
             // field is the field name & ele is the field element
-            switch (field) {
+            switch (ele) {
               case 'image':
               case 'title':
               case 'price':
@@ -271,6 +272,37 @@ document.addEventListener('DOMContentLoaded', function (e) {
       }
     });
 
+    // FormValidation.formValidation(document.getElementById('length'), {
+    //   fields: {
+    //     length: {
+    //       validators: {
+    //         integer: {
+    //           message: 'The product length value is not an integer',
+    //           // The default separators
+    //           thousandsSeparator: '',
+    //           decimalSeparator: '.',
+    //         },
+    //         notEmpty: {
+    //           message: 'Please enter your product length'
+    //         },
+    //         greaterThan: {
+    //           message: 'The value of product length must be greater than or equal to 0',
+    //           min: 0,
+    //         },
+    //       }
+    //       },
+    //   },
+    //   plugins: {
+    //       trigger: new FormValidation.plugins.Trigger(),
+    //       bootstrap: new FormValidation.plugins.Bootstrap(),
+    //       submitButton: new FormValidation.plugins.SubmitButton(),
+    //       icon: new FormValidation.plugins.Icon({
+    //           valid: 'fa fa-check',
+    //           invalid: 'fa fa-times',
+    //           validating: 'fa fa-refresh',
+    //       }),
+    //   },
+    //   });
     //? Revalidation third-party libs inputs on change trigger
 
     // Flatpickr
