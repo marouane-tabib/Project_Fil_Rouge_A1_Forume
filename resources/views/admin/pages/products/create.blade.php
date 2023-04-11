@@ -50,7 +50,7 @@
         <h5 class="mb-0">Create Product</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data"  id="formValidationExamples">
+        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data"  id="createProductForm">
           @csrf
           <div class="mb-3">
             <label class="form-label" for="image">Image</label>

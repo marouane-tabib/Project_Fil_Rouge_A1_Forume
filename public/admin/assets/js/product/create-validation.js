@@ -60,7 +60,7 @@ var __webpack_exports__ = {};
 //------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
-    var formValidationExamples = document.getElementById('formValidationExamples'),
+    var formValidationExamples = document.getElementById('createProductForm'),
       formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="category_id"]'));
       // formValidationTechEle = jQuery(formValidationExamples.querySelector('[name="formValidationTech"]')),
       // formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
