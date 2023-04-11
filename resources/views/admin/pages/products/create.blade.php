@@ -158,11 +158,6 @@
   </div>
 
   <div class="col-12">
-    <h5 class="mt-2 fw-semibold">3. Choose Your Plan</h5>
-    <hr class="mt-0" />
-  </div>
-  
-  <div class="col-12">
     <button type="submit" name="submitButton" class="btn btn-primary">Submit</button>
   </div>
 </form>
