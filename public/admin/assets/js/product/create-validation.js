@@ -61,7 +61,7 @@ var __webpack_exports__ = {};
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
     var formValidationExamples = document.getElementById('formValidationExamples'),
-      formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="formValidationSelect2"]'));
+      formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="category_id"]'));
       // formValidationTechEle = jQuery(formValidationExamples.querySelector('[name="formValidationTech"]')),
       // formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
       // formValidationHobbiesEle = jQuery(formValidationExamples.querySelector('.selectpicker'));
@@ -165,23 +165,23 @@ document.addEventListener('DOMContentLoaded', function (e) {
             },
           }
         },
-        length: {
-          validators: {
-            integer: {
-              message: 'The product length value is not an integer',
-              // The default separators
-              thousandsSeparator: '',
-              decimalSeparator: '.',
-            },
-            notEmpty: {
-              message: 'Please enter your product length'
-            },
-            greaterThan: {
-              message: 'The value of product length must be greater than or equal to 0',
-              min: 0,
-            },
-          }
-        },
+        // length: {
+        //   validators: {
+        //     integer: {
+        //       message: 'The product length value is not an integer',
+        //       // The default separators
+        //       thousandsSeparator: '',
+        //       decimalSeparator: '.',
+        //     },
+        //     notEmpty: {
+        //       message: 'Please enter your product length'
+        //     },
+        //     greaterThan: {
+        //       message: 'The value of product length must be greater than or equal to 0',
+        //       min: 0,
+        //     },
+        //   }
+        // },
         category_id: {
           validators: {
             notEmpty: {
@@ -232,24 +232,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
           rowSelector: function rowSelector(field, ele) {
             // field is the field name & ele is the field element
             switch (field) {
+              case 'image':
               case 'title':
-              // case 'formValidationEmail':
-              // case 'formValidationPass':
-              // case 'formValidationConfirmPass':
-              case 'formValidationFile':
-              // case 'formValidationDob':
-              case 'formValidationSelect2':
-              // case 'formValidationLang':
-              // case 'formValidationTech':
-              // case 'formValidationHobbies':
-              case 'formValidationBio':
-              // case 'formValidationGender':
-              //   return '.col-md-6';
-              // case 'formValidationPlan':
-              //   return '.col-xl-3';
-              // case 'formValidationSwitch':
-              // case 'formValidationCheckbox':
-              //   return '.col-12';
+              case 'price':
+              case 'quantity':
+              case 'sku':
+              case 'width':
+              // case 'length':
+              case 'category_id':
+              case 'primary_color_id':
+              case 'secondary_color_id':
+              case 'home_style_id':
+              case 'description':
               default:
                 return '.row';
             }
@@ -280,15 +274,15 @@ document.addEventListener('DOMContentLoaded', function (e) {
     //? Revalidation third-party libs inputs on change trigger
 
     // Flatpickr
-    flatpickr(formValidationExamples.querySelector('[name="formValidationDob"]'), {
-      enableTime: false,
-      // See https://flatpickr.js.org/formatting/
-      dateFormat: 'Y/m/d',
-      // After selecting a date, we need to revalidate the field
-      onChange: function onChange() {
-        fv.revalidateField('formValidationDob');
-      }
-    });
+    // flatpickr(formValidationExamples.querySelector('[name="formValidationDob"]'), {
+    //   enableTime: false,
+    //   // See https://flatpickr.js.org/formatting/
+    //   dateFormat: 'Y/m/d',
+    //   // After selecting a date, we need to revalidate the field
+    //   onChange: function onChange() {
+    //     fv.revalidateField('formValidationDob');
+    //   }
+    // });
 
     // Select2 (Country)
     if (formValidationSelect2Ele.length) {
@@ -305,31 +299,31 @@ document.addEventListener('DOMContentLoaded', function (e) {
     // Typeahead
 
     // String Matcher function for typeahead
-    var substringMatcher = function substringMatcher(strs) {
-      return function findMatches(q, cb) {
-        var matches, substrRegex;
-        matches = [];
-        substrRegex = new RegExp(q, 'i');
-        $.each(strs, function (i, str) {
-          if (substrRegex.test(str)) {
-            matches.push(str);
-          }
-        });
-        cb(matches);
-      };
-    };
+    // var substringMatcher = function substringMatcher(strs) {
+    //   return function findMatches(q, cb) {
+    //     var matches, substrRegex;
+    //     matches = [];
+    //     substrRegex = new RegExp(q, 'i');
+    //     $.each(strs, function (i, str) {
+    //       if (substrRegex.test(str)) {
+    //         matches.push(str);
+    //       }
+    //     });
+    //     cb(matches);
+    //   };
+    // };
 
     // Check if rtl
-    if (isRtl) {
-      var typeaheadList = [].slice.call(document.querySelectorAll('.typeahead'));
+    // if (isRtl) {
+    //   var typeaheadList = [].slice.call(document.querySelectorAll('.typeahead'));
 
-      // Flat pickr
-      if (typeaheadList) {
-        typeaheadList.forEach(function (typeahead) {
-          typeahead.setAttribute('dir', 'rtl');
-        });
-      }
-    }
+    //   // Flat pickr
+    //   if (typeaheadList) {
+    //     typeaheadList.forEach(function (typeahead) {
+    //       typeahead.setAttribute('dir', 'rtl');
+    //     });
+    //   }
+    // }
     // formValidationTechEle.typeahead({
     //   hint: !isRtl,
     //   highlight: true,
