@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         price: {
           validators: {
             integer: {
-              message: 'The value is not an integer',
+              message: 'The product price value is not an integer',
               // The default separators
               thousandsSeparator: '',
               decimalSeparator: '.',
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               message: 'Please enter your product price'
             },
             greaterThan: {
-              message: 'The value must be greater than or equal to 18',
+              message: 'The value of product price must be greater than or equal to 50',
               min: 50,
             },
           }
