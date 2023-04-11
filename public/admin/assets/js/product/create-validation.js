@@ -61,14 +61,14 @@ var __webpack_exports__ = {};
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
     var formValidationExamples = document.getElementById('formValidationExamples'),
-      formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="formValidationSelect2"]')),
-      formValidationTechEle = jQuery(formValidationExamples.querySelector('[name="formValidationTech"]')),
-      formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
-      formValidationHobbiesEle = jQuery(formValidationExamples.querySelector('.selectpicker')),
-      tech = ['ReactJS', 'Angular', 'VueJS', 'Html', 'Css', 'Sass', 'Pug', 'Gulp', 'Php', 'Laravel', 'Python', 'Bootstrap', 'Material Design', 'NodeJS'];
+      formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="formValidationSelect2"]'));
+      // formValidationTechEle = jQuery(formValidationExamples.querySelector('[name="formValidationTech"]')),
+      // formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
+      // formValidationHobbiesEle = jQuery(formValidationExamples.querySelector('.selectpicker'));
+      // tech = ['ReactJS', 'Angular', 'VueJS', 'Html', 'Css', 'Sass', 'Pug', 'Gulp', 'Php', 'Laravel', 'Python', 'Bootstrap', 'Material Design', 'NodeJS'];
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
-        formValidationName: {
+        title: {
           validators: {
             notEmpty: {
               message: 'Please enter your name'
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
           rowSelector: function rowSelector(field, ele) {
             // field is the field name & ele is the field element
             switch (field) {
-              case 'formValidationName':
+              case 'title':
               case 'formValidationEmail':
               case 'formValidationPass':
               case 'formValidationConfirmPass':
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               case 'formValidationDob':
               case 'formValidationSelect2':
               case 'formValidationLang':
-              case 'formValidationTech':
+              // case 'formValidationTech':
               case 'formValidationHobbies':
               case 'formValidationBio':
               case 'formValidationGender':
@@ -218,26 +218,26 @@ document.addEventListener('DOMContentLoaded', function (e) {
         });
       }
     }
-    formValidationTechEle.typeahead({
-      hint: !isRtl,
-      highlight: true,
-      minLength: 1
-    }, {
-      name: 'tech',
-      source: substringMatcher(tech)
-    });
+    // formValidationTechEle.typeahead({
+    //   hint: !isRtl,
+    //   highlight: true,
+    //   minLength: 1
+    // }, {
+    //   name: 'tech',
+    //   source: substringMatcher(tech)
+    // });
 
     // Tagify
-    var formValidationLangTagify = new Tagify(formValidationLangEle);
-    formValidationLangEle.addEventListener('change', onChange);
-    function onChange() {
-      fv.revalidateField('formValidationLang');
-    }
+    // var formValidationLangTagify = new Tagify(formValidationLangEle);
+    // formValidationLangEle.addEventListener('change', onChange);
+    // function onChange() {
+    //   fv.revalidateField('formValidationLang');
+    // }
 
     //Bootstrap select
-    formValidationHobbiesEle.on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-      fv.revalidateField('formValidationHobbies');
-    });
+    // formValidationHobbiesEle.on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+    //   fv.revalidateField('formValidationHobbies');
+    // });
   })();
 });
 /******/ 	return __webpack_exports__;
