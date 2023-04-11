@@ -10,26 +10,28 @@ class FileUploadService
     // Generate file name
     $filename = date('YmdHi').$file->getClientOriginalName();
     // Create the storage derictory link
-    $storagePath = public_path($baseDerictory.$childDerictory.date('m-Y'));
+    $storagePath = $baseDerictory.$childDerictory.date('m-Y').'/';
     // Generate the storage derictory child link to this file
     $storagePathChild = date('m-Y').'/'.$filename;
     // Move to store the file
-    $file->move($storagePath, $filename);
+    Storage::putFileAs($storagePath, $file, $filename);
     // return the finale database storing name
     return $storagePathChild;
   }
 
-  public function deleteFile($derictory)
+  public function deleteFile($filePath, $baseDerictory, $childDerictory)
   {
-    if (Storage::disk('public')->exists($derictory)) {
+    // Create the path of the delete file
+    $deleteFilePath = $baseDerictory.$childDerictory.$filePath;
+    if (Storage::exists($deleteFilePath)) {
         // Delete the file using the Storage facade
-        return Storage::disk('public')->delete($derictory);
+        return Storage::delete($deleteFilePath);
     }
     return false;
   }
 
   public function updateFile($oldFilePath, $file, $baseDerictory, $childDerictory){
-    $deleteFile = $this->deleteFile($oldFilePath);
+    $deleteFile = $this->deleteFile($oldFilePath, $baseDerictory, $childDerictory);
     $uploadFile = $this->uploadFile($file, $baseDerictory, $childDerictory);
     return $uploadFile;
   }
