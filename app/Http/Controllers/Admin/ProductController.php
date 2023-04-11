@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Product\CreateProductRequest;
 use App\Services\ProductService;
 use App\Traits\ImageUploaderTrait;
 use Illuminate\Http\Request;
@@ -44,9 +45,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateProductRequest $request)
     {
-      $this->productService->create($request->all());
+      $this->productService->create($request->validated());
       return redirect()->route('product.index');
     }
 
