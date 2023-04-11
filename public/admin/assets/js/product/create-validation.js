@@ -121,25 +121,25 @@ document.addEventListener('DOMContentLoaded', function (e) {
             // field is the field name & ele is the field element
             switch (field) {
               case 'title':
-              case 'formValidationEmail':
-              case 'formValidationPass':
-              case 'formValidationConfirmPass':
+              // case 'formValidationEmail':
+              // case 'formValidationPass':
+              // case 'formValidationConfirmPass':
               case 'formValidationFile':
-              case 'formValidationDob':
+              // case 'formValidationDob':
               case 'formValidationSelect2':
-              case 'formValidationLang':
+              // case 'formValidationLang':
               // case 'formValidationTech':
-              case 'formValidationHobbies':
+              // case 'formValidationHobbies':
               case 'formValidationBio':
-              case 'formValidationGender':
-                return '.col-md-6';
-              case 'formValidationPlan':
-                return '.col-xl-3';
-              case 'formValidationSwitch':
-              case 'formValidationCheckbox':
-                return '.col-12';
-              default:
-                return '.row';
+              // case 'formValidationGender':
+              //   return '.col-md-6';
+              // case 'formValidationPlan':
+              //   return '.col-xl-3';
+              // case 'formValidationSwitch':
+              // case 'formValidationCheckbox':
+              //   return '.col-12';
+              // default:
+              //   return '.row';
             }
           }
         }),
