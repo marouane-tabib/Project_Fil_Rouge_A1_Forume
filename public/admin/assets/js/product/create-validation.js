@@ -68,6 +68,19 @@ document.addEventListener('DOMContentLoaded', function (e) {
       // tech = ['ReactJS', 'Angular', 'VueJS', 'Html', 'Css', 'Sass', 'Pug', 'Gulp', 'Php', 'Laravel', 'Python', 'Bootstrap', 'Material Design', 'NodeJS'];
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
+        image: {
+          validators: {
+            notEmpty: {
+              message: 'Please select an image',
+            },
+            file: {
+                extension: 'jpeg,jpg,png',
+                type: 'image/jpeg,image/png',
+                maxSize: 2097152, // 2048 * 1024
+                message: 'The selected file is not valid',
+            },
+          }
+        },
         title: {
           validators: {
             notEmpty: {
@@ -195,20 +208,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
             notEmpty: {
               message: 'Please enter your product home style'
             },
-          }
-        },
-        formValidationSelect2: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your country'
-            }
-          }
-        },
-        formValidationFile: {
-          validators: {
-            notEmpty: {
-              message: 'Please select the file'
-            }
           }
         },
         formValidationBio: {
