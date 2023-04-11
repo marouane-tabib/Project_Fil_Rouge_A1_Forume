@@ -60,13 +60,7 @@ var __webpack_exports__ = {};
 //------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
-    var formValidationExamples = document.getElementById('createProductForm'),
-      formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="category_id"]'));
-      // formValidationTechEle = jQuery(formValidationExamples.querySelector('[name="formValidationTech"]')),
-      // formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
-      // formValidationHobbiesEle = jQuery(formValidationExamples.querySelector('.selectpicker'));
-      // tech = ['ReactJS', 'Angular', 'VueJS', 'Html', 'Css', 'Sass', 'Pug', 'Gulp', 'Php', 'Laravel', 'Python', 'Bootstrap', 'Material Design', 'NodeJS'];
-
+    var formValidationExamples = document.getElementById('createProductForm');
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
         image: {
@@ -272,110 +266,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
       }
     });
 
-    // FormValidation.formValidation(document.getElementById('length'), {
-    //   fields: {
-    //     length: {
-    //       validators: {
-    //         integer: {
-    //           message: 'The product length value is not an integer',
-    //           // The default separators
-    //           thousandsSeparator: '',
-    //           decimalSeparator: '.',
-    //         },
-    //         notEmpty: {
-    //           message: 'Please enter your product length'
-    //         },
-    //         greaterThan: {
-    //           message: 'The value of product length must be greater than or equal to 0',
-    //           min: 0,
-    //         },
-    //       }
-    //       },
-    //   },
-    //   plugins: {
-    //       trigger: new FormValidation.plugins.Trigger(),
-    //       bootstrap: new FormValidation.plugins.Bootstrap(),
-    //       submitButton: new FormValidation.plugins.SubmitButton(),
-    //       icon: new FormValidation.plugins.Icon({
-    //           valid: 'fa fa-check',
-    //           invalid: 'fa fa-times',
-    //           validating: 'fa fa-refresh',
-    //       }),
-    //   },
-    //   });
-    //? Revalidation third-party libs inputs on change trigger
-
-    // Flatpickr
-    // flatpickr(formValidationExamples.querySelector('[name="formValidationDob"]'), {
-    //   enableTime: false,
-    //   // See https://flatpickr.js.org/formatting/
-    //   dateFormat: 'Y/m/d',
-    //   // After selecting a date, we need to revalidate the field
-    //   onChange: function onChange() {
-    //     fv.revalidateField('formValidationDob');
-    //   }
-    // });
-
-    // Select2 (Country)
-    if (formValidationSelect2Ele.length) {
-      formValidationSelect2Ele.wrap('<div class="position-relative"></div>');
-      formValidationSelect2Ele.select2({
-        placeholder: 'Select country',
-        dropdownParent: formValidationSelect2Ele.parent()
-      }).on('change.select2', function () {
-        // Revalidate the color field when an option is chosen
-        fv.revalidateField('formValidationSelect2');
-      });
-    }
-
-    // Typeahead
-
-    // String Matcher function for typeahead
-    // var substringMatcher = function substringMatcher(strs) {
-    //   return function findMatches(q, cb) {
-    //     var matches, substrRegex;
-    //     matches = [];
-    //     substrRegex = new RegExp(q, 'i');
-    //     $.each(strs, function (i, str) {
-    //       if (substrRegex.test(str)) {
-    //         matches.push(str);
-    //       }
-    //     });
-    //     cb(matches);
-    //   };
-    // };
-
-    // Check if rtl
-    // if (isRtl) {
-    //   var typeaheadList = [].slice.call(document.querySelectorAll('.typeahead'));
-
-    //   // Flat pickr
-    //   if (typeaheadList) {
-    //     typeaheadList.forEach(function (typeahead) {
-    //       typeahead.setAttribute('dir', 'rtl');
-    //     });
-    //   }
-    // }
-    // formValidationTechEle.typeahead({
-    //   hint: !isRtl,
-    //   highlight: true,
-    //   minLength: 1
-    // }, {
-    //   name: 'tech',
-    //   source: substringMatcher(tech)
-    // });
-
-    // Tagify
-    // var formValidationLangTagify = new Tagify(formValidationLangEle);
-    // formValidationLangEle.addEventListener('change', onChange);
-    // function onChange() {
-    //   fv.revalidateField('formValidationLang');
-    // }
-
-    //Bootstrap select
-    // formValidationHobbiesEle.on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-    //   fv.revalidateField('formValidationHobbies');
-    // });
   })();
 });
 /******/ 	return __webpack_exports__;
