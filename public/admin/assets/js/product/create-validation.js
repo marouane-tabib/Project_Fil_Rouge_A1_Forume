@@ -96,16 +96,16 @@ document.addEventListener('DOMContentLoaded', function (e) {
         price: {
           validators: {
             integer: {
-              message: 'The product price value is not an integer',
+              message: 'Please make sure to enter an integer value for the product price.',
               // The default separators
               thousandsSeparator: '',
               decimalSeparator: '.',
             },
             notEmpty: {
-              message: 'Please enter your product price'
+              message: 'Please make sure to enter a product price.'
             },
             greaterThan: {
-              message: 'The value of product price must be greater than or equal to 50',
+              message: 'The product price must be greater than or equal to 50.',
               min: 50,
             },
           }
