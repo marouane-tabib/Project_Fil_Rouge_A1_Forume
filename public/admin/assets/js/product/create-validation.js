@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
         image: {
           validators: {
             notEmpty: {
-              message: 'Please select your product image',
+              message: 'Please select your product image.',
             },
             file: {
                 extension: 'jpeg,jpg,png',
                 type: 'image/jpeg,image/png',
                 maxSize: 204800, // 200 * 1024
                 minSize: 10240, // 10 * 1024
-                message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a maximum size of 2 MB.',
+                message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.',
             },
           }
         },
