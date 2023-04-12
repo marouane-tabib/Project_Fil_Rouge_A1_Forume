@@ -130,16 +130,16 @@ document.addEventListener('DOMContentLoaded', function (e) {
         sku: {
           validators: {
             integer: {
-              message: 'The product sku value is not an integer',
+              message: 'Please make sure to enter an integer value for the sku price.',
               // The default separators
               thousandsSeparator: '',
               decimalSeparator: '.',
             },
             notEmpty: {
-              message: 'Please enter your product sku'
+              message: 'Please make sure to enter a product sku.'
             },
             greaterThan: {
-              message: 'The value of product sku must be greater than or equal to 1',
+              message: 'The product sku must be greater than or equal to 50.',
               min: 1,
             },
           }
