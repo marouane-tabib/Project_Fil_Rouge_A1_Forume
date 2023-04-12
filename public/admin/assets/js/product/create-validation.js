@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               message: 'Please make sure to enter a product quantity.'
             },
             greaterThan: {
-              message: 'The product quantity must be greater than or equal to 50.',
+              message: 'The product quantity must be greater than or equal to 1.',
               min: 1,
             },
           }
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               message: 'Please make sure to enter a product sku.'
             },
             greaterThan: {
-              message: 'The product sku must be greater than or equal to 50.',
+              message: 'The product sku must be greater than or equal to 1.',
               min: 1,
             },
           }
