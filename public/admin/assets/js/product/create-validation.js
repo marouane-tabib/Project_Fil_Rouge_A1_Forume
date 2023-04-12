@@ -147,16 +147,16 @@ document.addEventListener('DOMContentLoaded', function (e) {
         width: {
           validators: {
             integer: {
-              message: 'The product width value is not an integer',
+              message: 'Please make sure to enter an integer value for the width price.',
               // The default separators
               thousandsSeparator: '',
               decimalSeparator: '.',
             },
             notEmpty: {
-              message: 'Please enter your product width'
+              message: 'Please make sure to enter a product width.'
             },
             greaterThan: {
-              message: 'The value of product width must be greater than or equal to 0',
+              message: 'The product width must be greater than or equal to 0.',
               min: 0,
             },
           }
