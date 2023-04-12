@@ -181,7 +181,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
         category_id: {
           validators: {
             notEmpty: {
-              message: 'Please enter your product category'
+              message: 'Please make sure to enter a product category.'
+            },
+            integer: {
+              message: 'Please make sure to enter category value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
             },
           }
         },
