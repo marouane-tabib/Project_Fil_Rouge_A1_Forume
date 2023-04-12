@@ -38,7 +38,7 @@
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
 <script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
-<script src="{{asset('admin/assets/js/product/create-validation.js')}}"></script>
+{{-- <script src="{{asset('admin/assets/js/product/create-validation.js')}}"></script> --}}
 @endsection
 
 @section('content')
@@ -53,6 +53,9 @@
         <form method="POST" action="{{ route('product.update', $product->id)}}" enctype="multipart/form-data"  id="createProductForm">
           @csrf
           @method('PUT')
+          <div class="col-12 mb-3">
+            <img src="{{ asset('storage/images/products/'.$product->image) }}" alt="" width="300" class="img-fluid" srcset="">
+          </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="image">Image</label>
             <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" placeholder="Add your product image" />
