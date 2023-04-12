@@ -80,16 +80,16 @@ document.addEventListener('DOMContentLoaded', function (e) {
         title: {
           validators: {
             notEmpty: {
-              message: 'Please enter your product title'
+              message: 'Please make sure to enter a product title.'
             },
             stringLength: {
               min: 4,
               max: 50,
-              message: 'The title must be more than 4 and less than 50 characters long'
+              message: 'The product title must be between 4 and 50 characters in length.'
             },
             regexp: {
               regexp: /^[a-zA-Z0-9 ]+$/,
-              message: 'The name can only consist of alphabetical, number and space'
+              message: 'The product name can only contain alphabetical, numeric, and space characters.'
             }
           }
         },
