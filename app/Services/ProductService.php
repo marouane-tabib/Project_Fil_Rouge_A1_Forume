@@ -34,7 +34,9 @@ class ProductService
   public function update(int $id, array $data)
   {
     $product = $this->productRepository->find($id);
-    $data['image'] = $data['image'] ? $this->fileUpload->updateFile($product->image, $data['image'], 'public/images/', 'products/') : $product->image;
+    if (isset($data['image'])) {
+      $data['image'] = $this->fileUpload->updateFile($product->image, $data['image'], 'public/images/', 'products/');
+    }
     return $this->productRepository->update($id, $data);
   }
 
