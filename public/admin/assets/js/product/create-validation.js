@@ -194,33 +194,51 @@ document.addEventListener('DOMContentLoaded', function (e) {
         primary_color_id: {
           validators: {
             notEmpty: {
-              message: 'Please enter your product primary color'
+              message: 'Please make sure to enter a product primary color.'
+            },
+            integer: {
+              message: 'Please make sure to enter primary color value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
             },
           }
         },
         secondary_color_id: {
           validators: {
             notEmpty: {
-              message: 'Please enter your product secondary color'
+              message: 'Please make sure to enter a product secondary color.'
+            },
+            integer: {
+              message: 'Please make sure to enter secondary color value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
             },
           }
         },
         home_style_id: {
           validators: {
             notEmpty: {
-              message: 'Please enter your product home style'
+              message: 'Please make sure to enter a product home style.'
+            },
+            integer: {
+              message: 'Please make sure to enter home style value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
             },
           }
         },
         description: {
           validators: {
             notEmpty: {
-              message: 'Please enter your product description'
+              message: 'Please make sure to enter a product description.'
             },
             stringLength: {
               min: 10,
               max: 5000,
-              message: 'The bio must be more than 100 and less than 500 characters long'
+              message: 'The description must be more than 100 and less than 500 characters long'
             }
           }
         },
