@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\CreateProductRequest;
+use App\Http\Requests\ProductRequest;
 use App\Services\ProductService;
 
 class ProductController extends Controller
@@ -41,7 +42,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateProductRequest $request)
+    public function store(ProductRequest $request)
     {
       $this->productService->create($request->validated());
       return redirect()->route('product.index');
@@ -76,7 +77,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateProductRequest $request, $id)
+    public function update(ProductRequest $request, $id)
     {
       $this->productService->update($id, $request->all());
       return redirect()->route('product.index');
