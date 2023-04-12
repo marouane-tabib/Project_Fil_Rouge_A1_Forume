@@ -42,6 +42,8 @@ class ProductService
 
   public function delete(int $id)
   {
+    $product = $this->productRepository->find($id);
+    $this->fileUpload->deleteFile($product->image, 'public/images/', 'products/');
     return $this->productRepository->delete($id);
   }
 }
