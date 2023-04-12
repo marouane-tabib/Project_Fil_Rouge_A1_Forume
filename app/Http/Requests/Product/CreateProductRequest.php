@@ -24,7 +24,8 @@ class CreateProductRequest extends FormRequest
     public function rules()
     {
       return [
-        'image' => 'required',
+        // Images types and size => Thumbnail images=>max:50KB|Product images=>max:500KB|Zoom or gallery images=>max:1MB
+        'image' => 'required|image|between:10,200|mimes:jpeg,png,jpg',
         'title' => 'required|string|min:4|max:50',
         'price' => 'required|numeric|min:50',
         'quantity' => 'required|numeric|min:1',
