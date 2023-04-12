@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
             file: {
                 extension: 'jpeg,jpg,png',
                 type: 'image/jpeg,image/png',
-                maxSize: 2097152, // 2048 * 1024
+                maxSize: 204800, // 200 * 1024
+                minSize: 10240, // 10 * 1024
                 message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a maximum size of 2 MB.',
             },
           }
