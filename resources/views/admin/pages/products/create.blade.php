@@ -61,42 +61,42 @@
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="title">Title</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Add your product title" />
+            <input type="text" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" id="title" name="title" placeholder="Add your product title" />
             @error('title')
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="price">Price</label>
-            <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" placeholder="Add your product price" />
+            <input type="number" class="form-control @error('price') is-invalid @enderror" value="{{ old('price') }}" id="price" name="price" placeholder="Add your product price" />
             @error('price')
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="quantity">Quantity</label>
-            <input type="number" class="form-control @error('quantity') is-invalid @enderror" id="quantity" name="quantity" placeholder="Add your product quantity" />
+            <input type="number" class="form-control @error('quantity') is-invalid @enderror" value="{{ old('quantity') }}" id="quantity" name="quantity" placeholder="Add your product quantity" />
             @error('quantity')
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="sku">SKU</label>
-            <input type="number" class="form-control @error('sku') is-invalid @enderror" id="sku" name="sku" placeholder="Add your product sku" />
+            <input type="number" class="form-control @error('sku') is-invalid @enderror" value="{{ old('sku') }}" id="sku" name="sku" placeholder="Add your product sku" />
             @error('sku')
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="width">Width</label>
-            <input type="number" class="form-control @error('width') is-invalid @enderror" id="width" name="width" placeholder="Add your product width" />
+            <input type="number" class="form-control @error('width') is-invalid @enderror" value="{{ old('width') }}" id="width" name="width" placeholder="Add your product width" />
             @error('width')
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="length_value">Length</label>
-            <input type="number" class="form-control @error('length_value') is-invalid @enderror" id="length_value" name="length_value" placeholder="Add your product length" />
+            <input type="number" class="form-control @error('length_value') is-invalid @enderror" value="{{ old('length_value') }}" id="length_value" name="length_value" placeholder="Add your product length" />
             @error('length_value')
               <span class="text-danger">{{$message}}</span>
             @enderror
@@ -104,10 +104,10 @@
           <div class="col-12 mb-3">
             <label class="form-label" for="categories">Categories</label>
             <select id="categories" class="select2 form-select @error('category_id') is-invalid @enderror" name="category_id" data-allow-clear="true">
-              <option value="">Select</option>
-              <option value="1">Alabama</option>
-              <option value="2">Alaska</option>
-              <option value="3">Wyoming</option>
+              <option value="" {{ old('category_id') == "" ? 'selected' : '' }}>Select</option>
+              <option value="1" {{ old('category_id') == 1 ? 'selected' : '' }}>Alabama</option>
+              <option value="2" {{ old('category_id') == 2 ? 'selected' : '' }}>Alaska</option>
+              <option value="3" {{ old('category_id') == 3 ? 'selected' : '' }}>Wyoming</option>
             </select>
             @error('category_id')
               <span class="text-danger">{{$message}}</span>
@@ -116,10 +116,10 @@
           <div class="col-12 mb-3">
             <label class="form-label" for="primary-color">Primary Color</label>
             <select id="primary-color" class="select2 form-select @error('primary_color_id') is-invalid @enderror" name="primary_color_id" data-allow-clear="true">
-              <option value="">Select</option>
-              <option value="1">Alabama</option>
-              <option value="2">Wisconsin</option>
-              <option value="3">Wyoming</option>
+              <option value="" {{ old('primary_color_id') == "" ? 'selected' : '' }}>Select</option>
+              <option value="1" {{ old('primary_color_id') == 2 ? 'selected' : '' }}>Alabama</option>
+              <option value="2" {{ old('primary_color_id') == 3 ? 'selected' : '' }}>Wisconsin</option>
+              <option value="3" {{ old('primary_color_id') == 4 ? 'selected' : '' }}>Wyoming</option>
             </select>
             @error('primary_color_id')
               <span class="text-danger">{{$message}}</span>
@@ -128,11 +128,11 @@
           <div class="col-12 mb-3">
             <label class="form-label" for="secondary-color">Secondary Color</label>
             <select id="secondary-color" class="select2 form-select @error('secondary_color_id') is-invalid @enderror" name="secondary_color_id" data-allow-clear="true">
-              <option value="">Select</option>
-              <option value="1">Alabama</option>
-              <option value="2">Alaska</option>
-              <option value="3">Arizona</option>
-              <option value="4">Wyoming</option>
+              <option value="" {{ old('secondary_color_id') == "" ? 'selected' : '' }}>Select</option>
+              <option value="1" {{ old('secondary_color_id') == 1 ? 'selected' : '' }}>Alabama</option>
+              <option value="2" {{ old('secondary_color_id') == 2 ? 'selected' : '' }}>Alaska</option>
+              <option value="3" {{ old('secondary_color_id') == 3 ? 'selected' : '' }}>Arizona</option>
+              <option value="4" {{ old('secondary_color_id') == 4 ? 'selected' : '' }}>Wyoming</option>
             </select>
             @error('secondary_color_id')
               <span class="text-danger">{{$message}}</span>
@@ -141,11 +141,11 @@
           <div class="col-12 mb-3">
             <label class="form-label" for="home-style">Home Style</label>
             <select id="home-style" class="select2 form-select @error('home_style_id') is-invalid @enderror" name="home_style_id" data-allow-clear="true">
-              <option value="">Select</option>
-              <option value="1">Alabama</option>
-              <option value="2">Alaska</option>
-              <option value="3">Wisconsin</option>
-              <option value="4">Wyoming</option>
+              <option value="" {{ old('home_style_id') == "" ? 'selected' : '' }}>Select</option>
+              <option value="1" {{ old('home_style_id') == 1 ? 'selected' : '' }}>Alabama</option>
+              <option value="2" {{ old('home_style_id') == 2 ? 'selected' : '' }}>Alaska</option>
+              <option value="3" {{ old('home_style_id') == 3 ? 'selected' : '' }}>Wisconsin</option>
+              <option value="4" {{ old('home_style_id') == 4 ? 'selected' : '' }}>Wyoming</option>
             </select>
             @error('home_style_id')
               <span class="text-danger">{{$message}}</span>
@@ -154,7 +154,7 @@
           <div class="col-12 mb-3">
             <label class="form-label" for="description">Description</label>
             {{-- <input type="number" class="form-control" id="description" name="description" placeholder="Add your product description" /> --}}
-            <textarea name="description" id="description" class="form-control @error('desctiption') is-invalid @enderror" cols="30" rows="6" placeholder="Add your product description..."></textarea>
+            <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" cols="30" rows="6" placeholder="Add your product description...">{{ old('description') }}</textarea>
             @error('description')
               <span class="text-danger">{{$message}}</span>
             @enderror
