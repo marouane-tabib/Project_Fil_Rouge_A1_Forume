@@ -8,6 +8,7 @@ class ProductService
 {
   protected ProductRepositoryInterface $productRepository;
   protected FileUploadService $fileUpload;
+  protected $storageDerictory = "public/images/products/";
 
   public function __construct(ProductRepositoryInterface $productRepository, FileUploadService $fileUpload)
   {
@@ -27,7 +28,7 @@ class ProductService
 
   public function create(array $data)
   {
-    $data['image'] = $this->fileUpload->uploadFile($data['image'], 'public/images/', 'products/');
+    $data['image'] = $this->fileUpload->uploadFile($data['image'], $this->storageDerictory);
     return $this->productRepository->create($data);
   }
 
@@ -35,7 +36,7 @@ class ProductService
   {
     $product = $this->productRepository->find($id);
     if (isset($data['image'])) {
-      $data['image'] = $this->fileUpload->updateFile($product->image, $data['image'], 'public/images/', 'products/');
+      $data['image'] = $this->fileUpload->updateFile($product->image, $data['image'], $this->storageDerictory);
     }
     return $this->productRepository->update($id, $data);
   }
@@ -43,7 +44,7 @@ class ProductService
   public function delete(int $id)
   {
     $product = $this->productRepository->find($id);
-    $this->fileUpload->deleteFile($product->image, 'public/images/', 'products/');
+    $this->fileUpload->deleteFile($this->storageDerictory.$product->image);
     return $this->productRepository->delete($id);
   }
 }
