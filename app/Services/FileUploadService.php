@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Storage;
 
 class FileUploadService
 {
-  public function uploadFile($file, $baseDerictory, $childDerictory){
+  public function uploadFile($file, $storageDerictory){
     // Generate file name
     $filename = date('YmdHi').$file->getClientOriginalName();
     // Create the storage derictory link
-    $storagePath = $baseDerictory.$childDerictory.date('m-Y').'/';
+    $storagePath = $storageDerictory.date('m-Y').'/';
     // Generate the storage derictory child link to this file
     $storagePathChild = date('m-Y').'/'.$filename;
     // Move to store the file
@@ -19,20 +19,19 @@ class FileUploadService
     return $storagePathChild;
   }
 
-  public function deleteFile($filePath, $baseDerictory, $childDerictory)
+  public function deleteFile($filePath)
   {
     // Create the path of the delete file
-    $deleteFilePath = $baseDerictory.$childDerictory.$filePath;
-    if (Storage::exists($deleteFilePath)) {
+    if (Storage::exists($filePath)) {
         // Delete the file using the Storage facade
-        return Storage::delete($deleteFilePath);
+        return Storage::delete($filePath);
     }
     return false;
   }
 
-  public function updateFile($oldFilePath, $file, $baseDerictory, $childDerictory){
-    $deleteFile = $this->deleteFile($oldFilePath, $baseDerictory, $childDerictory);
-    $uploadFile = $this->uploadFile($file, $baseDerictory, $childDerictory);
+  public function updateFile($oldFile, $file, $storageDerictory){
+    $deleteFile = $this->deleteFile($storageDerictory.$oldFile);
+    $uploadFile = $this->uploadFile($file, $storageDerictory);
     return $uploadFile;
   }
 }
