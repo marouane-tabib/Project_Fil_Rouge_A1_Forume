@@ -132,7 +132,8 @@ mixAssetsDir('css/**/*.css', (src, dest) => mix.copy(src, dest));
 mix.js('resources/js/laravel-user-management.js', 'public/js/');
 // Admin Derictory
 mix.js('resources/admin/assets/js/products/create-validation.js', 'public/admin/assets/js/product/')
-   .js('resources/admin/assets/js/products/edit-validation.js', 'public/admin/assets/js/product/');
+   .js('resources/admin/assets/js/products/edit-validation.js', 'public/admin/assets/js/product/')
+   .js('resources/admin/assets/js/products/data-form-validation.js', 'public/admin/assets/js/product/');
 
 mix.copy('node_modules/@fortawesome/fontawesome-free/webfonts/*', 'public/assets/vendor/fonts/fontawesome');
 mix.copy('node_modules/katex/dist/fonts/*', 'public/assets/vendor/libs/quill/fonts');
