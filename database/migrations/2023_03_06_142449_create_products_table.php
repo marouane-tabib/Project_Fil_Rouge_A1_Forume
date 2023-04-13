@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('image', 150);
             $table->string('title', 55);
             $table->float('width', 6, 2)->nullable();
-            $table->float('length', 6, 2)->nullable();
+            $table->float('length_value', 6, 2)->nullable();
             $table->float('diameter', 6, 2)->nullable();
             $table->text('description', 5000);
             $table->float('price', 11, 2);
