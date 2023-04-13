@@ -1,4 +1,20 @@
-'use strict';
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(self, function() {
+return /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+/*!*****************************************************************!*\
+  !*** ./resources/admin/assets/js/products/create-validation.js ***!
+  \*****************************************************************/
+
 
 (function () {
   // Init custom option check
@@ -7,10 +23,10 @@
   // Bootstrap validation example
   //------------------------------------------------------------------------------------------
   // const flatPickrEL = $('.flatpickr-validation');
-  const flatPickrList = [].slice.call(document.querySelectorAll('.flatpickr-validation'));
+  var flatPickrList = [].slice.call(document.querySelectorAll('.flatpickr-validation'));
   // Flat pickr
   if (flatPickrList) {
-    flatPickrList.forEach(flatPickr => {
+    flatPickrList.forEach(function (flatPickr) {
       flatPickr.flatpickr({
         allowInput: true,
         monthSelectorType: 'static'
@@ -19,25 +35,20 @@
   }
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const bsValidationForms = document.querySelectorAll('.needs-validation');
+  var bsValidationForms = document.querySelectorAll('.needs-validation');
 
   // Loop over them and prevent submission
   Array.prototype.slice.call(bsValidationForms).forEach(function (form) {
-    form.addEventListener(
-      'submit',
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          // Submit your form
-          alert('Submitted!!!');
-        }
-
-        form.classList.add('was-validated');
-      },
-      false
-    );
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        // Submit your form
+        alert('Submitted!!!');
+      }
+      form.classList.add('was-validated');
+    }, false);
   });
 })();
 /**
@@ -49,162 +60,188 @@
 //------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
-    const formValidationExamples = document.getElementById('formValidationExamples'),
-      formValidationSelect2Ele = jQuery(formValidationExamples.querySelector('[name="formValidationSelect2"]')),
-      formValidationTechEle = jQuery(formValidationExamples.querySelector('[name="formValidationTech"]')),
-      formValidationLangEle = formValidationExamples.querySelector('[name="formValidationLang"]'),
-      formValidationHobbiesEle = jQuery(formValidationExamples.querySelector('.selectpicker')),
-      tech = [
-        'ReactJS',
-        'Angular',
-        'VueJS',
-        'Html',
-        'Css',
-        'Sass',
-        'Pug',
-        'Gulp',
-        'Php',
-        'Laravel',
-        'Python',
-        'Bootstrap',
-        'Material Design',
-        'NodeJS'
-      ];
-
-    const fv = FormValidation.formValidation(formValidationExamples, {
+    var formValidationExamples = document.getElementById('createProductForm');
+    var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
-        formValidationName: {
+        image: {
           validators: {
             notEmpty: {
-              message: 'Please enter your name'
+              message: 'Please select your product image.',
+            },
+            file: {
+                extension: 'jpeg,jpg,png',
+                type: 'image/jpeg,image/png',
+                maxSize: 204800, // 200 * 1024
+                minSize: 10240, // 10 * 1024
+                message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.',
+            },
+          }
+        },
+        title: {
+          validators: {
+            notEmpty: {
+              message: 'Please make sure to enter a product title.'
             },
             stringLength: {
-              min: 6,
-              max: 30,
-              message: 'The name must be more than 6 and less than 30 characters long'
+              min: 4,
+              max: 50,
+              message: 'The product title must be between 4 and 50 characters in length.'
             },
             regexp: {
               regexp: /^[a-zA-Z0-9 ]+$/,
-              message: 'The name can only consist of alphabetical, number and space'
+              message: 'The product name can only contain alphabetical, numeric, and space characters.'
             }
           }
         },
-        formValidationEmail: {
+        price: {
           validators: {
-            notEmpty: {
-              message: 'Please enter your email'
+            integer: {
+              message: 'Please make sure to enter an integer value for the product price.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
             },
-            emailAddress: {
-              message: 'The value is not a valid email address'
-            }
-          }
-        },
-        formValidationPass: {
-          validators: {
             notEmpty: {
-              message: 'Please enter your password'
-            }
-          }
-        },
-        formValidationConfirmPass: {
-          validators: {
-            notEmpty: {
-              message: 'Please confirm password'
+              message: 'Please make sure to enter a product price.'
             },
-            identical: {
-              compare: function () {
-                return formValidationExamples.querySelector('[name="formValidationPass"]').value;
-              },
-              message: 'The password and its confirm are not the same'
-            }
-          }
-        },
-        formValidationFile: {
-          validators: {
-            notEmpty: {
-              message: 'Please select the file'
-            }
-          }
-        },
-        formValidationDob: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your DOB'
+            greaterThan: {
+              message: 'The product price must be greater than or equal to 50.',
+              min: 50,
             },
-            date: {
-              format: 'YYYY/MM/DD',
-              message: 'The value is not a valid date'
-            }
           }
         },
-        formValidationSelect2: {
+        quantity: {
           validators: {
+            integer: {
+              message: 'Please make sure to enter an integer value for the product quantity.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
             notEmpty: {
-              message: 'Please select your country'
-            }
+              message: 'Please make sure to enter a product quantity.'
+            },
+            greaterThan: {
+              message: 'The product quantity must be greater than or equal to 1.',
+              min: 1,
+            },
           }
         },
-        formValidationLang: {
+        sku: {
           validators: {
+            integer: {
+              message: 'Please make sure to enter an integer value for the sku price.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
             notEmpty: {
-              message: 'Please add your language'
-            }
+              message: 'Please make sure to enter a product sku.'
+            },
+            greaterThan: {
+              message: 'The product sku must be greater than or equal to 1.',
+              min: 1,
+            },
           }
         },
-        formValidationTech: {
+        width: {
           validators: {
+            integer: {
+              message: 'Please make sure to enter an integer value for the width price.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
             notEmpty: {
-              message: 'Please select technology'
-            }
+              message: 'Please make sure to enter a product width.'
+            },
+            greaterThan: {
+              message: 'The product width must be greater than or equal to 0.',
+              min: 0,
+            },
           }
         },
-        formValidationHobbies: {
+        length_value: {
           validators: {
+            integer: {
+              message: 'Please make sure to enter an integer value for the product length.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
             notEmpty: {
-              message: 'Please select your hobbies'
-            }
+              message: 'Please make sure to enter a product price.'
+            },
+            greaterThan: {
+              message: 'The product price must be greater than or equal to 1.',
+              min: 1,
+            },
           }
         },
-        formValidationBio: {
+        category_id: {
           validators: {
             notEmpty: {
-              message: 'Please enter your bio'
+              message: 'Please make sure to enter a product category.'
+            },
+            integer: {
+              message: 'Please make sure to enter category value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+          }
+        },
+        primary_color_id: {
+          validators: {
+            notEmpty: {
+              message: 'Please make sure to enter a product primary color.'
+            },
+            integer: {
+              message: 'Please make sure to enter primary color value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+          }
+        },
+        secondary_color_id: {
+          validators: {
+            notEmpty: {
+              message: 'Please make sure to enter a product secondary color.'
+            },
+            integer: {
+              message: 'Please make sure to enter secondary color value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+          }
+        },
+        home_style_id: {
+          validators: {
+            notEmpty: {
+              message: 'Please make sure to enter a product home style.'
+            },
+            integer: {
+              message: 'Please make sure to enter home style value.',
+              // The default separators
+              thousandsSeparator: '',
+              decimalSeparator: '.',
+            },
+          }
+        },
+        description: {
+          validators: {
+            notEmpty: {
+              message: 'Please make sure to enter a product description.'
             },
             stringLength: {
-              min: 100,
-              max: 500,
-              message: 'The bio must be more than 100 and less than 500 characters long'
+              min: 10,
+              max: 5000,
+              message: 'The description must be more than 100 and less than 500 characters long'
             }
           }
         },
-        formValidationGender: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your gender'
-            }
-          }
-        },
-        formValidationPlan: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your preferred plan'
-            }
-          }
-        },
-        formValidationSwitch: {
-          validators: {
-            notEmpty: {
-              message: 'Please select your preference'
-            }
-          }
-        },
-        formValidationCheckbox: {
-          validators: {
-            notEmpty: {
-              message: 'Please confirm our T&C'
-            }
-          }
-        }
       },
       plugins: {
         trigger: new FormValidation.plugins.Trigger(),
@@ -212,27 +249,21 @@ document.addEventListener('DOMContentLoaded', function (e) {
           // Use this for enabling/changing valid/invalid class
           // eleInvalidClass: '',
           eleValidClass: '',
-          rowSelector: function (field, ele) {
+          rowSelector: function rowSelector(field, ele) {
             // field is the field name & ele is the field element
-            switch (field) {
-              case 'formValidationName':
-              case 'formValidationEmail':
-              case 'formValidationPass':
-              case 'formValidationConfirmPass':
-              case 'formValidationFile':
-              case 'formValidationDob':
-              case 'formValidationSelect2':
-              case 'formValidationLang':
-              case 'formValidationTech':
-              case 'formValidationHobbies':
-              case 'formValidationBio':
-              case 'formValidationGender':
-                return '.col-md-6';
-              case 'formValidationPlan':
-                return '.col-xl-3';
-              case 'formValidationSwitch':
-              case 'formValidationCheckbox':
-                return '.col-12';
+            switch (ele) {
+              case 'image':
+              case 'title':
+              case 'price':
+              case 'quantity':
+              case 'sku':
+              case 'width':
+              case 'length_value':
+              case 'category_id':
+              case 'primary_color_id':
+              case 'secondary_color_id':
+              case 'home_style_id':
+              case 'description':
               default:
                 return '.row';
             }
@@ -243,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
         autoFocus: new FormValidation.plugins.AutoFocus()
       },
-      init: instance => {
+      init: function init(instance) {
         instance.on('plugins.message.placed', function (e) {
           //* Move the error message out of the `input-group` element
           if (e.element.parentElement.classList.contains('input-group')) {
@@ -260,84 +291,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
       }
     });
 
-    //? Revalidation third-party libs inputs on change trigger
-
-    // Flatpickr
-    flatpickr(formValidationExamples.querySelector('[name="formValidationDob"]'), {
-      enableTime: false,
-      // See https://flatpickr.js.org/formatting/
-      dateFormat: 'Y/m/d',
-      // After selecting a date, we need to revalidate the field
-      onChange: function () {
-        fv.revalidateField('formValidationDob');
-      }
-    });
-
-    // Select2 (Country)
-    if (formValidationSelect2Ele.length) {
-      formValidationSelect2Ele.wrap('<div class="position-relative"></div>');
-      formValidationSelect2Ele
-        .select2({
-          placeholder: 'Select country',
-          dropdownParent: formValidationSelect2Ele.parent()
-        })
-        .on('change.select2', function () {
-          // Revalidate the color field when an option is chosen
-          fv.revalidateField('formValidationSelect2');
-        });
-    }
-
-    // Typeahead
-
-    // String Matcher function for typeahead
-    const substringMatcher = function (strs) {
-      return function findMatches(q, cb) {
-        var matches, substrRegex;
-        matches = [];
-        substrRegex = new RegExp(q, 'i');
-        $.each(strs, function (i, str) {
-          if (substrRegex.test(str)) {
-            matches.push(str);
-          }
-        });
-
-        cb(matches);
-      };
-    };
-
-    // Check if rtl
-    if (isRtl) {
-      const typeaheadList = [].slice.call(document.querySelectorAll('.typeahead'));
-
-      // Flat pickr
-      if (typeaheadList) {
-        typeaheadList.forEach(typeahead => {
-          typeahead.setAttribute('dir', 'rtl');
-        });
-      }
-    }
-    formValidationTechEle.typeahead(
-      {
-        hint: !isRtl,
-        highlight: true,
-        minLength: 1
-      },
-      {
-        name: 'tech',
-        source: substringMatcher(tech)
-      }
-    );
-
-    // Tagify
-    let formValidationLangTagify = new Tagify(formValidationLangEle);
-    formValidationLangEle.addEventListener('change', onChange);
-    function onChange() {
-      fv.revalidateField('formValidationLang');
-    }
-
-    //Bootstrap select
-    formValidationHobbiesEle.on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-      fv.revalidateField('formValidationHobbies');
-    });
   })();
+});
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
 });
