@@ -38,7 +38,7 @@
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
 <script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
-{{-- <script src="{{asset('admin/assets/js/product/create-validation.js')}}"></script> --}}
+<script src="{{asset('admin/assets/js/product/create-validation.js')}}"></script>
 @endsection
 
 @section('content')
@@ -100,7 +100,7 @@
           </div>
           <div class="col-12 mb-3">
             <label class="form-label" for="length_value">Length</label>
-            <input type="number" class="form-control @error('length_value') is-invalid @enderror" value="{{ old('length_value', $product->length) }}" id="length_value" name="length_value" placeholder="Add your product length" />
+            <input type="number" class="form-control @error('length_value') is-invalid @enderror" value="{{ old('length_value', $product->length_value) }}" id="length_value" name="length_value" placeholder="Add your product length" />
             @error('length_value')
               <span class="text-danger">{{$message}}</span>
             @enderror
