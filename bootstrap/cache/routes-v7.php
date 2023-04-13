@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::7UUOjomqg56sfsP0',
+            '_route' => 'generated::Lvpkcy4m1ry66Ctz',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Ie5Hw33MBuc5AXwl',
+            '_route' => 'generated::kZHtfsFXUm7Neux0',
           ),
           1 => NULL,
           2 => 
@@ -578,7 +578,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::7UUOjomqg56sfsP0' => 
+    'generated::Lvpkcy4m1ry66Ctz' => 
     array (
       'methods' => 
       array (
@@ -599,7 +599,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::7UUOjomqg56sfsP0',
+        'as' => 'generated::Lvpkcy4m1ry66Ctz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -724,7 +724,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Ie5Hw33MBuc5AXwl' => 
+    'generated::kZHtfsFXUm7Neux0' => 
     array (
       'methods' => 
       array (
@@ -741,13 +741,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000008fa0000000000000000";}";s:4:"hash";s:44:"YG1yRppB8y9mKjA0dH8ie6VC4/uwa07X2lUE5Y34nNQ=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000052c0000000000000000";}";s:4:"hash";s:44:"3DDtkgahYtM0Ou5VnYoSBjEp/KmTBtkcZCJ4ZieocyM=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::Ie5Hw33MBuc5AXwl',
+        'as' => 'generated::kZHtfsFXUm7Neux0',
       ),
       'fallback' => false,
       'defaults' => 
@@ -778,8 +778,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.index',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@index',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@index',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -815,8 +815,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.create',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@create',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@create',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -851,8 +851,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.store',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@store',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@store',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -888,8 +888,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.show',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@show',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@show',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -925,8 +925,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.edit',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@edit',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@edit',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -962,8 +962,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.update',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@update',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@update',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -998,8 +998,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'product.destroy',
-        'uses' => 'App\\Http\\Controllers\\Admin\\ProductController@destroy',
-        'controller' => 'App\\Http\\Controllers\\Admin\\ProductController@destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
