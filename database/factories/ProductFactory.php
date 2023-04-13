@@ -24,7 +24,7 @@ class ProductFactory extends Factory
             'image' => fake()->image(),
             'title' => fake()->title(),
             'width' => fake()->numberBetween(2, 40),
-            'length' => fake()->numberBetween(2, 40),
+            'length_value' => fake()->numberBetween(2, 40),
             'diameter' => fake()->numberBetween(2, 40),
             'description' => fake()->text(400),
             'price' => fake()->numberBetween(220, 430),

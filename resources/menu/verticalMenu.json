@@ -1,36 +1,35 @@
 {
   "menu": [
     {
-      "url": "/",
-      "name": "Home",
+      "name": "Dashboards",
       "icon": "menu-icon tf-icons ti ti-smart-home",
-      "slug": "pages-home"
+      "slug": "dashboard",
+      "submenu": [
+        {
+          "url": "/",
+          "icon": "menu-icon tf-icons ti ti-chart-pie-2",
+          "name": "Analytics",
+          "slug": "dashboard-analytics"
+        },
+        {
+          "url": "/dashboard/crm",
+          "name": "CRM",
+          "icon": "menu-icon tf-icons ti ti-3d-cube-sphere",
+          "slug": "dashboard-crm"
+        },
+        {
+          "url": "/dashboard/ecommerce",
+          "name": "eCommerce",
+          "icon": "menu-icon tf-icons ti ti-atom-2",
+          "slug": "dashboard-ecommerce"
+        }
+      ]
     },
     {
-      "url": "/page-2",
-      "icon": "menu-icon tf-icons ti ti-file",
-      "name": "Page 2",
-      "slug": "pages-page-2"
-    },
-    {
-      "url": "/test",
-      "icon": "menu-icon tf-icons ti ti-file",
-      "name": "Test Page",
-      "slug": "test-page"
-    },
-    {
-      "url": "/pages/misc-error",
-      "name": "Error",
-      "icon": "menu-icon tf-icons ti ti-alert-triangle",
-      "slug": "pages-misc-error",
-      "target": "_blank"
-    },
-    {
-      "url": "/auth/login-basic",
-      "name": "Login",
-      "icon": "menu-icon tf-icons ti ti-login",
-      "slug": "auth-login-basic",
-      "target": "_blank"
+      "url": "/product",
+      "name": "Products",
+      "icon": "menu-icon tf-icons ti ti-box",
+      "slug": "product.index"
     },
     {
       "url": "/auth/register-basic",
