@@ -19,187 +19,6 @@ return /******/ (function() { // webpackBootstrap
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-editValidationFields = {
-  image: {
-    validators: {
-      file: {
-        extension: 'jpeg,jpg,png',
-        type: 'image/jpeg,image/png',
-        maxSize: 204800,
-        // 200 * 1024
-        minSize: 10240,
-        // 10 * 1024
-        message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.'
-      }
-    }
-  },
-  title: {
-    validators: {
-      notEmpty: {
-        message: 'Please make sure to enter a product title.'
-      },
-      stringLength: {
-        min: 4,
-        max: 50,
-        message: 'The product title must be between 4 and 50 characters in length.'
-      },
-      regexp: {
-        regexp: /^[a-zA-Z0-9 ]+$/,
-        message: 'The product name can only contain alphabetical, numeric, and space characters.'
-      }
-    }
-  },
-  price: {
-    validators: {
-      integer: {
-        message: 'Please make sure to enter an integer value for the product price.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      },
-      notEmpty: {
-        message: 'Please make sure to enter a product price.'
-      },
-      greaterThan: {
-        message: 'The product price must be greater than or equal to 50.',
-        min: 50
-      }
-    }
-  },
-  quantity: {
-    validators: {
-      integer: {
-        message: 'Please make sure to enter an integer value for the product quantity.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      },
-      notEmpty: {
-        message: 'Please make sure to enter a product quantity.'
-      },
-      greaterThan: {
-        message: 'The product quantity must be greater than or equal to 1.',
-        min: 1
-      }
-    }
-  },
-  sku: {
-    validators: {
-      integer: {
-        message: 'Please make sure to enter an integer value for the sku price.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      },
-      notEmpty: {
-        message: 'Please make sure to enter a product sku.'
-      },
-      greaterThan: {
-        message: 'The product sku must be greater than or equal to 1.',
-        min: 1
-      }
-    }
-  },
-  width: {
-    validators: {
-      integer: {
-        message: 'Please make sure to enter an integer value for the width price.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      },
-      notEmpty: {
-        message: 'Please make sure to enter a product width.'
-      },
-      greaterThan: {
-        message: 'The product width must be greater than or equal to 0.',
-        min: 0
-      }
-    }
-  },
-  length_value: {
-    validators: {
-      integer: {
-        message: 'Please make sure to enter an integer value for the product length.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      },
-      notEmpty: {
-        message: 'Please make sure to enter a product price.'
-      },
-      greaterThan: {
-        message: 'The product price must be greater than or equal to 1.',
-        min: 1
-      }
-    }
-  },
-  category_id: {
-    validators: {
-      notEmpty: {
-        message: 'Please make sure to enter a product category.'
-      },
-      integer: {
-        message: 'Please make sure to enter category value.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      }
-    }
-  },
-  primary_color_id: {
-    validators: {
-      notEmpty: {
-        message: 'Please make sure to enter a product primary color.'
-      },
-      integer: {
-        message: 'Please make sure to enter primary color value.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      }
-    }
-  },
-  secondary_color_id: {
-    validators: {
-      notEmpty: {
-        message: 'Please make sure to enter a product secondary color.'
-      },
-      integer: {
-        message: 'Please make sure to enter secondary color value.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      }
-    }
-  },
-  home_style_id: {
-    validators: {
-      notEmpty: {
-        message: 'Please make sure to enter a product home style.'
-      },
-      integer: {
-        message: 'Please make sure to enter home style value.',
-        // The default separators
-        thousandsSeparator: '',
-        decimalSeparator: '.'
-      }
-    }
-  },
-  description: {
-    validators: {
-      notEmpty: {
-        message: 'Please make sure to enter a product description.'
-      },
-      stringLength: {
-        min: 10,
-        max: 5000,
-        message: 'The description must be more than 100 and less than 500 characters long'
-      }
-    }
-  }
-};
-console.log(editValidationFiels);
 (function webpackUniversalModuleDefinition(root, factory) {
   if (( false ? 0 : _typeof(exports)) === 'object' && ( false ? 0 : _typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
@@ -213,8 +32,8 @@ console.log(editValidationFiels);
 
       var __webpack_exports__ = {};
       /*!*****************************************************************!*\
-      !*** ./resources/admin/assets/js/products/create-validation.js ***!
-      \*****************************************************************/
+        !*** ./resources/admin/assets/js/products/create-validation.js ***!
+        \*****************************************************************/
 
       (function () {
         // Init custom option check
@@ -252,33 +71,199 @@ console.log(editValidationFiels);
         });
       })();
       /**
-      * Form Validation (https://formvalidation.io/guide/examples)
-      * ? Primary form validation plugin for this template
-      * ? In this example we've try to covered as many form inputs as we can.
-      * ? Though If we've miss any 3rd party libraries, then refer: https://formvalidation.io/guide/examples/integrating-with-3rd-party-libraries
-      */
+       * Form Validation (https://formvalidation.io/guide/examples)
+       * ? Primary form validation plugin for this template
+       * ? In this example we've try to covered as many form inputs as we can.
+       * ? Though If we've miss any 3rd party libraries, then refer: https://formvalidation.io/guide/examples/integrating-with-3rd-party-libraries
+       */
       //------------------------------------------------------------------------------------------
       document.addEventListener('DOMContentLoaded', function (e) {
         (function () {
           var formValidationExamples = document.getElementById('createProductForm');
-          var imageFiels = {
-            image: {
-              validators: {
-                file: {
-                  extension: 'jpeg,jpg,png',
-                  type: 'image/jpeg,image/png',
-                  maxSize: 204800,
-                  // 200 * 1024
-                  minSize: 10240,
-                  // 10 * 1024
-                  message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.'
+          var fv = FormValidation.formValidation(formValidationExamples, {
+            fields: {
+              image: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please select your product image.'
+                  },
+                  file: {
+                    extension: 'jpeg,jpg,png',
+                    type: 'image/jpeg,image/png',
+                    maxSize: 204800,
+                    // 200 * 1024
+                    minSize: 10240,
+                    // 10 * 1024
+                    message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.'
+                  }
+                }
+              },
+              title: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please make sure to enter a product title.'
+                  },
+                  stringLength: {
+                    min: 4,
+                    max: 50,
+                    message: 'The product title must be between 4 and 50 characters in length.'
+                  },
+                  regexp: {
+                    regexp: /^[a-zA-Z0-9 ]+$/,
+                    message: 'The product name can only contain alphabetical, numeric, and space characters.'
+                  }
+                }
+              },
+              price: {
+                validators: {
+                  integer: {
+                    message: 'Please make sure to enter an integer value for the product price.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  },
+                  notEmpty: {
+                    message: 'Please make sure to enter a product price.'
+                  },
+                  greaterThan: {
+                    message: 'The product price must be greater than or equal to 50.',
+                    min: 50
+                  }
+                }
+              },
+              quantity: {
+                validators: {
+                  integer: {
+                    message: 'Please make sure to enter an integer value for the product quantity.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  },
+                  notEmpty: {
+                    message: 'Please make sure to enter a product quantity.'
+                  },
+                  greaterThan: {
+                    message: 'The product quantity must be greater than or equal to 1.',
+                    min: 1
+                  }
+                }
+              },
+              sku: {
+                validators: {
+                  integer: {
+                    message: 'Please make sure to enter an integer value for the sku price.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  },
+                  notEmpty: {
+                    message: 'Please make sure to enter a product sku.'
+                  },
+                  greaterThan: {
+                    message: 'The product sku must be greater than or equal to 1.',
+                    min: 1
+                  }
+                }
+              },
+              width: {
+                validators: {
+                  integer: {
+                    message: 'Please make sure to enter an integer value for the width price.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  },
+                  notEmpty: {
+                    message: 'Please make sure to enter a product width.'
+                  },
+                  greaterThan: {
+                    message: 'The product width must be greater than or equal to 0.',
+                    min: 0
+                  }
+                }
+              },
+              length_value: {
+                validators: {
+                  integer: {
+                    message: 'Please make sure to enter an integer value for the product length.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  },
+                  notEmpty: {
+                    message: 'Please make sure to enter a product price.'
+                  },
+                  greaterThan: {
+                    message: 'The product price must be greater than or equal to 1.',
+                    min: 1
+                  }
+                }
+              },
+              category_id: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please make sure to enter a product category.'
+                  },
+                  integer: {
+                    message: 'Please make sure to enter category value.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  }
+                }
+              },
+              primary_color_id: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please make sure to enter a product primary color.'
+                  },
+                  integer: {
+                    message: 'Please make sure to enter primary color value.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  }
+                }
+              },
+              secondary_color_id: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please make sure to enter a product secondary color.'
+                  },
+                  integer: {
+                    message: 'Please make sure to enter secondary color value.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  }
+                }
+              },
+              home_style_id: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please make sure to enter a product home style.'
+                  },
+                  integer: {
+                    message: 'Please make sure to enter home style value.',
+                    // The default separators
+                    thousandsSeparator: '',
+                    decimalSeparator: '.'
+                  }
+                }
+              },
+              description: {
+                validators: {
+                  notEmpty: {
+                    message: 'Please make sure to enter a product description.'
+                  },
+                  stringLength: {
+                    min: 10,
+                    max: 5000,
+                    message: 'The description must be more than 100 and less than 500 characters long'
+                  }
                 }
               }
-            }
-          };
-          console.log(imageFiels);
-          var fv = FormValidation.formValidation(formValidationExamples, {
-            fields: editValidationFields,
+            },
             plugins: {
               trigger: new FormValidation.plugins.Trigger(),
               bootstrap5: new FormValidation.plugins.Bootstrap5({
