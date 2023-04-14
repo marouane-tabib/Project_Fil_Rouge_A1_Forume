@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function create()
     {
       return view('admin.pages.products.create');
-    } 
+    }
 
     /**
      * Store a newly created resource in storage.
