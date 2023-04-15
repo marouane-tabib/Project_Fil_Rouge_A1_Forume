@@ -13,7 +13,7 @@ class MakeInterfaceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:interface {name}';
+    protected $signature = 'make:interface {name} {--r|repository}';
 
     /**
      * The console command description.
@@ -39,9 +39,11 @@ class MakeInterfaceCommand extends Command
     {
         $namespace = 'App\\Interfaces';
 
+        $this->option('repository') ? $stub = 'interface.repository.stub' : $stub = 'interface.stub';
+
         $full_path = base_path($namespace) . '\\' . $this->argument('name').'Interface.php';
 
-        $message = CustomStubService::of($this->files,'interface.stub',$this->argument('name'),$namespace,$full_path);
+        $message = CustomStubService::of($this->files, $stub,$this->argument('name'), $namespace,$full_path);
 
         $this->info($message);
     }
