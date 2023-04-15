@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Services\CustomStubService;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Artisan;
 
 class MakeInterfaceCommand extends Command
 {
@@ -13,7 +14,7 @@ class MakeInterfaceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:interface {name} {--r|repository}';
+    protected $signature = 'make:interface {name} {--r|repository} {--a|all}';
 
     /**
      * The console command description.
@@ -39,14 +40,19 @@ class MakeInterfaceCommand extends Command
     {
         $namespace = 'App\\Interfaces';
 
-        $stub = $this->option('repository') ? 'interface.repository.stub' : 'interface.stub';
+        $stub = $this->option('repository') || $this->option('all') ? 'interface.repository.stub' : 'interface.stub';
 
-        $fileType = $this->option('repository') ? 'RepositoryInterface.php' : 'Interface.php';
+        $fileType = $this->option('repository') || $this->option('all') ? 'RepositoryInterface.php' : 'Interface.php';
 
         $full_path = base_path($namespace) . '\\' . $this->argument('name').$fileType;
 
         $message = CustomStubService::of($this->files, $stub, $this->argument('name'), $namespace,$full_path);
 
         $this->info($message);
+
+        if ($this->option('all')) {
+          Artisan::call('make:repository '.$this->argument('name'));
+          Artisan::call('make:service '.$this->argument('name').' -r');
+        }
     }
 }
