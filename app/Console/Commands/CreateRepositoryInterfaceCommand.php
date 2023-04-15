@@ -11,14 +11,14 @@ class CreateRepositoryInterfaceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:interface {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'With the command can you create repository interface ';
 
     /**
      * Execute the console command.
@@ -27,6 +27,6 @@ class CreateRepositoryInterfaceCommand extends Command
      */
     public function handle()
     {
-        return Command::SUCCESS;
+      return $this->info($this->argument('name'));
     }
 }
