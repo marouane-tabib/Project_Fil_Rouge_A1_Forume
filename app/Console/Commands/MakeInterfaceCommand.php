@@ -39,11 +39,13 @@ class MakeInterfaceCommand extends Command
     {
         $namespace = 'App\\Interfaces';
 
-        $this->option('repository') ? $stub = 'interface.repository.stub' : $stub = 'interface.stub';
+        $stub = $this->option('repository') ? 'interface.repository.stub' : 'interface.stub';
 
-        $full_path = base_path($namespace) . '\\' . $this->argument('name').'Interface.php';
+        $fileType = $this->option('repository') ? 'RepositoryInterface.php' : 'Interface.php';
 
-        $message = CustomStubService::of($this->files, $stub,$this->argument('name'), $namespace,$full_path);
+        $full_path = base_path($namespace) . '\\' . $this->argument('name').$fileType;
+
+        $message = CustomStubService::of($this->files, $stub, $this->argument('name'), $namespace,$full_path);
 
         $this->info($message);
     }
