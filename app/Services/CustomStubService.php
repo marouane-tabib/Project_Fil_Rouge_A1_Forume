@@ -48,6 +48,7 @@ class CustomStubService
         $vars = [
             'NAMESPACE' => self::$namespace,
             'CLASSNAME' => ucwords(Pluralizer::singular(self::$name)),
+            'LOWERCLASSNAME' => strtolower(ucwords(Pluralizer::singular(self::$name))),
         ];
 
         return self::getStubContent($stub, $vars);
