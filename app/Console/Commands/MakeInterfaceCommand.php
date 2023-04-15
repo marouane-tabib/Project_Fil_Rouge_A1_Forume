@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Services\CustomStubService;
 use Illuminate\Console\Command;
+use Illuminate\Filesystem\Filesystem;
 
 class MakeInterfaceCommand extends Command
 {
@@ -11,7 +13,7 @@ class MakeInterfaceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:interface {name}';
 
     /**
      * The console command description.
@@ -20,13 +22,27 @@ class MakeInterfaceCommand extends Command
      */
     protected $description = 'Command description';
 
+    public Filesystem $files;
     /**
      * Execute the console command.
      *
      * @return int
      */
+    public function __construct(Filesystem $files)
+    {
+        parent::__construct();
+
+        $this->files = $files;
+    }
+
     public function handle()
     {
-        return Command::SUCCESS;
+        $namespace = 'App\\Interfaces';
+
+        $full_path = base_path($namespace) . '\\' . $this->argument('name').'Interface.php';
+
+        $message = CustomStubService::of($this->files,'interface.stub',$this->argument('name'),$namespace,$full_path);
+
+        $this->info($message);
     }
 }
