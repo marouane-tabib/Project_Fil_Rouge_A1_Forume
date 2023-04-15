@@ -4,7 +4,7 @@ namespace App\Services;
 
 use Illuminate\Support\Pluralizer;
 
-class Stub
+class CustomStubService
 {
     protected static $files, $filename, $name, $namespace, $full_path;
 
