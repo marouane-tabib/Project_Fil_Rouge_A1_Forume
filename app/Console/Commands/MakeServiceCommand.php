@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Services\CustomStubService;
 use Illuminate\Console\Command;
+use Illuminate\Filesystem\Filesystem;
 
 class MakeServiceCommand extends Command
 {
@@ -11,7 +13,7 @@ class MakeServiceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:service {name} {--r|repository}';
 
     /**
      * The console command description.
@@ -20,13 +22,31 @@ class MakeServiceCommand extends Command
      */
     protected $description = 'Command description';
 
+    public Filesystem $files;
     /**
      * Execute the console command.
      *
      * @return int
      */
+    public function __construct(Filesystem $files)
+    {
+        parent::__construct();
+
+        $this->files = $files;
+    }
+
     public function handle()
     {
-        return Command::SUCCESS;
+        $namespace = 'App\\Services';
+
+        $stub = $this->option('repository') ? 'service.repository.stub' : 'service.stub';
+
+        $fileType = 'Service.php';
+
+        $full_path = base_path($namespace) . '\\' . $this->argument('name').$fileType;
+
+        $message = CustomStubService::of($this->files, $stub, $this->argument('name'), $namespace,$full_path);
+
+        $this->info($message);
     }
 }
