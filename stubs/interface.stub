@@ -2,7 +2,7 @@
 
 namespace $NAMESPACE$;
 
-trait $CLASSNAME$Trait
+interface $CLASSNAME$Interface
 {
     //
 }
