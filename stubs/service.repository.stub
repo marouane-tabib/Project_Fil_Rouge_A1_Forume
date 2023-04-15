@@ -1,0 +1,15 @@
+<?php
+
+namespace {{NAMESPACE}};
+
+use App\Interfaces\{{CLASSNAME}}RepositoryInterface;
+
+class {{CLASSNAME}}Service
+{
+  protected {{CLASSNAME}}RepositoryInterface ${{LOWERCLASSNAME}}Repository;
+
+  public function __construct({{CLASSNAME}}RepositoryInterface ${{LOWERCLASSNAME}}Repository)
+  {
+    $this->{{LOWERCLASSNAME}}Repository = ${{LOWERCLASSNAME}}Repository;
+  }
+}
