@@ -1,8 +1,8 @@
 <?php
 
-namespace $NAMESPACE$;
+namespace {{NAMESPACE}};
 
-interface $CLASSNAME$Interface extends BaseRepositoryInterface
+interface {{CLASSNAME}}Interface extends BaseRepositoryInterface
 {
     //
 }

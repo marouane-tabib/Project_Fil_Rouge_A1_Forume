@@ -59,7 +59,7 @@ class CustomStubService
 
         foreach ($stub_vars as $name => $value)
         {
-            $content = str_replace('$'.$name.'$', $value, $content);
+            $content = str_replace('{{'.$name.'}}', $value, $content);
         }
 
         return $content;
