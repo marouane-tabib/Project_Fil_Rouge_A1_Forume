@@ -13,7 +13,7 @@ class MakeRepositoryCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:repository';
+    protected $signature = 'make:repository {name} {--b|base}';
 
     /**
      * The console command description.
@@ -37,11 +37,11 @@ class MakeRepositoryCommand extends Command
 
     public function handle()
     {
-        $namespace = 'App\\Interfaces';
+        $namespace = 'App\\Repositories';
 
-        $stub = 'repository.stub';
+        $stub = $this->option('base') ? 'repository.base.stub' : 'repository.stub';
 
-        $fileType = 'Repository.php';
+        $fileType = $this->option('base') ? 'BaseRepository.php' : 'Repository.php';
 
         $full_path = base_path($namespace) . '\\' . $this->argument('name').$fileType;
 
