@@ -2,7 +2,7 @@
 
 namespace {{NAMESPACE}};
 
-interface {{CLASSNAME}}Interface extends BaseRepositoryInterface
+interface {{CLASSNAME}}RepositoryInterface extends BaseRepositoryInterface
 {
     //
 }
