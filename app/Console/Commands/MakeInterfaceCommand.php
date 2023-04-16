@@ -14,7 +14,7 @@ class MakeInterfaceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:interface {name} {--r|repository} {--a|all}';
+    protected $signature = 'make:interface {name} {--r|repository} {--a|all} {--b|bind}';
 
     /**
      * The console command description.
@@ -53,6 +53,9 @@ class MakeInterfaceCommand extends Command
         if ($this->option('all')) {
           Artisan::call('make:repository '.$this->argument('name'));
           Artisan::call('make:service '.$this->argument('name').' -r');
+          if ($this->option('bind')) {
+            Artisan::call("bind:repository ".$this->argument('name')."RepositoryInterface ".$this->argument('name')."Repository");
+          }
         }
     }
 }
