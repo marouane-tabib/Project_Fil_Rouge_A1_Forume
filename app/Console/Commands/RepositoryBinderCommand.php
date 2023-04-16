@@ -11,7 +11,7 @@ class RepositoryBinderCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'bind:repository';
 
     /**
      * The console command description.
