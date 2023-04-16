@@ -28,25 +28,35 @@ class RepositoryBinderCommand extends Command
 
      public function handle()
      {
-        $concrete = $this->argument('concrete');
-        $abstract = $this->argument('abstract');
 
-        $providerFile = app_path('Providers/RepositoryServiceProvider.php');
-        $providerContents = file_get_contents($providerFile);
+      $concrete = $this->argument('concrete');
+$abstract = $this->argument('abstract');
 
-        if (strpos($providerContents, "->bind($abstract)") !== false) {
-            $this->info("Binding for $abstract already exists in RepositoryServiceProvider.");
-        }
+$providerFile = app_path('Providers/RepositoryServiceProvider.php');
+$providerContents = file_get_contents($providerFile);
 
-        $binding = "\$this->app->bind($abstract::class, $concrete::class);";
-        $providerContents = preg_replace(
-            '/public function register\(\)\s*{/',
-            "public function register()\n    {\n      $binding", // Add the binding after the opening brace
-            $providerContents
-        );
+if (strpos($providerContents, "->bind($abstract)") !== false) {
+    $this->info("Binding for $abstract already exists in RepositoryServiceProvider.");
+}
 
-        $this->info("Binding for $abstract has been added to RepositoryServiceProvider in the register() method.");
+$useStatements = "use $concrete;\nuse $abstract;\r";
+// Find the position of the namespace declaration
+$namespacePosition = strpos($providerContents, 'namespace App\Providers;');
+if ($namespacePosition !== false) {
+    // Insert the new use statements after the namespace declaration
+    $providerContents = substr_replace($providerContents, "\n$useStatements", $namespacePosition + strlen('namespace App\Providers;'), 0);
+}
 
-        file_put_contents($providerFile, $providerContents);
+$binding = "\$this->app->bind($abstract::class, $concrete::class);";
+$providerContents = preg_replace(
+    '/public function register\(\)\s*{/',
+    "public function register()\n    {\n      $binding", // Add the binding after the opening brace
+    $providerContents
+);
+
+$this->info("Binding for $abstract has been added to RepositoryServiceProvider in the register() method.");
+
+file_put_contents($providerFile, $providerContents);
+
       }
 }

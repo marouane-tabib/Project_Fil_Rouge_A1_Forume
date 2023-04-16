@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Providers;
+use CityInterface;
+use CityRepositoryInterface;
 
 use App\Interfaces\BaseRepositoryInterface;
 use App\Interfaces\ProductRepositoryInterface;
@@ -17,6 +19,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+      $this->app->bind(CityRepositoryInterface::class, CityInterface::class);
       $this->app->bind(BaseRepositoryInterface::class, BaseRepository::class);
       $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
     }
