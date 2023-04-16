@@ -11,7 +11,7 @@ class RepositoryBinderCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'bind:repository';
+    protected $signature = 'bind:repository {abstract} {concrete}';
 
     /**
      * The console command description.
@@ -28,30 +28,33 @@ class RepositoryBinderCommand extends Command
 
      public function handle()
      {
+        $concrete = $this->argument('concrete');
+        $abstract = $this->argument('abstract');
+
          $providerFile = app_path('Providers/RepositoryServiceProvider.php');
          $providerContents = file_get_contents($providerFile);
 
          // Check if the bindings already exist
-         $bindings = [
-             BaseRepositoryInterface::class => BaseRepository::class,
-             ProductRepositoryInterface::class => ProductRepository::class,
-             // Add more bindings here as needed
-         ];
-         foreach ($bindings as $interface => $implementation) {
-             if (strpos($providerContents, "->bind($interface)") !== false) {
-                 $this->info("Binding for $interface already exists in RepositoryServiceProvider.");
-                 continue;
+        //  $bindings = [
+        //      BaseRepositoryInterface::class => BaseRepository::class,
+        //      ProductRepositoryInterface::class => ProductRepository::class,
+        //      // Add more bindings here as needed
+        //  ];
+        //  foreach ($bindings as $interface => $implementation) {
+             if (strpos($providerContents, "->bind($abstract)") !== false) {
+                 $this->info("Binding for $abstract already exists in RepositoryServiceProvider.");
+                //  continue;
              }
 
              // Add the binding to the register() method
-             $binding = "\$this->app->bind($interface::class, $implementation::class);";
+             $binding = "\$this->app->bind($abstract::class, $concrete::class);";
              $providerContents = preg_replace(
                  '/public function register\(\)\s*{/',
-                 "public function register()\n    {\n        $binding\n", // Add the binding after the opening brace
+                 "public function register()\n    {\n      $binding", // Add the binding after the opening brace
                  $providerContents
              );
-             $this->info("Binding for $interface has been added to RepositoryServiceProvider in the register() method.");
-         }
+             $this->info("Binding for $abstract has been added to RepositoryServiceProvider in the register() method.");
+        //  }
 
          file_put_contents($providerFile, $providerContents);
      }
