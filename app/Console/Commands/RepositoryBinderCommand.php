@@ -35,7 +35,7 @@ $abstract = $this->argument('abstract');
 $providerFile = app_path('Providers/RepositoryServiceProvider.php');
 $providerContents = file_get_contents($providerFile);
 
-if (strpos($providerContents, "->bind($abstract)") !== false) {
+if (strpos($providerContents, "bind($abstract::class, $concrete::class);") !== false) {
     $this->info("Binding for $abstract already exists in RepositoryServiceProvider.");
 }
 
@@ -44,7 +44,7 @@ $useStatements = "use $concrete;\nuse $abstract;\r";
 $namespacePosition = strpos($providerContents, 'namespace App\Providers;');
 if ($namespacePosition !== false) {
     // Insert the new use statements after the namespace declaration
-    $providerContents = substr_replace($providerContents, "\n$useStatements", $namespacePosition + strlen('namespace App\Providers;'), 0);
+    $providerContents = substr_replace($providerContents, $useStatements, $namespacePosition + strlen('namespace App\Providers;\n'), 0);
 }
 
 $binding = "\$this->app->bind($abstract::class, $concrete::class);";
