@@ -30,33 +30,31 @@ class RepositoryBinderCommand extends Command
      {
 
       $concrete = $this->argument('concrete');
-$abstract = $this->argument('abstract');
+      $abstract = $this->argument('abstract');
 
-$providerFile = app_path('Providers/RepositoryServiceProvider.php');
-$providerContents = file_get_contents($providerFile);
+      $providerFile = app_path('Providers/RepositoryServiceProvider.php');
+      $providerContents = file_get_contents($providerFile);
 
-if (strpos($providerContents, "bind($abstract::class, $concrete::class);") !== false) {
-    $this->info("Binding for $abstract already exists in RepositoryServiceProvider.");
-}
+      if (strpos($providerContents, "bind($abstract::class, $concrete::class);") !== false) {
+          $this->error("Binding for $abstract already exists in RepositoryServiceProvider.");
+      }else {
 
-$useStatements = "use $concrete;\nuse $abstract;\r";
-// Find the position of the namespace declaration
-$namespacePosition = strpos($providerContents, 'namespace App\Providers;');
-if ($namespacePosition !== false) {
-    // Insert the new use statements after the namespace declaration
-    $providerContents = substr_replace($providerContents, $useStatements, $namespacePosition + strlen('namespace App\Providers;\n'), 0);
-}
+        $useStatements = "use $concrete;\nuse $abstract;\r";
+        $namespacePosition = strpos($providerContents, 'namespace App\Providers;');
 
-$binding = "\$this->app->bind($abstract::class, $concrete::class);";
-$providerContents = preg_replace(
-    '/public function register\(\)\s*{/',
-    "public function register()\n    {\n      $binding", // Add the binding after the opening brace
-    $providerContents
-);
+        if ($namespacePosition !== false) {
+            $providerContents = substr_replace($providerContents, $useStatements, $namespacePosition + strlen('namespace App\Providers;\n'), 0);
+        }
 
-$this->info("Binding for $abstract has been added to RepositoryServiceProvider in the register() method.");
+        $binding = "\$this->app->bind($abstract::class, $concrete::class);";
+        $providerContents = preg_replace(
+            '/public function register\(\)\s*{/',
+            "public function register()\n    {\n      $binding",
+            $providerContents
+        );
 
-file_put_contents($providerFile, $providerContents);
-
+        $this->info("Binding for $abstract has been added to RepositoryServiceProvider in the register() method.");
+        file_put_contents($providerFile, $providerContents);
+        }
       }
 }
