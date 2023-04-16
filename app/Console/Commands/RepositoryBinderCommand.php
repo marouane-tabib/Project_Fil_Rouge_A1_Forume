@@ -39,7 +39,7 @@ class RepositoryBinderCommand extends Command
           $this->error("Binding for $abstract already exists in RepositoryServiceProvider.");
       }else {
 
-        $useStatements = "use $concrete;\nuse $abstract;\r";
+        $useStatements = "use App\Interfaces\\$abstract;\nuse App\Repositories\\$concrete;\r";
         $namespacePosition = strpos($providerContents, 'namespace App\Providers;');
 
         if ($namespacePosition !== false) {
