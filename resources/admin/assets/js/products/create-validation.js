@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
             stringLength: {
               min: 10,
               max: 5000,
-              message: 'The description must be more than 100 and less than 500 characters long'
+              message: 'The description must be more than 10 and less than 5000 characters long'
             }
           }
         },
