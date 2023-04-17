@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.products.index', ['products' => $this->productService->all()]);
+      return view('admin.pages.products.index', ['products' => $this->productService->get(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
     }
 
     /**
@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function create()
     {
       return view('admin.pages.products.create');
-    } 
+    }
 
     /**
      * Store a newly created resource in storage.
