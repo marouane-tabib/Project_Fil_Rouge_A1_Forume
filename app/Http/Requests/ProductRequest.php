@@ -27,7 +27,7 @@ class ProductRequest extends FormRequest
           case 'POST' : {
             return [
               // Images types and size => Thumbnail images=>max:50KB|Product images=>max:500KB|Zoom or gallery images=>max:1MB
-              'image' => 'required|image|between:10,200|mimes:jpeg,png,jpg',
+              'image' => 'required|image|between:10,2000|mimes:jpeg,png,jpg',
               'title' => 'required|string|min:4|max:50',
               'price' => 'required|numeric|min:50',
               'quantity' => 'required|numeric|min:1',
@@ -47,7 +47,7 @@ class ProductRequest extends FormRequest
           case 'PATCH' : {
             return [
               // Images types and size => Thumbnail images=>max:50KB|Product images=>max:500KB|Zoom or gallery images=>max:1MB
-              'image' => 'nullable|image|between:10,200|mimes:jpeg,png,jpg',
+              'image' => 'nullable|image|between:10,2000|mimes:jpeg,png,jpg',
               'title' => 'required|string|min:4|max:50',
               'price' => 'required|numeric|min:50',
               'quantity' => 'required|numeric|min:1',
@@ -73,7 +73,7 @@ class ProductRequest extends FormRequest
         return [
             'image.required' => 'Please upload an image for your product.',
             'image.image' => 'The uploaded file must be an image.',
-            'image.between' => 'The image size must be between 10 KB and 200 KB.',
+            'image.between' => 'The image size must be between 10 KB and 2 MB.',
             'image.mimes' => 'The image must be in JPEG, PNG, or JPG format.',
             'title.required' => 'Please enter a title for your product.',
             'title.string' => 'The title must be a string.',

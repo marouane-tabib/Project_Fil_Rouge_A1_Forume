@@ -90,9 +90,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                   file: {
                     extension: 'jpeg,jpg,png',
                     type: 'image/jpeg,image/png',
-                    maxSize: 250000,
+                    maxSize: 2097152,
                     // 200 * 1024
-                    minSize: 12500,
+                    minSize: 10485,
                     // 10 * 1024
                     message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.'
                   }
