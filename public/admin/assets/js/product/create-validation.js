@@ -90,9 +90,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                   file: {
                     extension: 'jpeg,jpg,png',
                     type: 'image/jpeg,image/png',
-                    maxSize: 204800,
+                    maxSize: 250000,
                     // 200 * 1024
-                    minSize: 10240,
+                    minSize: 12500,
                     // 10 * 1024
                     message: 'The selected file is not valid. Please make sure you upload a JPEG or PNG image file with a minimum size of 10 KB and a maximum size of 2 MB.'
                   }
@@ -259,7 +259,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                   stringLength: {
                     min: 10,
                     max: 5000,
-                    message: 'The description must be more than 100 and less than 500 characters long'
+                    message: 'The description must be more than 10 and less than 5000 characters long'
                   }
                 }
               }
