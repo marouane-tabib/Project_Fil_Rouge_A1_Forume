@@ -8,15 +8,22 @@ use Tests\TestCase;
 
 class ProductValidationTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
-    {
-        $response = $this->get('/');
+  public function test_product_validation_rules()
+  {
+    $response = $this->post('/products', [
+        'title' => 'Test Product',
+        'description' => 'This is a test product',
+        'price' => 25,
+        'quantity' => 10,
+        'sku' => 123,
+        'width' => 5,
+        'length_value' => 10,
+        'category_id' => 1,
+        'primary_color_id' => 1,
+        'secondary_color_id' => 2,
+        'home_style_id' => 1,
+    ]);
 
-        $response->assertStatus(200);
-    }
+    $response->assertRedirect('/products')->assertSessionHasNoErrors();
+  }
 }
