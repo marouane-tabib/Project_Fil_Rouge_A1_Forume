@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
 
 class MakeRepositoryPaterenCrudCommand extends Command
 {
@@ -11,7 +12,7 @@ class MakeRepositoryPaterenCrudCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:repository-crud {name}';
 
     /**
      * The console command description.
@@ -27,6 +28,6 @@ class MakeRepositoryPaterenCrudCommand extends Command
      */
     public function handle()
     {
-        return Command::SUCCESS;
+      Artisan::call('make:model -mfs '.$this->argument('name'));
     }
 }
