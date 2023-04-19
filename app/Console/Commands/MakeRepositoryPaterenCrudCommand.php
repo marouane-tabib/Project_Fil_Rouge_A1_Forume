@@ -28,6 +28,7 @@ class MakeRepositoryPaterenCrudCommand extends Command
      */
     public function handle()
     {
-      Artisan::call('make:model -mfscr '.$this->argument('name'));
+      Artisan::call('make:model '.$this->argument('name').' -mfscr');
+      Artisan::call('make:interface '.$this->argument('name').' -a -b');
     }
 }
