@@ -11,7 +11,7 @@ class MakeRequestSwitchCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:request {name} {--s|switch}';
 
     /**
      * The console command description.
