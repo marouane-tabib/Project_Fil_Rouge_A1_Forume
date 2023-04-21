@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagRequest;
 use App\Services\TagService;
 use Illuminate\Http\Request;
 
@@ -41,9 +42,10 @@ class TagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TagRequest $request)
     {
-        //
+      $this->tagService->create($request->validated());
+      return redirect()->back();
     }
 
     /**
