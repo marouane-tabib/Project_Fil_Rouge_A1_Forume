@@ -43,4 +43,15 @@ class TagRequest extends FormRequest
             //
         ];
     }
+
+    public function messages()
+    {
+      return [
+        'name.required' => 'Please enter a name for your category.',
+        'name.string' => 'The name must be a string.',
+        'name.min' => 'The name must be at least 4 characters long.',
+        'name.max' => 'The name must not exceed 50 characters.',
+        'name.unique' => 'The category name has already been taken.',
+      ];
+    }
 }
