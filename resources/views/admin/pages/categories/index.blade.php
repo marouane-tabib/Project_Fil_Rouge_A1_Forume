@@ -6,6 +6,40 @@
 
 @section('title', 'Categories')
 
+@section('vendor-style')
+{{-- <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/dropzone/dropzone.css')}}" /> --}}
+
+{{-- Validation
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/typeahead-js/typeahead.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/tagify/tagify.css')}}" /> --}}
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
+@endsection
+
+@section('vendor-script')
+{{-- <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/dropzone/dropzone.js')}}"></script> --}}
+
+{{-- Validation --}}
+{{-- <script src="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/typeahead-js/typeahead.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/tagify/tagify.js')}}"></script> --}}
+<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+@endsection
+@section('page-script')
+{{-- <script src="{{asset('assets/js/form-layouts.js')}}"></script>
+<script src="{{asset('assets/js/forms-file-upload.js')}}"></script> --}}
+<script src="{{asset('admin/assets/js/categories/data-form-validation.js')}}"></script>
+@endsection
+
 @section('content')
 <div class="d-flex justify-content-end">
     @include('admin.components.categoriesEditModal')
