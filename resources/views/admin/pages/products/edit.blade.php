@@ -38,7 +38,7 @@
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
 <script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
-<script src="{{asset('admin/assets/js/product/edit-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/products/edit-validation.js')}}"></script>
 @endsection
 
 @section('content')
@@ -162,7 +162,7 @@
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" class="btn btn-primary">Update</button>
         </form>
       </div>
     </div>

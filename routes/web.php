@@ -5,4 +5,4 @@ use App\Http\Controllers\Test\test;
 use Illuminate\Support\Facades\Route;
 
 // admine
-Route::resource('/product', ProductController::class);
+Route::resource('/products', ProductController::class);
