@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 
 // admine
 Route::resource('/product', ProductController::class);
-Route::resource('/product', CategoryController::class);
+Route::resource('/categories', CategoryController::class);
