@@ -67,7 +67,7 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.tags.edit', ["tag" => $this->tagService->find($id)]);
     }
 
     /**
