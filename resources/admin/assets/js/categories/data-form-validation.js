@@ -60,7 +60,7 @@ var __webpack_exports__ = {};
 //------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
-    var formValidationExamples = document.getElementById('createProductForm');
+    var formValidationExamples = document.getElementById('createCategoryForm');
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
         name: {
