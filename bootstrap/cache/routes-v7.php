@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::HMVDbBu6EcxBZiXY',
+            '_route' => 'generated::slOHeUmP3vGEhbU3',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xPheQdNZg5RwI7Ft',
+            '_route' => 'generated::tiAxojnnhniTlFKK',
           ),
           1 => NULL,
           2 => 
@@ -288,10 +288,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/tags' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/tags/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123))|/categories/([^/]++)(?|(*:155)|/edit(*:168)|(*:176)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123))|/categories/([^/]++)(?|(*:155)|/edit(*:168)|(*:176))|/tags/([^/]++)(?|(*:202)|/edit(*:215)|(*:223)))/?$}sDu',
     ),
     3 => 
     array (
@@ -517,6 +573,94 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
+      ),
+      202 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.show',
+          ),
+          1 => 
+          array (
+            0 => 'tag',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      215 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.edit',
+          ),
+          1 => 
+          array (
+            0 => 'tag',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      223 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.update',
+          ),
+          1 => 
+          array (
+            0 => 'tag',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'tags.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'tag',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
         2 => 
         array (
           0 => NULL,
@@ -722,7 +866,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::HMVDbBu6EcxBZiXY' => 
+    'generated::slOHeUmP3vGEhbU3' => 
     array (
       'methods' => 
       array (
@@ -743,7 +887,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::HMVDbBu6EcxBZiXY',
+        'as' => 'generated::slOHeUmP3vGEhbU3',
       ),
       'fallback' => false,
       'defaults' => 
@@ -868,7 +1012,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::xPheQdNZg5RwI7Ft' => 
+    'generated::tiAxojnnhniTlFKK' => 
     array (
       'methods' => 
       array (
@@ -885,13 +1029,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003870000000000000000";}";s:4:"hash";s:44:"yEuou8Ol/2vV8zDYgewUI+Mea3jKXgGRqAv6LMdnKdw=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000038a0000000000000000";}";s:4:"hash";s:44:"i87tKRCeM9fTwUH/PN19hIgtcMI3PGc7B3DmRNrATOA=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::xPheQdNZg5RwI7Ft',
+        'as' => 'generated::tiAxojnnhniTlFKK',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1401,6 +1545,263 @@ app('router')->setCompiledRoutes(
         'as' => 'categories.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'tags',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@index',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'tags/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'tags',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'tags/{tag}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'tags/{tag}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'tags/{tag}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'tags.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'tags/{tag}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'tags.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
