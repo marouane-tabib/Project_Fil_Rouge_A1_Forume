@@ -73,6 +73,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
               max: 50,
               message: 'The category name must be between 4 and 50 characters in length.'
             },
+            regexp: {
+              regexp: /^[^\d]*$/,
+              message: 'The category name can only contain alphabetical and space characters.'
+            }
           }
         },
       },
