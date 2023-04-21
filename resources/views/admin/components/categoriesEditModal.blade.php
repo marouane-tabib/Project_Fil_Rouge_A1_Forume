@@ -20,6 +20,9 @@
             <div class="col mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name" placeholder="Add your category name" />
+              @error('name')
+                <span class="text-danger">{{$message}}</span>
+              @enderror
             </div>
           </div>
         </div>
