@@ -21,6 +21,11 @@ class ProductService
     return $this->productRepository->all();
   }
 
+  public function get(array $select = ['*'], array $with = [])
+  {
+    return $this->productRepository->get($select, $with);
+  }
+
   public function find(int $id)
   {
     return $this->productRepository->find($id);

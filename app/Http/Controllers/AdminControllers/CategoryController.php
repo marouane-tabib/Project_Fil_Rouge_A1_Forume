@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ProductRequest;
-use App\Services\ProductService;
+use App\Services\CategoryService;
+use App\Http\Requests\CategoryRequest;
+use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
-    protected ProductService $productService;
+    protected CategoryService $categoryService;
 
-    public function __construct(ProductService $productService)
+    public function __construct(CategoryService $categoryService)
     {
-      $this->productService = $productService;
+      $this->categoryService = $categoryService;
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.products.index', ['products' => $this->productService->get(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
+      return view('admin.pages.categories.index', ['categories' => $this->categoryService->get()]);
     }
 
     /**
@@ -32,7 +32,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-      return view('admin.pages.products.create');
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(CategoryRequest $request)
     {
-      $this->productService->create($request->validated());
-      return redirect()->route('products.index');
+      $this->categoryService->create($request->validated());
+      return redirect()->back();
     }
 
     /**
@@ -55,7 +55,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-      //
+        //
     }
 
     /**
@@ -66,7 +66,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.products.edit', ["product" => $this->productService->find($id)]);
+      return view('admin.pages.categories.edit', ["category" => $this->categoryService->find($id)]);
     }
 
     /**
@@ -76,10 +76,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
-      $this->productService->update($id, $request->validated());
-      return redirect()->route('products.index');
+      $this->categoryService->update($id, $request->validated());
+      return redirect()->route('categories.index');
     }
 
     /**
@@ -90,7 +90,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-      $this->productService->delete($id);
+      $this->categoryService->delete($id);
       return redirect()->back();
     }
 }

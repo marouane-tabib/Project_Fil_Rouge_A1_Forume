@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::yEjjWn1xdXRU9XXH',
+            '_route' => 'generated::HMVDbBu6EcxBZiXY',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xoia5wRUL4zwTyMM',
+            '_route' => 'generated::xPheQdNZg5RwI7Ft',
           ),
           1 => NULL,
           2 => 
@@ -232,10 +232,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/categories' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/categories/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123))|/categories/([^/]++)(?|(*:155)|/edit(*:168)|(*:176)))/?$}sDu',
     ),
     3 => 
     array (
@@ -363,6 +419,94 @@ app('router')->setCompiledRoutes(
           1 => 
           array (
             0 => 'product',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      155 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.show',
+          ),
+          1 => 
+          array (
+            0 => 'category',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      168 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.edit',
+          ),
+          1 => 
+          array (
+            0 => 'category',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      176 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.update',
+          ),
+          1 => 
+          array (
+            0 => 'category',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'categories.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'category',
           ),
           2 => 
           array (
@@ -578,7 +722,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::yEjjWn1xdXRU9XXH' => 
+    'generated::HMVDbBu6EcxBZiXY' => 
     array (
       'methods' => 
       array (
@@ -599,7 +743,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::yEjjWn1xdXRU9XXH',
+        'as' => 'generated::HMVDbBu6EcxBZiXY',
       ),
       'fallback' => false,
       'defaults' => 
@@ -724,7 +868,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::xoia5wRUL4zwTyMM' => 
+    'generated::xPheQdNZg5RwI7Ft' => 
     array (
       'methods' => 
       array (
@@ -741,13 +885,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003670000000000000000";}";s:4:"hash";s:44:"3jXw17Bo9brw7u5ImaX4/xm7Lq5BCotZX85CvYrArGY=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003870000000000000000";}";s:4:"hash";s:44:"yEuou8Ol/2vV8zDYgewUI+Mea3jKXgGRqAv6LMdnKdw=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::xoia5wRUL4zwTyMM',
+        'as' => 'generated::xPheQdNZg5RwI7Ft',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1000,6 +1144,263 @@ app('router')->setCompiledRoutes(
         'as' => 'products.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'categories',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@index',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'categories/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'categories',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'categories/{category}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'categories/{category}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'categories/{category}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'categories.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'categories/{category}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'categories.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\CategoryController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
