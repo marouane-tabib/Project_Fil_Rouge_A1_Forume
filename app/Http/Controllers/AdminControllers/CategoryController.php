@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    protected CategoryService $categoryService;
+
+    public function __construct(CategoryService $categoryService)
+    {
+      $this->categoryService = $categoryService;
+    }
     /**
      * Display a listing of the resource.
      *
