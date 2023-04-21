@@ -88,6 +88,7 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->tagService->delete($id);
+      return redirect()->back();
     }
 }
