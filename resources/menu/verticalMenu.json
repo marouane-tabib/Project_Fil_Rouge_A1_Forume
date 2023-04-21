@@ -26,10 +26,10 @@
       ]
     },
     {
-      "url": "/product",
+      "url": "/products",
       "name": "Products",
       "icon": "menu-icon tf-icons ti ti-box",
-      "slug": "product.index"
+      "slug": "products.index"
     },
     {
       "url": "/auth/register-basic",
