@@ -22,7 +22,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+      return view('admin.pages.tags.index', ['tags' => $this->tagService->get()]);
     }
 
     /**
