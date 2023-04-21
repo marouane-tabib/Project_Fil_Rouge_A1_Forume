@@ -3,10 +3,18 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Services\TagService;
 use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
+    protected TagService $tagService;
+
+    public function __construct(TagService $tagService)
+    {
+      $this->tagService = $tagService;
+    }
+
     /**
      * Display a listing of the resource.
      *
