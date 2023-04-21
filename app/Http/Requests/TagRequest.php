@@ -26,7 +26,7 @@ class TagRequest extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              'name' => 'required|string|min:4|max:50|unique:tags',
+              'name' => 'required|string|min:4|max:50|unique:tags|regex:/^[^\d]*$/',
             ];
           }
           case 'PUT' : {
@@ -34,7 +34,7 @@ class TagRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              'name' => 'required|string|min:4|max:50|unique:tags',
+              'name' => 'required|string|min:4|max:50|unique:tags|regex:/^[^\d]*$/',
             ];
           }
           default: break;
@@ -52,6 +52,7 @@ class TagRequest extends FormRequest
         'name.min' => 'The name must be at least 4 characters long.',
         'name.max' => 'The name must not exceed 50 characters.',
         'name.unique' => 'The tag name has already been taken.',
+        'name.regex' => 'The :attribute field cannot contain numbers.'
       ];
     }
 }
