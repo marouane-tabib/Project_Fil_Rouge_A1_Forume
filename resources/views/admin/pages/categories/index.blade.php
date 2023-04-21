@@ -8,11 +8,12 @@
 
 @section('content')
 <div class="d-flex justify-content-end">
-  <a href="#">
+  {{-- <a href="#">
     <button type="button" class="btn btn-primary">
       Add Category
     </button>
-  </a>
+  </a> --}}
+    @include('admin.components.categoriesEditModal')
 </div><br>
 <div class="table-responsive">
   <table class="table">
