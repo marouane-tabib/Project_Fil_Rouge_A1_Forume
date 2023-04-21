@@ -7,6 +7,9 @@
 <!-- Modal -->
 <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
+  <form action="{{ route('categories.store') }}" method="post">
+    @csrf
+    @method('POST')
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalCenterTitle">Add New Category</h5>
@@ -25,5 +28,6 @@
         <button type="submit" class="btn btn-primary">Send</button>
       </div>
     </div>
+  </form>
   </div>
 </div>
