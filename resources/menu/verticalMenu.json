@@ -38,6 +38,12 @@
       "slug": "categories.index"
     },
     {
+      "url": "/tags",
+      "name": "Tags",
+      "icon": "menu-icon ti ti-tags",
+      "slug": "tags.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
