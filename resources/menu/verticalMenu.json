@@ -34,7 +34,7 @@
     {
       "url": "/categories",
       "name": "Categories",
-      "icon": "menu-icon tf-icons ti ti-ice",
+      "icon": "menu-icon ti ti-layout-2",
       "slug": "categories.index"
     },
     {
