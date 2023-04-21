@@ -91,6 +91,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     min: 4,
                     max: 50,
                     message: 'The category name must be between 4 and 50 characters in length.'
+                  },
+                  regexp: {
+                    regexp: /^[^\d]*$/,
+                    message: 'The category name can only contain alphabetical and space characters.'
                   }
                 }
               }
@@ -104,18 +108,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 rowSelector: function rowSelector(field, ele) {
                   // field is the field name & ele is the field element
                   switch (ele) {
-                    case 'image':
-                    case 'title':
-                    case 'price':
-                    case 'quantity':
-                    case 'sku':
-                    case 'width':
-                    case 'length_value':
-                    case 'category_id':
-                    case 'primary_color_id':
-                    case 'secondary_color_id':
-                    case 'home_style_id':
-                    case 'description':
+                    case 'name':
                     default:
                       return '.row';
                   }
@@ -157,7 +150,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -171,17 +164,17 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	!function() {
@@ -191,14 +184,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 			return module;
 /******/ 		};
 /******/ 	}();
-/******/
+/******/ 	
 /************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./resources/admin/assets/js/categories/data-form-validation.js");
-/******/
+/******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;
