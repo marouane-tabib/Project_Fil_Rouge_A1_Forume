@@ -13,7 +13,7 @@ class Category extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class Category extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:categories',
             ];
           }
           case 'PUT' : {
@@ -34,7 +34,7 @@ class Category extends FormRequest
           }
           case 'PATCH' : {
             return [
-              // 
+              //
             ];
           }
           default: break;
