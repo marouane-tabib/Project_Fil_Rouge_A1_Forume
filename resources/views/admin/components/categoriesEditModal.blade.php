@@ -8,7 +8,7 @@
 <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <form action="{{ route('categories.store') }}" method="post">
+      <form action="{{ route('categories.store') }}" method="post" id="createCategoryForm">
         @csrf
         @method('POST')
         <div class="modal-header">
