@@ -89,18 +89,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
           rowSelector: function rowSelector(field, ele) {
             // field is the field name & ele is the field element
             switch (ele) {
-              case 'image':
-              case 'title':
-              case 'price':
-              case 'quantity':
-              case 'sku':
-              case 'width':
-              case 'length_value':
-              case 'category_id':
-              case 'primary_color_id':
-              case 'secondary_color_id':
-              case 'home_style_id':
-              case 'description':
+              case 'name':
               default:
                 return '.row';
             }
