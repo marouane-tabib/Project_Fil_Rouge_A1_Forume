@@ -77,9 +77,10 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TagRequest $request, $id)
     {
-        //
+      $this->tagService->update($id, $request->validated());
+      return redirect()->route('tags.index');
     }
 
     /**
