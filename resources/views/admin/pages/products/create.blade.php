@@ -38,7 +38,7 @@
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
 <script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
-<script src="{{asset('admin/assets/js/product/create-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/products/create-validation.js')}}"></script>
 @endsection
 
 @section('content')
