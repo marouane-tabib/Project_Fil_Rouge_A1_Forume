@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var formValidationExamples = document.getElementById('createProductForm');
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
-        title: {
+        name: {
           validators: {
             notEmpty: {
               message: 'Please make sure to enter a category name.'
