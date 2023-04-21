@@ -9,30 +9,20 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalCenterTitle">Modal title</h5>
+        <h5 class="modal-title" id="modalCenterTitle">Add New Category</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="row">
           <div class="col mb-3">
-            <label for="nameWithTitle" class="form-label">Name</label>
-            <input type="text" id="nameWithTitle" class="form-control" placeholder="Enter Name">
-          </div>
-        </div>
-        <div class="row g-2">
-          <div class="col mb-0">
-            <label for="emailWithTitle" class="form-label">Email</label>
-            <input type="email" id="emailWithTitle" class="form-control" placeholder="xxxx@xxx.xx">
-          </div>
-          <div class="col mb-0">
-            <label for="dobWithTitle" class="form-label">DOB</label>
-            <input type="date" id="dobWithTitle" class="form-control" placeholder="DD / MM / YY">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name" placeholder="Add your category name" />
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Send</button>
       </div>
     </div>
   </div>
