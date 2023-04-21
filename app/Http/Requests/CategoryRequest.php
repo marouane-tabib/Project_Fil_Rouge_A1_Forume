@@ -34,7 +34,7 @@ class CategoryRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:categories',
             ];
           }
           default: break;
