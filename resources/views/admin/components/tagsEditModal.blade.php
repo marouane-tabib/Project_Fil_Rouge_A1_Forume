@@ -1,7 +1,7 @@
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCenter">
-  Add Category
+  Add Tag
 </button>
 
 <!-- Modal -->
@@ -19,7 +19,7 @@
           <div class="row">
             <div class="col">
               <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name" placeholder="Add your category name" />
+              <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name" placeholder="Add your tag name" />
               @error('name')
                 <span class="text-danger">{{$message}}</span>
               @enderror
