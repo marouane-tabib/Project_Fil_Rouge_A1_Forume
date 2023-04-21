@@ -30,4 +30,4 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/auth/register-basic', $controller_path . '\authentications\RegisterBasic@index')->name('auth-register-basic');
 
 // admine
-Route::resource('/product', ProductController::class);
+Route::resource('/products', ProductController::class);

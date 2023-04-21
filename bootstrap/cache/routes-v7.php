@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Lvpkcy4m1ry66Ctz',
+            '_route' => 'generated::yEjjWn1xdXRU9XXH',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::kZHtfsFXUm7Neux0',
+            '_route' => 'generated::xoia5wRUL4zwTyMM',
           ),
           1 => NULL,
           2 => 
@@ -176,13 +176,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/product' => 
+      '/products' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'product.index',
+            '_route' => 'products.index',
           ),
           1 => NULL,
           2 => 
@@ -199,7 +199,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'product.store',
+            '_route' => 'products.store',
           ),
           1 => NULL,
           2 => 
@@ -212,13 +212,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/product/create' => 
+      '/products/create' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'product.create',
+            '_route' => 'products.create',
           ),
           1 => NULL,
           2 => 
@@ -235,7 +235,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/product/([^/]++)(?|(*:101)|/edit(*:114)|(*:122)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123)))/?$}sDu',
     ),
     3 => 
     array (
@@ -286,13 +286,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      101 => 
+      102 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'product.show',
+            '_route' => 'products.show',
           ),
           1 => 
           array (
@@ -309,13 +309,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      114 => 
+      115 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'product.edit',
+            '_route' => 'products.edit',
           ),
           1 => 
           array (
@@ -332,13 +332,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      122 => 
+      123 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'product.update',
+            '_route' => 'products.update',
           ),
           1 => 
           array (
@@ -358,7 +358,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'product.destroy',
+            '_route' => 'products.destroy',
           ),
           1 => 
           array (
@@ -578,7 +578,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Lvpkcy4m1ry66Ctz' => 
+    'generated::yEjjWn1xdXRU9XXH' => 
     array (
       'methods' => 
       array (
@@ -599,7 +599,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::Lvpkcy4m1ry66Ctz',
+        'as' => 'generated::yEjjWn1xdXRU9XXH',
       ),
       'fallback' => false,
       'defaults' => 
@@ -724,7 +724,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::kZHtfsFXUm7Neux0' => 
+    'generated::xoia5wRUL4zwTyMM' => 
     array (
       'methods' => 
       array (
@@ -741,13 +741,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000052c0000000000000000";}";s:4:"hash";s:44:"3DDtkgahYtM0Ou5VnYoSBjEp/KmTBtkcZCJ4ZieocyM=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003670000000000000000";}";s:4:"hash";s:44:"3jXw17Bo9brw7u5ImaX4/xm7Lq5BCotZX85CvYrArGY=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::kZHtfsFXUm7Neux0',
+        'as' => 'generated::xoia5wRUL4zwTyMM',
       ),
       'fallback' => false,
       'defaults' => 
@@ -763,21 +763,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.index' => 
+    'products.index' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'product',
+      'uri' => 'products',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.index',
+        'as' => 'products.index',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@index',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@index',
         'namespace' => NULL,
@@ -800,21 +800,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.create' => 
+    'products.create' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'product/create',
+      'uri' => 'products/create',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.create',
+        'as' => 'products.create',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@create',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@create',
         'namespace' => NULL,
@@ -837,20 +837,20 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.store' => 
+    'products.store' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'product',
+      'uri' => 'products',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.store',
+        'as' => 'products.store',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@store',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@store',
         'namespace' => NULL,
@@ -873,21 +873,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.show' => 
+    'products.show' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'product/{product}',
+      'uri' => 'products/{product}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.show',
+        'as' => 'products.show',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@show',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@show',
         'namespace' => NULL,
@@ -910,21 +910,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.edit' => 
+    'products.edit' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'product/{product}/edit',
+      'uri' => 'products/{product}/edit',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.edit',
+        'as' => 'products.edit',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@edit',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@edit',
         'namespace' => NULL,
@@ -947,21 +947,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.update' => 
+    'products.update' => 
     array (
       'methods' => 
       array (
         0 => 'PUT',
         1 => 'PATCH',
       ),
-      'uri' => 'product/{product}',
+      'uri' => 'products/{product}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.update',
+        'as' => 'products.update',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@update',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@update',
         'namespace' => NULL,
@@ -984,20 +984,20 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'product.destroy' => 
+    'products.destroy' => 
     array (
       'methods' => 
       array (
         0 => 'DELETE',
       ),
-      'uri' => 'product/{product}',
+      'uri' => 'products/{product}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'product.destroy',
+        'as' => 'products.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ProductController@destroy',
         'namespace' => NULL,

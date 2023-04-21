@@ -38,7 +38,7 @@
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
 <script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
-<script src="{{asset('admin/assets/js/product/create-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/products/create-validation.js')}}"></script>
 @endsection
 
 @section('content')
@@ -50,7 +50,7 @@
         <h5 class="mb-0">Create Product</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data"  id="createProductForm">
+        <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data"  id="createProductForm">
           @csrf
           <div class="col-12 mb-3">
             <label class="form-label" for="image">Image</label>

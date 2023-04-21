@@ -38,7 +38,7 @@
 @section('page-script')
 <script src="{{asset('assets/js/form-layouts.js')}}"></script>
 <script src="{{asset('assets/js/forms-file-upload.js')}}"></script>
-<script src="{{asset('admin/assets/js/product/edit-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/products/edit-validation.js')}}"></script>
 @endsection
 
 @section('content')
@@ -50,7 +50,7 @@
         <h5 class="mb-0">Edit {{ $product->title }}</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.update', $product->id)}}" enctype="multipart/form-data"  id="createProductForm">
+        <form method="POST" action="{{ route('products.update', $product->id)}}" enctype="multipart/form-data"  id="createProductForm">
           @csrf
           @method('PUT')
           <div class="col-12 mb-3">
@@ -162,7 +162,7 @@
               <span class="text-danger">{{$message}}</span>
             @enderror
           </div>
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" class="btn btn-primary">Update</button>
         </form>
       </div>
     </div>
