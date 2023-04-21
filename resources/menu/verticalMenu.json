@@ -32,6 +32,12 @@
       "slug": "products.index"
     },
     {
+      "url": "/categories",
+      "name": "Categories",
+      "icon": "menu-icon tf-icons ti ti-ice",
+      "slug": "categories.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
