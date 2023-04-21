@@ -42,7 +42,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->categoryService->create($request->all());
+      return redirect()->back();
     }
 
     /**
