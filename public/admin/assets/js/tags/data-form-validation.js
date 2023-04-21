@@ -91,6 +91,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     min: 4,
                     max: 50,
                     message: 'The tag name must be between 4 and 50 characters in length.'
+                  },
+                  regexp: {
+                    regexp: /^[^\d]*$/,
+                    message: 'The tag name can only contain alphabetical and space characters.'
                   }
                 }
               }

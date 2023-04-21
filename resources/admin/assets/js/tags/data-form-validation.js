@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
               message: 'The tag name must be between 4 and 50 characters in length.'
             },
             regexp: {
-              regexp: /^[a-zA-Z0-9 ]+$/,
-              message: 'The product name can only contain alphabetical, numeric, and space characters.'
+              regexp: /^[^\d]*$/,
+              message: 'The tag name can only contain alphabetical and space characters.'
             }
           }
         },
