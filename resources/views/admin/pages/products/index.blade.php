@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="d-flex justify-content-end">
-  <a href="{{ route('product.create') }}">
+  <a href="{{ route('products.create') }}">
     <button type="button" class="btn btn-primary">
       Add Product
     </button>
@@ -44,9 +44,9 @@
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('product.edit', $product->id) }}"><i class="ti ti-pencil me-1"></i>Edit</a>
+                <a class="dropdown-item" href="{{ route('products.edit', $product->id) }}"><i class="ti ti-pencil me-1"></i>Edit</a>
                 <a class="dropdown-item" href="javascript:void(0);" onclick="if(confirm('Are You sure to delete this record?')){document.getElementById('delete-product-{{ $product->id }}').submit();} else {return false}"><i class="ti ti-trash me-1"></i>Delete</a>
-                <form action="{{ route('product.destroy' , $product->id) }}" method="post" class="d-none" id="delete-product-{{ $product->id }}" >
+                <form action="{{ route('products.destroy' , $product->id) }}" method="post" class="d-none" id="delete-product-{{ $product->id }}" >
                   @csrf
                   @method('DELETE')
                 </form>

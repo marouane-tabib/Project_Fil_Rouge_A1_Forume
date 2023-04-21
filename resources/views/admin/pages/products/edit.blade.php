@@ -50,7 +50,7 @@
         <h5 class="mb-0">Edit {{ $product->title }}</h5>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('product.update', $product->id)}}" enctype="multipart/form-data"  id="createProductForm">
+        <form method="POST" action="{{ route('products.update', $product->id)}}" enctype="multipart/form-data"  id="createProductForm">
           @csrf
           @method('PUT')
           <div class="col-12 mb-3">
