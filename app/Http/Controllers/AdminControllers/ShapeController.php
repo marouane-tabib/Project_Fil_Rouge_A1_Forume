@@ -66,7 +66,7 @@ class ShapeController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.shapes.edit', ["tag" => $this->shapeRepository->find($id)]);
     }
 
     /**
