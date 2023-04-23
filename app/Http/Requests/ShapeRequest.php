@@ -26,7 +26,7 @@ class ShapeRequest extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:categories|regex:/^[^\d]*$/',
             ];
           }
           case 'PUT' : {
