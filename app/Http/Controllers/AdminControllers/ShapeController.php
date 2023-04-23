@@ -43,7 +43,7 @@ class ShapeController extends Controller
      */
     public function store(ShapeRequest $request)
     {
-      $this->shapeService->create($request->all());
+      $this->shapeService->create($request->validated());
       return redirect()->back();
     }
 
