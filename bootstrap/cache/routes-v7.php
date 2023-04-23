@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::WtUvzqqBlZTrx4Ov',
+            '_route' => 'generated::LxCi3hzlAMJ5VRWR',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::9bG7tnOJS1ukGdRv',
+            '_route' => 'generated::aXL576aCuEjlxWML',
           ),
           1 => NULL,
           2 => 
@@ -1010,7 +1010,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::WtUvzqqBlZTrx4Ov' => 
+    'generated::LxCi3hzlAMJ5VRWR' => 
     array (
       'methods' => 
       array (
@@ -1031,7 +1031,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::WtUvzqqBlZTrx4Ov',
+        'as' => 'generated::LxCi3hzlAMJ5VRWR',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1156,7 +1156,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::9bG7tnOJS1ukGdRv' => 
+    'generated::aXL576aCuEjlxWML' => 
     array (
       'methods' => 
       array (
@@ -1179,7 +1179,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::9bG7tnOJS1ukGdRv',
+        'as' => 'generated::aXL576aCuEjlxWML',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1981,8 +1981,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.index',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@index',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@index',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -2018,8 +2018,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.create',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@create',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@create',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -2054,8 +2054,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.store',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@store',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@store',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -2091,8 +2091,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.show',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@show',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@show',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -2128,8 +2128,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.edit',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@edit',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@edit',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -2165,8 +2165,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.update',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@update',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@update',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -2201,8 +2201,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'shapes.destroy',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\TagController@destroy',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\TagController@destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
