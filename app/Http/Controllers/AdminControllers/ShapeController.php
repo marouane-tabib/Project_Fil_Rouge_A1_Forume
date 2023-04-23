@@ -5,15 +5,16 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ShapeRequest;
 use App\Interfaces\ShapeRepositoryInterface;
+use App\Services\ShapeService;
 use Illuminate\Http\Request;
 
 class ShapeController extends Controller
 {
-  protected ShapeRepositoryInterface $shapeRepository;
+  protected ShapeService $shapeService;
 
-  public function __construct(ShapeRepositoryInterface $shapeRepository)
+  public function __construct(ShapeService $shapeService)
   {
-    $this->shapeRepository = $shapeRepository;
+    $this->shapeService = $shapeService;
   }
     /**
      * Display a listing of the resource.
@@ -78,7 +79,8 @@ class ShapeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->sha->update($id, $request->validated());
+      return redirect()->route('categories.index');
     }
 
     /**
