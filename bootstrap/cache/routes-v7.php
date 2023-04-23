@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::LxCi3hzlAMJ5VRWR',
+            '_route' => 'generated::UEmPQbFk80QnwDbC',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::aXL576aCuEjlxWML',
+            '_route' => 'generated::KwwbPw9U7pffHkhA',
           ),
           1 => NULL,
           2 => 
@@ -400,10 +400,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/rooms' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/rooms/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123))|/categories/([^/]++)(?|(*:155)|/edit(*:168)|(*:176))|/tags/([^/]++)(?|(*:202)|/edit(*:215)|(*:223))|/shapes/([^/]++)(?|(*:251)|/edit(*:264)|(*:272)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123))|/categories/([^/]++)(?|(*:155)|/edit(*:168)|(*:176))|/tags/([^/]++)(?|(*:202)|/edit(*:215)|(*:223))|/shapes/([^/]++)(?|(*:251)|/edit(*:264)|(*:272))|/rooms/([^/]++)(?|(*:299)|/edit(*:312)|(*:320)))/?$}sDu',
     ),
     3 => 
     array (
@@ -805,6 +861,94 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
+      ),
+      299 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.show',
+          ),
+          1 => 
+          array (
+            0 => 'room',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      312 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.edit',
+          ),
+          1 => 
+          array (
+            0 => 'room',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      320 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.update',
+          ),
+          1 => 
+          array (
+            0 => 'room',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rooms.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'room',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
         2 => 
         array (
           0 => NULL,
@@ -1010,7 +1154,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::LxCi3hzlAMJ5VRWR' => 
+    'generated::UEmPQbFk80QnwDbC' => 
     array (
       'methods' => 
       array (
@@ -1031,7 +1175,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::LxCi3hzlAMJ5VRWR',
+        'as' => 'generated::UEmPQbFk80QnwDbC',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1156,7 +1300,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::aXL576aCuEjlxWML' => 
+    'generated::KwwbPw9U7pffHkhA' => 
     array (
       'methods' => 
       array (
@@ -1173,13 +1317,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000038d0000000000000000";}";s:4:"hash";s:44:"eNTxxdugDC/IA2sZr+4jPosV1a0/d5u5sXRpGk4TkkA=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003900000000000000000";}";s:4:"hash";s:44:"pqUtvBm5X1p/PgywegnbwcbsuwyRVv7Cd1vBAV6gs+g=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::aXL576aCuEjlxWML',
+        'as' => 'generated::KwwbPw9U7pffHkhA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2203,6 +2347,263 @@ app('router')->setCompiledRoutes(
         'as' => 'shapes.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\ShapeController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'rooms',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@index',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'rooms/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'rooms',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'rooms/{room}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'rooms/{room}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'rooms/{room}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rooms.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'rooms/{room}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'rooms.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
