@@ -4,7 +4,6 @@ namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ShapeRequest;
-use App\Interfaces\ShapeRepositoryInterface;
 use App\Services\ShapeService;
 use Illuminate\Http\Request;
 
@@ -23,7 +22,7 @@ class ShapeController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.shapes.index', ['shapes' => $this->shapeRepository->get()]);
+      return view('admin.pages.shapes.index', ['shapes' => $this->shapeService->get()]);
     }
 
     /**
@@ -44,7 +43,7 @@ class ShapeController extends Controller
      */
     public function store(ShapeRequest $request)
     {
-      $this->shapeRepository->create($request->all());
+      $this->shapeService->create($request->all());
       return redirect()->back();
     }
 
@@ -67,7 +66,7 @@ class ShapeController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.shapes.edit', ["shape" => $this->shapeRepository->find($id)]);
+      return view('admin.pages.shapes.edit', ["shape" => $this->shapeService->find($id)]);
     }
 
     /**
@@ -79,7 +78,7 @@ class ShapeController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $this->sha->update($id, $request->validated());
+      $this->shapeService->update($id, $request->validated());
       return redirect()->route('categories.index');
     }
 
