@@ -34,7 +34,7 @@ class ShapeRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:tags|regex:/^[^\d]*$/',
             ];
           }
           default: break;
