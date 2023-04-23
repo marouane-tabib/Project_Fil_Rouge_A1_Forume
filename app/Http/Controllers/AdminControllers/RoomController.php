@@ -3,10 +3,17 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Services\RoomService;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {
+  protected RoomService $roomService;
+
+  public function __construct(RoomService $roomService)
+  {
+    $this->roomService = $roomService;
+  }
     /**
      * Display a listing of the resource.
      *
