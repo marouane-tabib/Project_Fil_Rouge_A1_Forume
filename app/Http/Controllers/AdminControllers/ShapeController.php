@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ShapeRequest;
 use App\Interfaces\ShapeRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,7 @@ class ShapeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ShapeRequest $request)
     {
       $this->shapeRepository->create($request->all());
       return redirect()->back();
