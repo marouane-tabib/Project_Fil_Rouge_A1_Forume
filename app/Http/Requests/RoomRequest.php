@@ -26,7 +26,7 @@ class RoomRequest extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              'name' => 'required|string|min:4|max:50|unique:shapes|regex:/^[^\d]*$/',
+              'name' => 'required|string|min:4|max:50|unique:rooms|regex:/^[^\d]*$/',
             ];
           }
           case 'PUT' : {
@@ -34,7 +34,7 @@ class RoomRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              'name' => 'required|string|min:4|max:50|unique:shapes|regex:/^[^\d]*$/',
+              'name' => 'required|string|min:4|max:50|unique:rooms|regex:/^[^\d]*$/',
             ];
           }
           default: break;
