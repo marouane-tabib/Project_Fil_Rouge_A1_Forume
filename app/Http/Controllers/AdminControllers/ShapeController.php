@@ -21,7 +21,7 @@ class ShapeController extends Controller
      */
     public function index()
     {
-        //
+      return view('admin.pages.shapes.index', ['shapes' => $this->shapeRepository->get()]);
     }
 
     /**
