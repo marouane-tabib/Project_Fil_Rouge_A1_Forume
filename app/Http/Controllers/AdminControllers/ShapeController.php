@@ -90,6 +90,7 @@ class ShapeController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->shapeService->delete($id);
+      return redirect()->back();
     }
 }
