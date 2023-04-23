@@ -10,3 +10,4 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/products', ProductController::class);
 Route::resource('/categories', CategoryController::class);
 Route::resource('/tags', TagController::class);
+Route::resource('/shapes', TagController::class);
