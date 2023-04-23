@@ -8,7 +8,7 @@
 <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <form action="{{ route('shapes.store') }}" method="post" id="createShapesForm">
+      <form action="{{ route('shapes.store') }}" method="post" id="createShapeForm">
         @csrf
         @method('POST')
         <div class="modal-header">
