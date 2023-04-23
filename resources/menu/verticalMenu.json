@@ -44,6 +44,12 @@
       "slug": "tags.index"
     },
     {
+      "url": "/shapes",
+      "name": "Shapes",
+      "icon": "menu-icon ti ti-tags",
+      "slug": "shapes.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
