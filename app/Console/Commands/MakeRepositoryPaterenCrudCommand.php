@@ -29,7 +29,7 @@ class MakeRepositoryPaterenCrudCommand extends Command
     public function handle()
     {
       Artisan::call('make:model '.$this->argument('name').' -mfs');
-      Artisan::call('make:controller AdminControllers/'.$this->argument('name').' -r');
+      Artisan::call('make:controller AdminControllers/'.$this->argument('name').'Controller -r');
       Artisan::call('make:request-switch '.$this->argument('name'));
       Artisan::call('make:interface '.$this->argument('name').' -a -b');
       return $this->info('CRUD created successfuly!');

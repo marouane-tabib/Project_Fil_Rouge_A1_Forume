@@ -11,10 +11,10 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./resources/admin/assets/js/categories/data-form-validation.js":
-/*!**********************************************************************!*\
-  !*** ./resources/admin/assets/js/categories/data-form-validation.js ***!
-  \**********************************************************************/
+/***/ "./resources/admin/assets/js/tags/data-form-validation.js":
+/*!****************************************************************!*\
+  !*** ./resources/admin/assets/js/tags/data-form-validation.js ***!
+  \****************************************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
@@ -79,22 +79,22 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       //------------------------------------------------------------------------------------------
       document.addEventListener('DOMContentLoaded', function (e) {
         (function () {
-          var formValidationExamples = document.getElementById('createCategoryForm');
+          var formValidationExamples = document.getElementById('createTagForm');
           var fv = FormValidation.formValidation(formValidationExamples, {
             fields: {
               name: {
                 validators: {
                   notEmpty: {
-                    message: 'Please make sure to enter a category name.'
+                    message: 'Please make sure to enter a tag name.'
                   },
                   stringLength: {
                     min: 4,
                     max: 50,
-                    message: 'The category name must be between 4 and 50 characters in length.'
+                    message: 'The tag name must be between 4 and 50 characters in length.'
                   },
                   regexp: {
                     regexp: /^[^\d]*$/,
-                    message: 'The category name can only contain alphabetical and space characters.'
+                    message: 'The tag name can only contain alphabetical and space characters.'
                   }
                 }
               }
@@ -190,7 +190,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./resources/admin/assets/js/categories/data-form-validation.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./resources/admin/assets/js/tags/data-form-validation.js");
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()

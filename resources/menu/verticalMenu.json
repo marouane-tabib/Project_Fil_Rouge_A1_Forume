@@ -32,6 +32,24 @@
       "slug": "products.index"
     },
     {
+      "url": "/categories",
+      "name": "Categories",
+      "icon": "menu-icon ti ti-layout-2",
+      "slug": "categories.index"
+    },
+    {
+      "url": "/tags",
+      "name": "Tags",
+      "icon": "menu-icon ti ti-tags",
+      "slug": "tags.index"
+    },
+    {
+      "url": "/shapes",
+      "name": "Shapes",
+      "icon": "menu-icon ti ti-tags",
+      "slug": "shapes.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
