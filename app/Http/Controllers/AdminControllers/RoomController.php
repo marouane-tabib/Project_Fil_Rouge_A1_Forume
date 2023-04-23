@@ -65,7 +65,7 @@ class RoomController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.rooms.edit', ["rooms" => $this->roomService->find($id)]);
+      return view('admin.pages.rooms.edit', ["room" => $this->roomService->find($id)]);
     }
 
     /**
@@ -77,7 +77,8 @@ class RoomController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->roomService->update($id, $request->all());
+      return redirect()->route('rooms.index');
     }
 
     /**
