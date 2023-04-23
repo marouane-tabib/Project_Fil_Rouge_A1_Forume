@@ -89,6 +89,7 @@ class RoomController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->roomService->delete($id);
+      return redirect()->back();
     }
 }
