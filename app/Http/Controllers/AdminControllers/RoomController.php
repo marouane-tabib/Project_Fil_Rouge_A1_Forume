@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RoomRequest;
 use App\Services\RoomService;
 use Illuminate\Http\Request;
 
@@ -40,9 +41,9 @@ class RoomController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RoomRequest $request)
     {
-      $this->roomService->create($request->all());
+      $this->roomService->create($request->validated());
       return redirect()->back();
     }
 
@@ -75,9 +76,9 @@ class RoomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RoomRequest $request, $id)
     {
-      $this->roomService->update($id, $request->all());
+      $this->roomService->update($id, $request->validated());
       return redirect()->route('rooms.index');
     }
 
