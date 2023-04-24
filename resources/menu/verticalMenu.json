@@ -46,7 +46,7 @@
     {
       "url": "/shapes",
       "name": "Shapes",
-      "icon": "menu-icon ti ti-tags",
+      "icon": "menu-icon ti ti-triangle-square-circle",
       "slug": "shapes.index"
     },
     {
