@@ -26,7 +26,7 @@ class PaternRequest extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:paterns|regex:/^[^\d]*$/',
             ];
           }
           case 'PUT' : {
@@ -34,7 +34,7 @@ class PaternRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:paterns|regex:/^[^\d]*$/',
             ];
           }
           default: break;
