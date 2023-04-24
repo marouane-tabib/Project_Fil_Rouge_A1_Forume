@@ -43,4 +43,16 @@ class MaterailRequest extends FormRequest
             //
         ];
     }
+
+    public function messages()
+    {
+      return [
+        'name.required' => 'Please enter a name for your materail.',
+        'name.string' => 'The name must be a string.',
+        'name.min' => 'The name must be at least 4 characters long.',
+        'name.max' => 'The name must not exceed 50 characters.',
+        'name.unique' => 'The materail name has already been taken.',
+        'name.regex' => 'The :attribute field cannot contain numbers.'
+      ];
+    }
 }
