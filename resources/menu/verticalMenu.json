@@ -57,7 +57,7 @@
     },
     {
       "url": "/patterns",
-      "name": "patterns",
+      "name": "Patterns",
       "icon": "menu-icon ti ti-box-padding",
       "slug": "patterns.index"
     },
