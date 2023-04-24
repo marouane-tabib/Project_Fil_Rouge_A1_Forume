@@ -46,8 +46,14 @@
     {
       "url": "/shapes",
       "name": "Shapes",
-      "icon": "menu-icon ti ti-tags",
+      "icon": "menu-icon ti ti-triangle-square-circle",
       "slug": "shapes.index"
+    },
+    {
+      "url": "/rooms",
+      "name": "Rooms",
+      "icon": "menu-icon ti ti-lamp",
+      "slug": "rooms.index"
     },
     {
       "url": "/auth/register-basic",
