@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MaterailRequest;
 use App\Services\MaterailService;
 use Illuminate\Http\Request;
 
@@ -41,7 +42,7 @@ class MaterailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MaterailRequest $request)
     {
       $this->materailService->create($request->all());
       return redirect()->back();
@@ -76,7 +77,7 @@ class MaterailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MaterailRequest $request, $id)
     {
       $this->materailService->update($id, $request->all());
       return redirect()->route('materails.index');
