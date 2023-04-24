@@ -43,7 +43,8 @@ class MaterailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->materailService->create($request->all());
+      return redirect()->back();
     }
 
     /**
