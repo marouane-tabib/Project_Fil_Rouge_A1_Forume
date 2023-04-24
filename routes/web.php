@@ -15,4 +15,4 @@ Route::resource('/categories', CategoryController::class);
 Route::resource('/tags', TagController::class);
 Route::resource('/shapes', ShapeController::class);
 Route::resource('/rooms', RoomController::class);
-Route::resource('/paterns', PaternController::class);
+Route::resource('/patterns', PaternController::class);

@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::zKaqSDRwjQjKOHpY',
+            '_route' => 'generated::yVD2fsHnkuNZDoBN',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::B8N662WcpqZF7mQB',
+            '_route' => 'generated::raYKDhp7seLscj8j',
           ),
           1 => NULL,
           2 => 
@@ -456,13 +456,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/paterns' => 
+      '/patterns' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'paterns.index',
+            '_route' => 'patterns.index',
           ),
           1 => NULL,
           2 => 
@@ -479,7 +479,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'paterns.store',
+            '_route' => 'patterns.store',
           ),
           1 => NULL,
           2 => 
@@ -492,13 +492,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/paterns/create' => 
+      '/patterns/create' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'paterns.create',
+            '_route' => 'patterns.create',
           ),
           1 => NULL,
           2 => 
@@ -515,7 +515,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|aterns/([^/]++)(?|(*:153)|/edit(*:166)|(*:174)))|/categories/([^/]++)(?|(*:207)|/edit(*:220)|(*:228))|/tags/([^/]++)(?|(*:254)|/edit(*:267)|(*:275))|/shapes/([^/]++)(?|(*:303)|/edit(*:316)|(*:324))|/rooms/([^/]++)(?|(*:351)|/edit(*:364)|(*:372)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/categories/([^/]++)(?|(*:208)|/edit(*:221)|(*:229))|/tags/([^/]++)(?|(*:255)|/edit(*:268)|(*:276))|/shapes/([^/]++)(?|(*:304)|/edit(*:317)|(*:325))|/rooms/([^/]++)(?|(*:352)|/edit(*:365)|(*:373)))/?$}sDu',
     ),
     3 => 
     array (
@@ -654,17 +654,17 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      153 => 
+      154 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'paterns.show',
+            '_route' => 'patterns.show',
           ),
           1 => 
           array (
-            0 => 'patern',
+            0 => 'pattern',
           ),
           2 => 
           array (
@@ -677,17 +677,17 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      166 => 
+      167 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'paterns.edit',
+            '_route' => 'patterns.edit',
           ),
           1 => 
           array (
-            0 => 'patern',
+            0 => 'pattern',
           ),
           2 => 
           array (
@@ -700,17 +700,17 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      174 => 
+      175 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'paterns.update',
+            '_route' => 'patterns.update',
           ),
           1 => 
           array (
-            0 => 'patern',
+            0 => 'pattern',
           ),
           2 => 
           array (
@@ -726,11 +726,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'paterns.destroy',
+            '_route' => 'patterns.destroy',
           ),
           1 => 
           array (
-            0 => 'patern',
+            0 => 'pattern',
           ),
           2 => 
           array (
@@ -742,7 +742,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      207 => 
+      208 => 
       array (
         0 => 
         array (
@@ -765,7 +765,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      220 => 
+      221 => 
       array (
         0 => 
         array (
@@ -788,7 +788,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      228 => 
+      229 => 
       array (
         0 => 
         array (
@@ -830,7 +830,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      254 => 
+      255 => 
       array (
         0 => 
         array (
@@ -853,7 +853,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      267 => 
+      268 => 
       array (
         0 => 
         array (
@@ -876,7 +876,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      275 => 
+      276 => 
       array (
         0 => 
         array (
@@ -918,7 +918,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      303 => 
+      304 => 
       array (
         0 => 
         array (
@@ -941,7 +941,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      316 => 
+      317 => 
       array (
         0 => 
         array (
@@ -964,7 +964,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      324 => 
+      325 => 
       array (
         0 => 
         array (
@@ -1006,7 +1006,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      351 => 
+      352 => 
       array (
         0 => 
         array (
@@ -1029,7 +1029,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      364 => 
+      365 => 
       array (
         0 => 
         array (
@@ -1052,7 +1052,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      372 => 
+      373 => 
       array (
         0 => 
         array (
@@ -1298,7 +1298,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::zKaqSDRwjQjKOHpY' => 
+    'generated::yVD2fsHnkuNZDoBN' => 
     array (
       'methods' => 
       array (
@@ -1319,7 +1319,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::zKaqSDRwjQjKOHpY',
+        'as' => 'generated::yVD2fsHnkuNZDoBN',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1444,7 +1444,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::B8N662WcpqZF7mQB' => 
+    'generated::raYKDhp7seLscj8j' => 
     array (
       'methods' => 
       array (
@@ -1461,13 +1461,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003920000000000000000";}";s:4:"hash";s:44:"xy56MOiA0QiK6M85HZPMbSCvBeTIhwZkvgISY2cwXcI=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003940000000000000000";}";s:4:"hash";s:44:"8ecXZSoFus54D7iEPemO6WLcK+XaI7lqijxaJ2W4KJc=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::B8N662WcpqZF7mQB',
+        'as' => 'generated::raYKDhp7seLscj8j',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2768,21 +2768,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.index' => 
+    'patterns.index' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'paterns',
+      'uri' => 'patterns',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.index',
+        'as' => 'patterns.index',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@index',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@index',
         'namespace' => NULL,
@@ -2805,21 +2805,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.create' => 
+    'patterns.create' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'paterns/create',
+      'uri' => 'patterns/create',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.create',
+        'as' => 'patterns.create',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@create',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@create',
         'namespace' => NULL,
@@ -2842,20 +2842,20 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.store' => 
+    'patterns.store' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'paterns',
+      'uri' => 'patterns',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.store',
+        'as' => 'patterns.store',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@store',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@store',
         'namespace' => NULL,
@@ -2878,21 +2878,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.show' => 
+    'patterns.show' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'paterns/{patern}',
+      'uri' => 'patterns/{pattern}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.show',
+        'as' => 'patterns.show',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@show',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@show',
         'namespace' => NULL,
@@ -2915,21 +2915,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.edit' => 
+    'patterns.edit' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'paterns/{patern}/edit',
+      'uri' => 'patterns/{pattern}/edit',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.edit',
+        'as' => 'patterns.edit',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@edit',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@edit',
         'namespace' => NULL,
@@ -2952,21 +2952,21 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.update' => 
+    'patterns.update' => 
     array (
       'methods' => 
       array (
         0 => 'PUT',
         1 => 'PATCH',
       ),
-      'uri' => 'paterns/{patern}',
+      'uri' => 'patterns/{pattern}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.update',
+        'as' => 'patterns.update',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@update',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@update',
         'namespace' => NULL,
@@ -2989,20 +2989,20 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'paterns.destroy' => 
+    'patterns.destroy' => 
     array (
       'methods' => 
       array (
         0 => 'DELETE',
       ),
-      'uri' => 'paterns/{patern}',
+      'uri' => 'patterns/{pattern}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'paterns.destroy',
+        'as' => 'patterns.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@destroy',
         'namespace' => NULL,
