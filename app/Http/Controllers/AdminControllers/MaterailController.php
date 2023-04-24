@@ -90,6 +90,7 @@ class MaterailController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->materailService->delete($id);
+      return redirect()->back();
     }
 }
