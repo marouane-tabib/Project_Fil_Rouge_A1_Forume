@@ -66,7 +66,7 @@ class PaternController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.paterns.edit', ["patern" => $this->paternService->find($id)]);
     }
 
     /**
