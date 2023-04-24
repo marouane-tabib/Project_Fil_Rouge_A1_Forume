@@ -14,6 +14,7 @@ class MaterailController extends Controller
   {
     $this->materailService = $materailService;
   }
+
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +22,7 @@ class MaterailController extends Controller
      */
     public function index()
     {
-        //
+      return view('admin.pages.materails.index', ['materails' => $this->materailService->get()]);
     }
 
     /**
