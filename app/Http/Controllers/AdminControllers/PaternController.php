@@ -21,7 +21,7 @@ class PaternController extends Controller
      */
     public function index()
     {
-        //
+      return view('admin.pages.paterns.index', ['paterns' => $this->paternService->get()]);
     }
 
     /**
