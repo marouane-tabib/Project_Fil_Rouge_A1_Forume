@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::UEmPQbFk80QnwDbC',
+            '_route' => 'generated::zKaqSDRwjQjKOHpY',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::KwwbPw9U7pffHkhA',
+            '_route' => 'generated::B8N662WcpqZF7mQB',
           ),
           1 => NULL,
           2 => 
@@ -456,10 +456,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/paterns' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/paterns/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/products/([^/]++)(?|(*:102)|/edit(*:115)|(*:123))|/categories/([^/]++)(?|(*:155)|/edit(*:168)|(*:176))|/tags/([^/]++)(?|(*:202)|/edit(*:215)|(*:223))|/shapes/([^/]++)(?|(*:251)|/edit(*:264)|(*:272))|/rooms/([^/]++)(?|(*:299)|/edit(*:312)|(*:320)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|aterns/([^/]++)(?|(*:153)|/edit(*:166)|(*:174)))|/categories/([^/]++)(?|(*:207)|/edit(*:220)|(*:228))|/tags/([^/]++)(?|(*:254)|/edit(*:267)|(*:275))|/shapes/([^/]++)(?|(*:303)|/edit(*:316)|(*:324))|/rooms/([^/]++)(?|(*:351)|/edit(*:364)|(*:372)))/?$}sDu',
     ),
     3 => 
     array (
@@ -510,7 +566,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      102 => 
+      105 => 
       array (
         0 => 
         array (
@@ -533,7 +589,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      115 => 
+      118 => 
       array (
         0 => 
         array (
@@ -556,7 +612,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      123 => 
+      126 => 
       array (
         0 => 
         array (
@@ -598,7 +654,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      155 => 
+      153 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.show',
+          ),
+          1 => 
+          array (
+            0 => 'patern',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      166 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.edit',
+          ),
+          1 => 
+          array (
+            0 => 'patern',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      174 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.update',
+          ),
+          1 => 
+          array (
+            0 => 'patern',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'paterns.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'patern',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      207 => 
       array (
         0 => 
         array (
@@ -621,7 +765,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      168 => 
+      220 => 
       array (
         0 => 
         array (
@@ -644,7 +788,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      176 => 
+      228 => 
       array (
         0 => 
         array (
@@ -686,7 +830,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      202 => 
+      254 => 
       array (
         0 => 
         array (
@@ -709,7 +853,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      215 => 
+      267 => 
       array (
         0 => 
         array (
@@ -732,7 +876,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      223 => 
+      275 => 
       array (
         0 => 
         array (
@@ -774,7 +918,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      251 => 
+      303 => 
       array (
         0 => 
         array (
@@ -797,7 +941,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      264 => 
+      316 => 
       array (
         0 => 
         array (
@@ -820,7 +964,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      272 => 
+      324 => 
       array (
         0 => 
         array (
@@ -862,7 +1006,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      299 => 
+      351 => 
       array (
         0 => 
         array (
@@ -885,7 +1029,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      312 => 
+      364 => 
       array (
         0 => 
         array (
@@ -908,7 +1052,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      320 => 
+      372 => 
       array (
         0 => 
         array (
@@ -1154,7 +1298,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::UEmPQbFk80QnwDbC' => 
+    'generated::zKaqSDRwjQjKOHpY' => 
     array (
       'methods' => 
       array (
@@ -1175,7 +1319,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::UEmPQbFk80QnwDbC',
+        'as' => 'generated::zKaqSDRwjQjKOHpY',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1300,7 +1444,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::KwwbPw9U7pffHkhA' => 
+    'generated::B8N662WcpqZF7mQB' => 
     array (
       'methods' => 
       array (
@@ -1317,13 +1461,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003900000000000000000";}";s:4:"hash";s:44:"pqUtvBm5X1p/PgywegnbwcbsuwyRVv7Cd1vBAV6gs+g=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003920000000000000000";}";s:4:"hash";s:44:"xy56MOiA0QiK6M85HZPMbSCvBeTIhwZkvgISY2cwXcI=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::KwwbPw9U7pffHkhA',
+        'as' => 'generated::B8N662WcpqZF7mQB',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2604,6 +2748,263 @@ app('router')->setCompiledRoutes(
         'as' => 'rooms.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\RoomController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'paterns',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@index',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'paterns/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'paterns',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'paterns/{patern}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'paterns/{patern}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'paterns/{patern}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'paterns.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'paterns/{patern}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'paterns.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\PaternController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
