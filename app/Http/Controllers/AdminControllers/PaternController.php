@@ -42,7 +42,8 @@ class PaternController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->paternService->create($request->all());
+      return redirect()->back();
     }
 
     /**
