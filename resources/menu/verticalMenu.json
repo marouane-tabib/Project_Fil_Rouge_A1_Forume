@@ -50,6 +50,12 @@
       "slug": "shapes.index"
     },
     {
+      "url": "/rooms",
+      "name": "Rooms",
+      "icon": "menu-icon ti ti-lamp",
+      "slug": "rooms.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
