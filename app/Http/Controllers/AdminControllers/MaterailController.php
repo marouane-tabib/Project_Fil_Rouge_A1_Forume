@@ -77,7 +77,8 @@ class MaterailController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->materailService->update($id, $request->all());
+      return redirect()->route('materails.index');
     }
 
     /**
