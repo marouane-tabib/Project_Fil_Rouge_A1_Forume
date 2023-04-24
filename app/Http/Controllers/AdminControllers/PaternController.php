@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PaternRequest;
 use App\Services\PaternService;
 use Illuminate\Http\Request;
 
@@ -40,9 +41,9 @@ class PaternController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PaternRequest $request)
     {
-      $this->paternService->create($request->all());
+      $this->paternService->create($request->validated());
       return redirect()->back();
     }
 
