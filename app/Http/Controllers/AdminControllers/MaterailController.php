@@ -65,7 +65,7 @@ class MaterailController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.materails.edit', ["materail" => $this->materailService->find($id)]);
     }
 
     /**
