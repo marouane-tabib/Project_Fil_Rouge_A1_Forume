@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class PaternController extends Controller
 {
+    protected PaternService $paternService;
+
+    public function __construct(PaternService $paternService)
+    {
+      $this->paternService = $paternService;
+    }
     /**
      * Display a listing of the resource.
      *
