@@ -3,10 +3,17 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Services\MaterailService;
 use Illuminate\Http\Request;
 
 class MaterailController extends Controller
 {
+  protected MaterailService $materailService;
+
+  public function __construct(MaterailService $materailService)
+  {
+    $this->materailService = $materailService;
+  }
     /**
      * Display a listing of the resource.
      *
