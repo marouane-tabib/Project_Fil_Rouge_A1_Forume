@@ -90,6 +90,7 @@ class PaternController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->paternService->delete($id);
+      return redirect()->back();
     }
 }
