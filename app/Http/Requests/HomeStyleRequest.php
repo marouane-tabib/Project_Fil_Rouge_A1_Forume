@@ -26,7 +26,7 @@ class HomeStyleRequest extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:home_styles|regex:/^[^\d]*$/',
             ];
           }
           case 'PUT' : {
@@ -34,7 +34,7 @@ class HomeStyleRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              //
+              'name' => 'required|string|min:4|max:50|unique:home_styles|regex:/^[^\d]*$/',
             ];
           }
           default: break;
