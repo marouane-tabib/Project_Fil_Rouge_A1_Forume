@@ -65,7 +65,7 @@ class HomeStyleController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.home_styles.edit', ["homeStyle" => $this->homeStyleService->find($id)]);
     }
 
     /**
