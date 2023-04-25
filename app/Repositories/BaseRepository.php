@@ -18,7 +18,7 @@ class BaseRepository implements BaseRepositoryInterface
   {
     return $this->model->all();
   }
-  
+
   public function get(array $select = ['*'], array $with = [])
   {
     return $this->model->with($with)->get($select);
@@ -27,6 +27,11 @@ class BaseRepository implements BaseRepositoryInterface
   public function find(int $id)
   {
     return $this->model->find($id);
+  }
+
+  public function addSelect(array $select = [])
+  {
+    return $this->model->addSelect($select)->get();
   }
 
   public function create(array $data)
