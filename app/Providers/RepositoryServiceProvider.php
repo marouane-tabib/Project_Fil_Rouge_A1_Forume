@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Providers;
-use App\Interfaces\MaterailRepositoryInterface;
-use App\Repositories\MaterailRepository;
+
+use App\Interfaces\MaterialRepositoryInterface;
+use App\Repositories\MaterialRepository;
 use App\Interfaces\PatternRepositoryInterface;
 use App\Repositories\PatternRepository;
 use App\Interfaces\RoomRepositoryInterface;
@@ -28,7 +29,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-      $this->app->bind(MaterailRepositoryInterface::class, MaterailRepository::class);
+      $this->app->bind(MaterialRepositoryInterface::class, MaterialRepository::class);
       $this->app->bind(PatternRepositoryInterface::class, PatternRepository::class);
       $this->app->bind(RoomRepositoryInterface::class, RoomRepository::class);
       $this->app->bind(ShapeRepositoryInterface::class, ShapeRepository::class);

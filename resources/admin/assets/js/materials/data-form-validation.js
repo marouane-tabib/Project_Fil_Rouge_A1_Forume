@@ -60,22 +60,22 @@ var __webpack_exports__ = {};
 //------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function (e) {
   (function () {
-    var formValidationExamples = document.getElementById('createMaterailForm');
+    var formValidationExamples = document.getElementById('createMaterialForm');
     var fv = FormValidation.formValidation(formValidationExamples, {
       fields: {
         name: {
           validators: {
             notEmpty: {
-              message: 'Please make sure to enter a materail name.'
+              message: 'Please make sure to enter a material name.'
             },
             stringLength: {
               min: 4,
               max: 50,
-              message: 'The materail name must be between 4 and 50 characters in length.'
+              message: 'The material name must be between 4 and 50 characters in length.'
             },
             regexp: {
               regexp: /^[^\d]*$/,
-              message: 'The materail name can only contain alphabetical and space characters.'
+              message: 'The material name can only contain alphabetical and space characters.'
             }
           }
         },

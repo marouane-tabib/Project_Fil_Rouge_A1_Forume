@@ -4,7 +4,7 @@
 
 @extends('admin/layouts/layoutMaster')
 
-@section('title', 'Materails')
+@section('title', 'Materials')
 
 @section('vendor-style')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
@@ -17,12 +17,12 @@
 @endsection
 
 @section('page-script')
-<script src="{{asset('admin/assets/js/materails/data-form-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/materials/data-form-validation.js')}}"></script>
 @endsection
 
 @section('content')
 <div class="d-flex justify-content-end">
-    @include('admin.components.materailsEditModal')
+    @include('admin.components.materialsEditModal')
 </div><br>
 <div class="table-responsive">
   <table class="table">
@@ -33,16 +33,16 @@
       </tr>
     </thead>
     <tbody class="table-border-bottom-0">
-      @foreach ($materails as $materail)
+      @foreach ($materials as $material)
         <tr>
-          <td>{{ $materail->name }}</td>
+          <td>{{ $material->name }}</td>
           <td>
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('materails.edit', $materail->id) }}"><i class="ti ti-pencil me-1"></i>Edit</a>
-                <a class="dropdown-item" href="javascript:void(0);" onclick="if(confirm('Are You sure to delete this record?')){document.getElementById('delete-materail-{{ $materail->id }}').submit();} else {return false}"><i class="ti ti-trash me-1"></i>Delete</a>
-                <form action="{{ route('materails.destroy' , $materail->id) }}" method="post" class="d-none" id="delete-materail-{{ $materail->id }}" >
+                <a class="dropdown-item" href="{{ route('materials.edit', $material->id) }}"><i class="ti ti-pencil me-1"></i>Edit</a>
+                <a class="dropdown-item" href="javascript:void(0);" onclick="if(confirm('Are You sure to delete this record?')){document.getElementById('delete-material-{{ $material->id }}').submit();} else {return false}"><i class="ti ti-trash me-1"></i>Delete</a>
+                <form action="{{ route('materials.destroy' , $material->id) }}" method="post" class="d-none" id="delete-material-{{ $material->id }}" >
                   @csrf
                   @method('DELETE')
                 </form>

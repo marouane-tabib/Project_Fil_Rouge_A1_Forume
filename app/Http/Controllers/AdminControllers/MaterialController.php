@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MaterailRequest;
-use App\Services\MaterailService;
+use App\Http\Requests\MaterialRequest;
+use App\Services\MaterialService;
 use Illuminate\Http\Request;
 
-class MaterailController extends Controller
+class MaterialController extends Controller
 {
-  protected MaterailService $materailService;
+  protected MaterialService $materialService;
 
-  public function __construct(MaterailService $materailService)
+  public function __construct(MaterialService $materialService)
   {
-    $this->materailService = $materailService;
+    $this->materialService = $materialService;
   }
 
     /**
@@ -23,7 +23,7 @@ class MaterailController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.materails.index', ['materails' => $this->materailService->get()]);
+      return view('admin.pages.materials.index', ['materials' => $this->materialService->get()]);
     }
 
     /**
@@ -42,9 +42,9 @@ class MaterailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(MaterailRequest $request)
+    public function store(MaterialRequest $request)
     {
-      $this->materailService->create($request->all());
+      $this->materialService->create($request->all());
       return redirect()->back();
     }
 
@@ -67,7 +67,7 @@ class MaterailController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.materails.edit', ["materail" => $this->materailService->find($id)]);
+      return view('admin.pages.materials.edit', ["material" => $this->materialService->find($id)]);
     }
 
     /**
@@ -77,10 +77,10 @@ class MaterailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MaterailRequest $request, $id)
+    public function update(MaterialRequest $request, $id)
     {
-      $this->materailService->update($id, $request->all());
-      return redirect()->route('materails.index');
+      $this->materialService->update($id, $request->all());
+      return redirect()->route('materials.index');
     }
 
     /**
@@ -91,7 +91,7 @@ class MaterailController extends Controller
      */
     public function destroy($id)
     {
-      $this->materailService->delete($id);
+      $this->materialService->delete($id);
       return redirect()->back();
     }
 }

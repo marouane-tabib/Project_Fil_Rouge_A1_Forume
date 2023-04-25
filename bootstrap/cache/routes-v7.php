@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::q40MFB01K1BtRh2U',
+            '_route' => 'generated::ZsLC9se9xUTKg1nR',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::3fLaegqsabA1MIAK',
+            '_route' => 'generated::t97ODMyNHHysvNE0',
           ),
           1 => NULL,
           2 => 
@@ -512,13 +512,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/materails' => 
+      '/materials' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'materails.index',
+            '_route' => 'materials.index',
           ),
           1 => NULL,
           2 => 
@@ -535,7 +535,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'materails.store',
+            '_route' => 'materials.store',
           ),
           1 => NULL,
           2 => 
@@ -548,13 +548,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/materails/create' => 
+      '/materials/create' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'materails.create',
+            '_route' => 'materials.create',
           ),
           1 => NULL,
           2 => 
@@ -571,7 +571,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/categories/([^/]++)(?|(*:208)|/edit(*:221)|(*:229))|/tags/([^/]++)(?|(*:255)|/edit(*:268)|(*:276))|/shapes/([^/]++)(?|(*:304)|/edit(*:317)|(*:325))|/rooms/([^/]++)(?|(*:352)|/edit(*:365)|(*:373))|/materails/([^/]++)(?|(*:404)|/edit(*:417)|(*:425)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/categories/([^/]++)(?|(*:208)|/edit(*:221)|(*:229))|/tags/([^/]++)(?|(*:255)|/edit(*:268)|(*:276))|/shapes/([^/]++)(?|(*:304)|/edit(*:317)|(*:325))|/rooms/([^/]++)(?|(*:352)|/edit(*:365)|(*:373))|/materials/([^/]++)(?|(*:404)|/edit(*:417)|(*:425)))/?$}sDu',
     ),
     3 => 
     array (
@@ -1156,11 +1156,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'materails.show',
+            '_route' => 'materials.show',
           ),
           1 => 
           array (
-            0 => 'materail',
+            0 => 'material',
           ),
           2 => 
           array (
@@ -1179,11 +1179,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'materails.edit',
+            '_route' => 'materials.edit',
           ),
           1 => 
           array (
-            0 => 'materail',
+            0 => 'material',
           ),
           2 => 
           array (
@@ -1202,11 +1202,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'materails.update',
+            '_route' => 'materials.update',
           ),
           1 => 
           array (
-            0 => 'materail',
+            0 => 'material',
           ),
           2 => 
           array (
@@ -1222,11 +1222,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'materails.destroy',
+            '_route' => 'materials.destroy',
           ),
           1 => 
           array (
-            0 => 'materail',
+            0 => 'material',
           ),
           2 => 
           array (
@@ -1442,7 +1442,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::q40MFB01K1BtRh2U' => 
+    'generated::ZsLC9se9xUTKg1nR' => 
     array (
       'methods' => 
       array (
@@ -1463,7 +1463,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::q40MFB01K1BtRh2U',
+        'as' => 'generated::ZsLC9se9xUTKg1nR',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1588,7 +1588,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::3fLaegqsabA1MIAK' => 
+    'generated::t97ODMyNHHysvNE0' => 
     array (
       'methods' => 
       array (
@@ -1605,13 +1605,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003960000000000000000";}";s:4:"hash";s:44:"7yXjg4hERmt8U/lh7U/Ybu0zkCfaH0AI/UblTzKF7iA=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003970000000000000000";}";s:4:"hash";s:44:"AlX6+lE2VekfObM+znUVK/UdxtEbkNvvg2LESsxw9ug=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::3fLaegqsabA1MIAK',
+        'as' => 'generated::t97ODMyNHHysvNE0',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3169,23 +3169,23 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.index' => 
+    'materials.index' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'materails',
+      'uri' => 'materials',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.index',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@index',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@index',
+        'as' => 'materials.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@index',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -3206,23 +3206,23 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.create' => 
+    'materials.create' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'materails/create',
+      'uri' => 'materials/create',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.create',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@create',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@create',
+        'as' => 'materials.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@create',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -3243,22 +3243,22 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.store' => 
+    'materials.store' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'materails',
+      'uri' => 'materials',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.store',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@store',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@store',
+        'as' => 'materials.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@store',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -3279,23 +3279,23 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.show' => 
+    'materials.show' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'materails/{materail}',
+      'uri' => 'materials/{material}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.show',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@show',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@show',
+        'as' => 'materials.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@show',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -3316,23 +3316,23 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.edit' => 
+    'materials.edit' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'materails/{materail}/edit',
+      'uri' => 'materials/{material}/edit',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.edit',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@edit',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@edit',
+        'as' => 'materials.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@edit',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -3353,23 +3353,23 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.update' => 
+    'materials.update' => 
     array (
       'methods' => 
       array (
         0 => 'PUT',
         1 => 'PATCH',
       ),
-      'uri' => 'materails/{materail}',
+      'uri' => 'materials/{material}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.update',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@update',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@update',
+        'as' => 'materials.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@update',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
@@ -3390,22 +3390,22 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'materails.destroy' => 
+    'materials.destroy' => 
     array (
       'methods' => 
       array (
         0 => 'DELETE',
       ),
-      'uri' => 'materails/{materail}',
+      'uri' => 'materials/{material}',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'as' => 'materails.destroy',
-        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@destroy',
-        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterailController@destroy',
+        'as' => 'materials.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 

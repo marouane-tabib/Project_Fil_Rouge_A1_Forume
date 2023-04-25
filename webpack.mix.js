@@ -139,7 +139,7 @@ mix.js('resources/admin/assets/js/products/create-validation.js', 'public/admin/
    .js('resources/admin/assets/js/shapes/data-form-validation.js', 'public/admin/assets/js/shapes/')
    .js('resources/admin/assets/js/rooms/data-form-validation.js', 'public/admin/assets/js/rooms/')
    .js('resources/admin/assets/js/patterns/data-form-validation.js', 'public/admin/assets/js/patterns/')
-   .js('resources/admin/assets/js/materails/data-form-validation.js', 'public/admin/assets/js/materails/');
+   .js('resources/admin/assets/js/materials/data-form-validation.js', 'public/admin/assets/js/materials/');
 
 mix.copy('node_modules/@fortawesome/fontawesome-free/webfonts/*', 'public/assets/vendor/fonts/fontawesome');
 mix.copy('node_modules/katex/dist/fonts/*', 'public/assets/vendor/libs/quill/fonts');

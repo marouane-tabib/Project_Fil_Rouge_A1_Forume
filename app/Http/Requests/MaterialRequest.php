@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MaterailRequest extends FormRequest
+class MaterialRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class MaterailRequest extends FormRequest
       switch ($this->method()){
           case 'POST' : {
             return [
-              'name' => 'required|string|min:4|max:50|unique:materails|regex:/^[^\d]*$/',
+              'name' => 'required|string|min:4|max:50|unique:materials|regex:/^[^\d]*$/',
             ];
           }
           case 'PUT' : {
@@ -34,7 +34,7 @@ class MaterailRequest extends FormRequest
           }
           case 'PATCH' : {
             return [
-              'name' => 'required|string|min:4|max:50|unique:materails|regex:/^[^\d]*$/',
+              'name' => 'required|string|min:4|max:50|unique:materials|regex:/^[^\d]*$/',
             ];
           }
           default: break;
@@ -47,11 +47,11 @@ class MaterailRequest extends FormRequest
     public function messages()
     {
       return [
-        'name.required' => 'Please enter a name for your materail.',
+        'name.required' => 'Please enter a name for your material.',
         'name.string' => 'The name must be a string.',
         'name.min' => 'The name must be at least 4 characters long.',
         'name.max' => 'The name must not exceed 50 characters.',
-        'name.unique' => 'The materail name has already been taken.',
+        'name.unique' => 'The material name has already been taken.',
         'name.regex' => 'The :attribute field cannot contain numbers.'
       ];
     }
