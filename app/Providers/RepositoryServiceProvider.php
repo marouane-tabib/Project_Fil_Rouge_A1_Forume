@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Interfaces\HomeStyleRepositoryInterface;
+use App\Repositories\HomeStyleRepository;
 use App\Interfaces\MaterialRepositoryInterface;
 use App\Repositories\MaterialRepository;
 use App\Interfaces\PatternRepositoryInterface;
@@ -29,6 +31,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+      $this->app->bind(HomeStyleRepositoryInterface::class, HomeStyleRepository::class);
       $this->app->bind(MaterialRepositoryInterface::class, MaterialRepository::class);
       $this->app->bind(PatternRepositoryInterface::class, PatternRepository::class);
       $this->app->bind(RoomRepositoryInterface::class, RoomRepository::class);
