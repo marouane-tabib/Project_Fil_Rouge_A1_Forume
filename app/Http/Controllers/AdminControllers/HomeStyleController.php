@@ -21,7 +21,7 @@ class HomeStyleController extends Controller
      */
     public function index()
     {
-        //
+      return view('admin.pages.home_styles.index', ['home_styles' => $this->homeStyleService->get()]);
     }
 
     /**
