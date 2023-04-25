@@ -42,7 +42,8 @@ class HomeStyleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->homeStyleService->create($request->all());
+      return redirect()->back();
     }
 
     /**
