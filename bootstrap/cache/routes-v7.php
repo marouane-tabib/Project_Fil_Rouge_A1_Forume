@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ZsLC9se9xUTKg1nR',
+            '_route' => 'generated::Qvyq16s5CE1vhvZH',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::t97ODMyNHHysvNE0',
+            '_route' => 'generated::dAO9y72hP8cRQ74W',
           ),
           1 => NULL,
           2 => 
@@ -568,10 +568,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/home-styles' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/home-styles/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/categories/([^/]++)(?|(*:208)|/edit(*:221)|(*:229))|/tags/([^/]++)(?|(*:255)|/edit(*:268)|(*:276))|/shapes/([^/]++)(?|(*:304)|/edit(*:317)|(*:325))|/rooms/([^/]++)(?|(*:352)|/edit(*:365)|(*:373))|/materials/([^/]++)(?|(*:404)|/edit(*:417)|(*:425)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/categories/([^/]++)(?|(*:208)|/edit(*:221)|(*:229))|/tags/([^/]++)(?|(*:255)|/edit(*:268)|(*:276))|/shapes/([^/]++)(?|(*:304)|/edit(*:317)|(*:325))|/rooms/([^/]++)(?|(*:352)|/edit(*:365)|(*:373))|/materials/([^/]++)(?|(*:404)|/edit(*:417)|(*:425))|/home\\-styles/([^/]++)(?|(*:459)|/edit(*:472)|(*:480)))/?$}sDu',
     ),
     3 => 
     array (
@@ -1237,6 +1293,94 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
+      ),
+      459 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.show',
+          ),
+          1 => 
+          array (
+            0 => 'home_style',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      472 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.edit',
+          ),
+          1 => 
+          array (
+            0 => 'home_style',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      480 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.update',
+          ),
+          1 => 
+          array (
+            0 => 'home_style',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home-styles.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'home_style',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
         2 => 
         array (
           0 => NULL,
@@ -1442,7 +1586,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZsLC9se9xUTKg1nR' => 
+    'generated::Qvyq16s5CE1vhvZH' => 
     array (
       'methods' => 
       array (
@@ -1463,7 +1607,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::ZsLC9se9xUTKg1nR',
+        'as' => 'generated::Qvyq16s5CE1vhvZH',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1588,7 +1732,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::t97ODMyNHHysvNE0' => 
+    'generated::dAO9y72hP8cRQ74W' => 
     array (
       'methods' => 
       array (
@@ -1605,13 +1749,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003970000000000000000";}";s:4:"hash";s:44:"AlX6+lE2VekfObM+znUVK/UdxtEbkNvvg2LESsxw9ug=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003990000000000000000";}";s:4:"hash";s:44:"L+KxZSDNic8HMtg9oo4o3Cgw/pdFpBNZiP3IzlNvysI=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::t97ODMyNHHysvNE0',
+        'as' => 'generated::dAO9y72hP8cRQ74W',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3406,6 +3550,263 @@ app('router')->setCompiledRoutes(
         'as' => 'materials.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\MaterialController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'home-styles',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@index',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'home-styles/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'home-styles',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'home-styles/{home_style}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'home-styles/{home_style}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'home-styles/{home_style}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home-styles.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'home-styles/{home_style}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'home-styles.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
