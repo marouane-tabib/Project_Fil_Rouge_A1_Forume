@@ -68,6 +68,12 @@
       "slug": "materials.index"
     },
     {
+      "url": "/home-styles",
+      "name": "Home Styles",
+      "icon": "menu-icon ti ti-home-dot",
+      "slug": "home-styles.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
