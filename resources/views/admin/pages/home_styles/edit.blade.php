@@ -17,7 +17,7 @@
 @endsection
 
 @section('page-script')
-<script src="{{asset('admin/assets/js/homeStyles/data-form-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/home_styles/data-form-validation.js')}}"></script>
 @endsection
 
 @section('content')
