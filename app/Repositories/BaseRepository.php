@@ -29,11 +29,6 @@ class BaseRepository implements BaseRepositoryInterface
     return $this->model->find($id);
   }
 
-  public function addSelect(array $select = [])
-  {
-    return $this->model->addSelect($select)->get();
-  }
-
   public function create(array $data)
   {
     return $this->model->create($data);
