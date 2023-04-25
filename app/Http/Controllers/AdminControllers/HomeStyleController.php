@@ -77,7 +77,8 @@ class HomeStyleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->homeStyleService->update($id, $request->all());
+      return redirect()->route('home-styles.index');
     }
 
     /**
