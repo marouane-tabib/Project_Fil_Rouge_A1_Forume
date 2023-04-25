@@ -44,7 +44,7 @@ class MaterialController extends Controller
      */
     public function store(MaterialRequest $request)
     {
-      $this->materialService->create($request->all());
+      $this->materialService->create($request->validated());
       return redirect()->back();
     }
 
@@ -79,7 +79,7 @@ class MaterialController extends Controller
      */
     public function update(MaterialRequest $request, $id)
     {
-      $this->materialService->update($id, $request->all());
+      $this->materialService->update($id, $request->validated());
       return redirect()->route('materials.index');
     }
 
