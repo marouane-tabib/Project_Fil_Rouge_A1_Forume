@@ -62,6 +62,12 @@
       "slug": "patterns.index"
     },
     {
+      "url": "/materials",
+      "name": "Materials",
+      "icon": "menu-icon ti ti-brand-airtable",
+      "slug": "materials.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
