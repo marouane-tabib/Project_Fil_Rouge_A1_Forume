@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\HomeStyleRequest;
 use App\Services\HomeStyleService;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,7 @@ class HomeStyleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HomeStyleRequest $request)
     {
       $this->homeStyleService->create($request->all());
       return redirect()->back();
@@ -75,7 +76,7 @@ class HomeStyleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(HomeStyleRequest $request, $id)
     {
       $this->homeStyleService->update($id, $request->all());
       return redirect()->route('home-styles.index');
