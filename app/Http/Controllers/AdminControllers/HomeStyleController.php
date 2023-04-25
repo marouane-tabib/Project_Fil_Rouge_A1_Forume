@@ -3,10 +3,17 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Services\HomeStyleService;
 use Illuminate\Http\Request;
 
 class HomeStyleController extends Controller
 {
+  protected HomeStyleService $homeStyleService;
+
+  public function __construct(HomeStyleService $homeStyleService)
+  {
+    $this->homeStyleService = $homeStyleService;
+  }
     /**
      * Display a listing of the resource.
      *
