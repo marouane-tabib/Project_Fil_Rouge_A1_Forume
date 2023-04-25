@@ -89,6 +89,7 @@ class HomeStyleController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->homeStyleService->delete($id);
+      return redirect()->back();
     }
 }
