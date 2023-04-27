@@ -66,7 +66,7 @@ class ColorController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.pages.colors.edit', ["color" => $this->colorService->find($id)]);
     }
 
     /**
