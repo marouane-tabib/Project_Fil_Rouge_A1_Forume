@@ -78,7 +78,8 @@ class ColorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->colorService->update($id, $request->all());
+      return redirect()->route('colors.index');
     }
 
     /**
