@@ -90,6 +90,7 @@ class ColorController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $this->colorService->delete($id);
+      return redirect()->back();
     }
 }
