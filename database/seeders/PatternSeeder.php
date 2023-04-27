@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Materail;
+use App\Models\Pattern;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class MaterailSeeder extends Seeder
+class PatternSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Materail::factory()->count(5)->create();
+        Pattern::factory()->count(5)->create();
     }
 }

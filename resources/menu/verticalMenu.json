@@ -46,8 +46,32 @@
     {
       "url": "/shapes",
       "name": "Shapes",
-      "icon": "menu-icon ti ti-tags",
+      "icon": "menu-icon ti ti-triangle-square-circle",
       "slug": "shapes.index"
+    },
+    {
+      "url": "/rooms",
+      "name": "Rooms",
+      "icon": "menu-icon ti ti-lamp",
+      "slug": "rooms.index"
+    },
+    {
+      "url": "/patterns",
+      "name": "Patterns",
+      "icon": "menu-icon ti ti-box-padding",
+      "slug": "patterns.index"
+    },
+    {
+      "url": "/materials",
+      "name": "Materials",
+      "icon": "menu-icon ti ti-brand-airtable",
+      "slug": "materials.index"
+    },
+    {
+      "url": "/home-styles",
+      "name": "Home Styles",
+      "icon": "menu-icon ti ti-armchair-2",
+      "slug": "home-styles.index"
     },
     {
       "url": "/auth/register-basic",

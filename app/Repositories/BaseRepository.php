@@ -18,7 +18,7 @@ class BaseRepository implements BaseRepositoryInterface
   {
     return $this->model->all();
   }
-  
+
   public function get(array $select = ['*'], array $with = [])
   {
     return $this->model->with($with)->get($select);

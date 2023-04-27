@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('materails', function (Blueprint $table) {
+        Schema::create('patterns', function (Blueprint $table) {
             $table->id();
             $table->string('name', 55);
             $table->timestamps();
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('materails');
+        Schema::dropIfExists('patterns');
     }
 };
