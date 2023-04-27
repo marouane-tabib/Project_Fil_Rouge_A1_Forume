@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ColorRequest;
 use App\Services\ColorService;
 use Illuminate\Http\Request;
 
@@ -41,7 +42,7 @@ class ColorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ColorRequest $request)
     {
       $this->colorService->create($request->all());
       return redirect()->back();
@@ -76,7 +77,7 @@ class ColorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ColorRequest $request, $id)
     {
       $this->colorService->update($id, $request->all());
       return redirect()->route('colors.index');
