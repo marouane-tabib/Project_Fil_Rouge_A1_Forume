@@ -4,7 +4,7 @@
 
 @extends('admin/layouts/layoutMaster')
 
-@section('title', 'Home Styles')
+@section('title', 'Colors')
 
 @section('vendor-style')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
@@ -17,12 +17,12 @@
 @endsection
 
 @section('page-script')
-<script src="{{asset('admin/assets/js/home_styles/data-form-validation.js')}}"></script>
+<script src="{{asset('admin/assets/js/colors/data-form-validation.js')}}"></script>
 @endsection
 
 @section('content')
 <div class="d-flex justify-content-end">
-    @include('admin.components.homeStylesEditModal')
+    @include('admin.components.colorsEditModal')
 </div><br>
 <div class="table-responsive">
   <table class="table">
@@ -33,16 +33,16 @@
       </tr>
     </thead>
     <tbody class="table-border-bottom-0">
-      @foreach ($homeStyles as $homeStyle)
+      @foreach ($colors as $color)
         <tr>
-          <td>{{ $homeStyle->name }}</td>
+          <td>{{ $color->name }}</td>
           <td>
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('home-styles.edit', $homeStyle->id) }}"><i class="ti ti-pencil me-1"></i>Edit</a>
-                <a class="dropdown-item" href="javascript:void(0);" onclick="if(confirm('Are You sure to delete this record?')){document.getElementById('delete-home-style-{{ $homeStyle->id }}').submit();} else {return false}"><i class="ti ti-trash me-1"></i>Delete</a>
-                <form action="{{ route('home-styles.destroy' , $homeStyle->id) }}" method="post" class="d-none" id="delete-home-style-{{ $homeStyle->id }}" >
+                <a class="dropdown-item" href="{{ route('colors.edit', $color->id) }}"><i class="ti ti-pencil me-1"></i>Edit</a>
+                <a class="dropdown-item" href="javascript:void(0);" onclick="if(confirm('Are You sure to delete this record?')){document.getElementById('delete-color-{{ $color->id }}').submit();} else {return false}"><i class="ti ti-trash me-1"></i>Delete</a>
+                <form action="{{ route('colors.destroy' , $color->id) }}" method="post" class="d-none" id="delete-color-{{ $color->id }}" >
                   @csrf
                   @method('DELETE')
                 </form>
