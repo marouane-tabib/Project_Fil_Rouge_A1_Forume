@@ -74,6 +74,12 @@
       "slug": "home-styles.index"
     },
     {
+      "url": "/colors",
+      "name": "Colors",
+      "icon": "menu-icon ti ti-palette",
+      "slug": "colors.index"
+    },
+    {
       "url": "/auth/register-basic",
       "name": "Register",
       "icon": "menu-icon tf-icons ti ti-user",
