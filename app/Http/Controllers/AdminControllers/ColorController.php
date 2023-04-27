@@ -43,7 +43,8 @@ class ColorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->colorService->create($request->all());
+      return redirect()->back();
     }
 
     /**
