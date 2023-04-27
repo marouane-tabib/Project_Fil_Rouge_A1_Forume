@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Qvyq16s5CE1vhvZH',
+            '_route' => 'generated::yuU6jutyfSirBq5Q',
           ),
           1 => NULL,
           2 => 
@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::dAO9y72hP8cRQ74W',
+            '_route' => 'generated::2AWVaaJ0Ftx9jg1A',
           ),
           1 => NULL,
           2 => 
@@ -624,10 +624,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/colors' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/colors/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/categories/([^/]++)(?|(*:208)|/edit(*:221)|(*:229))|/tags/([^/]++)(?|(*:255)|/edit(*:268)|(*:276))|/shapes/([^/]++)(?|(*:304)|/edit(*:317)|(*:325))|/rooms/([^/]++)(?|(*:352)|/edit(*:365)|(*:373))|/materials/([^/]++)(?|(*:404)|/edit(*:417)|(*:425))|/home\\-styles/([^/]++)(?|(*:459)|/edit(*:472)|(*:480)))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/p(?|roducts/([^/]++)(?|(*:105)|/edit(*:118)|(*:126))|atterns/([^/]++)(?|(*:154)|/edit(*:167)|(*:175)))|/c(?|ategories/([^/]++)(?|(*:211)|/edit(*:224)|(*:232))|olors/([^/]++)(?|(*:258)|/edit(*:271)|(*:279)))|/tags/([^/]++)(?|(*:306)|/edit(*:319)|(*:327))|/shapes/([^/]++)(?|(*:355)|/edit(*:368)|(*:376))|/rooms/([^/]++)(?|(*:403)|/edit(*:416)|(*:424))|/materials/([^/]++)(?|(*:455)|/edit(*:468)|(*:476))|/home\\-styles/([^/]++)(?|(*:510)|/edit(*:523)|(*:531)))/?$}sDu',
     ),
     3 => 
     array (
@@ -854,7 +910,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      208 => 
+      211 => 
       array (
         0 => 
         array (
@@ -877,7 +933,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      221 => 
+      224 => 
       array (
         0 => 
         array (
@@ -900,7 +956,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      229 => 
+      232 => 
       array (
         0 => 
         array (
@@ -942,7 +998,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      255 => 
+      258 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.show',
+          ),
+          1 => 
+          array (
+            0 => 'color',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      271 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.edit',
+          ),
+          1 => 
+          array (
+            0 => 'color',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      279 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.update',
+          ),
+          1 => 
+          array (
+            0 => 'color',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'colors.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'color',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      306 => 
       array (
         0 => 
         array (
@@ -965,7 +1109,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      268 => 
+      319 => 
       array (
         0 => 
         array (
@@ -988,7 +1132,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      276 => 
+      327 => 
       array (
         0 => 
         array (
@@ -1030,7 +1174,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      304 => 
+      355 => 
       array (
         0 => 
         array (
@@ -1053,7 +1197,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      317 => 
+      368 => 
       array (
         0 => 
         array (
@@ -1076,7 +1220,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      325 => 
+      376 => 
       array (
         0 => 
         array (
@@ -1118,7 +1262,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      352 => 
+      403 => 
       array (
         0 => 
         array (
@@ -1141,7 +1285,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      365 => 
+      416 => 
       array (
         0 => 
         array (
@@ -1164,7 +1308,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      373 => 
+      424 => 
       array (
         0 => 
         array (
@@ -1206,7 +1350,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      404 => 
+      455 => 
       array (
         0 => 
         array (
@@ -1229,7 +1373,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      417 => 
+      468 => 
       array (
         0 => 
         array (
@@ -1252,7 +1396,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      425 => 
+      476 => 
       array (
         0 => 
         array (
@@ -1294,7 +1438,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      459 => 
+      510 => 
       array (
         0 => 
         array (
@@ -1317,7 +1461,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      472 => 
+      523 => 
       array (
         0 => 
         array (
@@ -1340,7 +1484,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      480 => 
+      531 => 
       array (
         0 => 
         array (
@@ -1586,7 +1730,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Qvyq16s5CE1vhvZH' => 
+    'generated::yuU6jutyfSirBq5Q' => 
     array (
       'methods' => 
       array (
@@ -1607,7 +1751,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::Qvyq16s5CE1vhvZH',
+        'as' => 'generated::yuU6jutyfSirBq5Q',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1732,7 +1876,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::dAO9y72hP8cRQ74W' => 
+    'generated::2AWVaaJ0Ftx9jg1A' => 
     array (
       'methods' => 
       array (
@@ -1749,13 +1893,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003990000000000000000";}";s:4:"hash";s:44:"L+KxZSDNic8HMtg9oo4o3Cgw/pdFpBNZiP3IzlNvysI=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000039c0000000000000000";}";s:4:"hash";s:44:"ctN7DwaM7CCYLOgl1t1ZWR4eTVFnr0G5Z1VaYImjZCE=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::dAO9y72hP8cRQ74W',
+        'as' => 'generated::2AWVaaJ0Ftx9jg1A',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3807,6 +3951,263 @@ app('router')->setCompiledRoutes(
         'as' => 'home-styles.destroy',
         'uses' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@destroy',
         'controller' => 'App\\Http\\Controllers\\AdminControllers\\HomeStyleController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'colors',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.index',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@index',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@index',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'colors/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.create',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@create',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'colors',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.store',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@store',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'colors/{color}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.show',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@show',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'colors/{color}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.edit',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@edit',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'colors/{color}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.update',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@update',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'colors.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'colors/{color}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'colors.destroy',
+        'uses' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@destroy',
+        'controller' => 'App\\Http\\Controllers\\AdminControllers\\ColorController@destroy',
         'namespace' => NULL,
         'prefix' => '/',
         'where' => 
