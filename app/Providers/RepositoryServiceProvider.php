@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Providers;
-
+use App\Interfaces\ColorRepositoryInterface;
+use App\Repositories\ColorRepository;
 use App\Interfaces\HomeStyleRepositoryInterface;
 use App\Repositories\HomeStyleRepository;
 use App\Interfaces\MaterialRepositoryInterface;
@@ -31,6 +32,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+      $this->app->bind(ColorRepositoryInterface::class, ColorRepository::class);
       $this->app->bind(HomeStyleRepositoryInterface::class, HomeStyleRepository::class);
       $this->app->bind(MaterialRepositoryInterface::class, MaterialRepository::class);
       $this->app->bind(PatternRepositoryInterface::class, PatternRepository::class);
