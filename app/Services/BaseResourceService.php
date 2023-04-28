@@ -41,6 +41,6 @@ class BaseResourceService implements BaseResourceServiceInterface
 
   public function destroy(int $id)
   {
-    //
+    return $this->repository->delete($id);
   }
 }
