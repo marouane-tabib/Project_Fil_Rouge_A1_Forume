@@ -4,7 +4,6 @@ namespace App\Interfaces;
 
 interface BaseResourceServiceInterface
 {
-    // all - create - store - show - edit - update - destroy
   public function all();
   public function store(array $data);
   public function show(int $id);
