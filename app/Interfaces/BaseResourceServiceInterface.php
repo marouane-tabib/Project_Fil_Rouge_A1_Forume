@@ -2,7 +2,7 @@
 
 namespace App\Interfaces;
 
-interface BaseResourceServiceInterface
+interface BaseResourceServiceInterface extends BaseRepositoryInterface
 {
     //
 }
