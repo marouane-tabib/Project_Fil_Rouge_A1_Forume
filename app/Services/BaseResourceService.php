@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Interfaces\BaseRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\BaseResourceServiceInterface;
 use App\Repositories\BaseRepository;
 
@@ -9,7 +10,7 @@ class BaseResourceService implements BaseResourceServiceInterface
 {
   protected $repository;
 
-  public function __construct(BaseRepository $repository)
+  public function __construct(BaseRepositoryInterface $repository)
   {
     $this->repository = $repository;
   }
