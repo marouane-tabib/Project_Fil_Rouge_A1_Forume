@@ -23,22 +23,22 @@ class BaseResourceService implements BaseResourceServiceInterface
   {
     //
   }
-  
+
   public function show(int $id)
   {
     //
   }
-  
+
   public function edit(int $id)
   {
     //
   }
-  
+
   public function update(int $id, array $data)
   {
     //
   }
-  
+
   public function destroy(int $id)
   {
     //
