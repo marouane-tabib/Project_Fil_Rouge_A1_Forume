@@ -2,7 +2,9 @@
 
 namespace App\Services;
 
-class BaseResourceService
+use App\Interfaces\BaseResourceServiceInterface;
+
+class BaseResourceService extends BaseResourceServiceInterface
 {
   //
 }
