@@ -4,18 +4,15 @@ namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
-use App\Services\CityService;
 use App\Services\ProductService;
 
 class ProductController extends Controller
 {
     protected ProductService $productService;
-    protected CityService $cityService;
 
-    public function __construct(ProductService $productService, CityService $cityService)
+    public function __construct(ProductService $productService)
     {
       $this->productService = $productService;
-      $this->cityService = $cityService;
     }
 
     /**
@@ -25,8 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      dd($this->cityService->index());
-      // return view('admin.pages.products.index', ['products' => $this->productService->get(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
+      return view('admin.pages.products.index', ['products' => $this->productService->get(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
     }
 
     /**
