@@ -36,7 +36,7 @@ class BaseResourceService implements BaseResourceServiceInterface
 
   public function update(int $id, array $data)
   {
-    //
+    return $this->repository->update($id, $data);
   }
 
   public function destroy(int $id)
