@@ -2,9 +2,40 @@
 
 namespace App\Services;
 
-use App\Interfaces\BaseResourceServiceInterface;
+use App\Interfaces\ServiceInterfaces\BaseResourceServiceInterface;
+use App\Repositories\BaseRepository;
 
-class BaseResourceService extends BaseResourceServiceInterface
+class BaseResourceService implements BaseResourceServiceInterface
 {
-  //
+  protected $repository;
+
+  public function __construct(BaseRepository $repository)
+  {
+    $this->repository = $repository;
+  }
+
+  public function all()
+  {
+    //
+  }
+  public function store(array $data)
+  {
+    //
+  }
+  public function show(int $id)
+  {
+    //
+  }
+  public function edit(int $id)
+  {
+    //
+  }
+  public function update(int $id, array $data)
+  {
+    //
+  }
+  public function destroy(int $id)
+  {
+    //
+  }
 }
