@@ -21,7 +21,7 @@ class BaseResourceService implements BaseResourceServiceInterface
 
   public function store(array $data)
   {
-    //
+    return $this->repository->create($data);
   }
 
   public function show(int $id)
