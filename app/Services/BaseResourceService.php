@@ -14,7 +14,7 @@ class BaseResourceService implements BaseResourceServiceInterface
     $this->repository = $repository;
   }
 
-  public function all()
+  public function index()
   {
     return $this->repository->all();
   }

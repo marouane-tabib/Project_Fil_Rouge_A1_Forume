@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      dd($this->cityService->all());
+      dd($this->cityService->index());
       // return view('admin.pages.products.index', ['products' => $this->productService->get(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
     }
 
