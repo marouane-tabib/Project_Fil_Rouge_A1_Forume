@@ -4,15 +4,15 @@ namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
-use App\Interfaces\ServiceInterfaces\CityServiceInterface;
+use App\Services\CityService;
 use App\Services\ProductService;
 
 class ProductController extends Controller
 {
     protected ProductService $productService;
-    protected CityServiceInterface $cityService;
+    protected CityService $cityService;
 
-    public function __construct(ProductService $productService, CityServiceInterface $cityService)
+    public function __construct(ProductService $productService, CityService $cityService)
     {
       $this->productService = $productService;
       $this->cityService = $cityService;
