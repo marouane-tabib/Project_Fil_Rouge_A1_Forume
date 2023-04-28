@@ -23,7 +23,7 @@ class ColorController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.colors.index', ['colors' => $this->colorService->get()]);
+      return view('admin.pages.colors.index', ['colors' => $this->colorService->index()]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ColorController extends Controller
      */
     public function store(ColorRequest $request)
     {
-      $this->colorService->create($request->all());
+      $this->colorService->store($request->all());
       return redirect()->back();
     }
 
@@ -67,7 +67,7 @@ class ColorController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.colors.edit', ["color" => $this->colorService->find($id)]);
+      return view('admin.pages.colors.edit', ["color" => $this->colorService->edit($id)]);
     }
 
     /**
@@ -91,7 +91,7 @@ class ColorController extends Controller
      */
     public function destroy($id)
     {
-      $this->colorService->delete($id);
+      $this->colorService->destroy($id);
       return redirect()->back();
     }
 }
