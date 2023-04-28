@@ -26,12 +26,12 @@ class BaseResourceService implements BaseResourceServiceInterface
 
   public function show(int $id)
   {
-    //
+    return $this->repository->find($id);
   }
 
   public function edit(int $id)
   {
-    //
+    return $this->repository->find($id);
   }
 
   public function update(int $id, array $data)
