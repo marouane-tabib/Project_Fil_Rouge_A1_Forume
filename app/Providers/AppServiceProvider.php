@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Interfaces\ServiceInterfaces\BaseResourceServiceInterface;
+use App\Interfaces\ServiceInterfaces\CityServiceInterface;
 use App\Services\BaseResourceService;
+use App\Services\CityService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
    */
   public function register()
   {
+    $this->app->bind(CityServiceInterface::class, CityService::class);
     $this->app->bind(BaseResourceServiceInterface::class, BaseResourceService::class);
   }
 
