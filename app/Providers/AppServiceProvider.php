@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Interfaces\BaseResourceServiceInterface;
+use App\Interfaces\ServiceInterfaces\BaseResourceServiceInterface;
 use App\Services\BaseResourceService;
 use Illuminate\Support\ServiceProvider;
 
