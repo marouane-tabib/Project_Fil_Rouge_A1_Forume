@@ -21,7 +21,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.categories.index', ['categories' => $this->categoryService->get()]);
+      return view('admin.pages.categories.index', ['categories' => $this->categoryService->index()]);
     }
 
     /**
@@ -42,7 +42,7 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request)
     {
-      $this->categoryService->create($request->validated());
+      $this->categoryService->store($request->validated());
       return redirect()->back();
     }
 
@@ -65,7 +65,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.categories.edit', ["category" => $this->categoryService->find($id)]);
+      return view('admin.pages.categories.edit', ["category" => $this->categoryService->edit($id)]);
     }
 
     /**
@@ -89,7 +89,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-      $this->categoryService->delete($id);
+      $this->categoryService->destroy($id);
       return redirect()->back();
     }
 }
