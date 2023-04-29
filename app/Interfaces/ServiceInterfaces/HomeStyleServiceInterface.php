@@ -2,7 +2,7 @@
 
 namespace App\Interfaces\ServiceInterfaces;
 
-interface HomeStyleService extends BaseResourceServiceInterface
+interface HomeStyleServiceInterface extends BaseResourceServiceInterface
 {
     //
 }
