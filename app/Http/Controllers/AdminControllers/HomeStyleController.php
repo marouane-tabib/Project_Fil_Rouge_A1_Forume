@@ -22,7 +22,7 @@ class HomeStyleController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.home_styles.index', ['homeStyles' => $this->homeStyleService->get()]);
+      return view('admin.pages.home_styles.index', ['homeStyles' => $this->homeStyleService->index()]);
     }
 
     /**
@@ -43,7 +43,7 @@ class HomeStyleController extends Controller
      */
     public function store(HomeStyleRequest $request)
     {
-      $this->homeStyleService->create($request->all());
+      $this->homeStyleService->store($request->all());
       return redirect()->back();
     }
 
@@ -66,7 +66,7 @@ class HomeStyleController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.home_styles.edit', ["homeStyle" => $this->homeStyleService->find($id)]);
+      return view('admin.pages.home_styles.edit', ["homeStyle" => $this->homeStyleService->edit($id)]);
     }
 
     /**
@@ -90,7 +90,7 @@ class HomeStyleController extends Controller
      */
     public function destroy($id)
     {
-      $this->homeStyleService->delete($id);
+      $this->homeStyleService->destroy($id);
       return redirect()->back();
     }
 }
