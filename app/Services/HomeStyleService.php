@@ -3,43 +3,44 @@
 namespace App\Services;
 
 use App\Interfaces\HomeStyleRepositoryInterface;
+use App\Interfaces\ServiceInterfaces\ColorServiceInterface;
 
-class HomeStyleService
+class HomeStyleService extends BaseResourceService implements ColorServiceInterface
 {
-  protected HomeStyleRepositoryInterface $homestyleRepository;
+  protected $repository;
 
-  public function __construct(HomeStyleRepositoryInterface $homestyleRepository)
+  public function __construct(HomeStyleRepositoryInterface $repository)
   {
-    $this->homestyleRepository = $homestyleRepository;
+    $this->repository = $repository;
   }
 
-  public function all()
-  {
-    return $this->homestyleRepository->all();
-  }
+  // public function all()
+  // {
+  //   return $this->homestyleRepository->all();
+  // }
 
-  public function get(array $select = ['*'], array $with = [])
-  {
-    return $this->homestyleRepository->get($select, $with);
-  }
+  // public function get(array $select = ['*'], array $with = [])
+  // {
+  //   return $this->homestyleRepository->get($select, $with);
+  // }
 
-  public function find(int $id)
-  {
-    return $this->homestyleRepository->find($id);
-  }
+  // public function find(int $id)
+  // {
+  //   return $this->homestyleRepository->find($id);
+  // }
 
-  public function create(array $data)
-  {
-    return $this->homestyleRepository->create($data);
-  }
+  // public function create(array $data)
+  // {
+  //   return $this->homestyleRepository->create($data);
+  // }
 
-  public function update(int $id, array $data)
-  {
-    return $this->homestyleRepository->update($id, $data);
-  }
+  // public function update(int $id, array $data)
+  // {
+  //   return $this->homestyleRepository->update($id, $data);
+  // }
 
-  public function delete(int $id)
-  {
-    return $this->homestyleRepository->delete($id);
-  }
+  // public function delete(int $id)
+  // {
+  //   return $this->homestyleRepository->delete($id);
+  // }
 }
