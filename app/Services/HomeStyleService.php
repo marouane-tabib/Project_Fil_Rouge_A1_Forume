@@ -3,9 +3,9 @@
 namespace App\Services;
 
 use App\Interfaces\HomeStyleRepositoryInterface;
-use App\Interfaces\ServiceInterfaces\ColorServiceInterface;
+use App\Interfaces\ServiceInterfaces\HomeStyleServiceInterface;
 
-class HomeStyleService extends BaseResourceService implements ColorServiceInterface
+class HomeStyleService extends BaseResourceService implements HomeStyleServiceInterface
 {
   protected $repository;
 
