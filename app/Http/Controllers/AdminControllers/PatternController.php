@@ -22,7 +22,7 @@ class PatternController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.patterns.index', ['patterns' => $this->patternService->get()]);
+      return view('admin.pages.patterns.index', ['patterns' => $this->patternService->index()]);
     }
 
     /**
@@ -43,7 +43,7 @@ class PatternController extends Controller
      */
     public function store(PatternRequest $request)
     {
-      $this->patternService->create($request->validated());
+      $this->patternService->store($request->validated());
       return redirect()->back();
     }
 
@@ -66,7 +66,7 @@ class PatternController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.patterns.edit', ["pattern" => $this->patternService->find($id)]);
+      return view('admin.pages.patterns.edit', ["pattern" => $this->patternService->edit($id)]);
     }
 
     /**
@@ -90,7 +90,7 @@ class PatternController extends Controller
      */
     public function destroy($id)
     {
-      $this->patternService->delete($id);
+      $this->patternService->destroy($id);
       return redirect()->back();
     }
 }
