@@ -23,7 +23,7 @@ class TagController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.tags.index', ['tags' => $this->tagService->get()]);
+      return view('admin.pages.tags.index', ['tags' => $this->tagService->index()]);
     }
 
     /**
@@ -44,7 +44,7 @@ class TagController extends Controller
      */
     public function store(TagRequest $request)
     {
-      $this->tagService->create($request->validated());
+      $this->tagService->store($request->validated());
       return redirect()->back();
     }
 
@@ -67,7 +67,7 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.tags.edit', ["tag" => $this->tagService->find($id)]);
+      return view('admin.pages.tags.edit', ["tag" => $this->tagService->edit($id)]);
     }
 
     /**
@@ -91,7 +91,7 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-      $this->tagService->delete($id);
+      $this->tagService->destroy($id);
       return redirect()->back();
     }
 }
