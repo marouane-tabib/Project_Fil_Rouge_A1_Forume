@@ -22,7 +22,7 @@ class RoomController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.rooms.index', ['rooms' => $this->roomService->get()]);
+      return view('admin.pages.rooms.index', ['rooms' => $this->roomService->index()]);
     }
 
     /**
@@ -43,7 +43,7 @@ class RoomController extends Controller
      */
     public function store(RoomRequest $request)
     {
-      $this->roomService->create($request->validated());
+      $this->roomService->store($request->validated());
       return redirect()->back();
     }
 
@@ -66,7 +66,7 @@ class RoomController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.rooms.edit', ["room" => $this->roomService->find($id)]);
+      return view('admin.pages.rooms.edit', ["room" => $this->roomService->edit($id)]);
     }
 
     /**
@@ -90,7 +90,7 @@ class RoomController extends Controller
      */
     public function destroy($id)
     {
-      $this->roomService->delete($id);
+      $this->roomService->destroy($id);
       return redirect()->back();
     }
 }
