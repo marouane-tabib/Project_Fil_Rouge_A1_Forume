@@ -23,7 +23,7 @@ class MaterialController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.materials.index', ['materials' => $this->materialService->get()]);
+      return view('admin.pages.materials.index', ['materials' => $this->materialService->index()]);
     }
 
     /**
@@ -44,7 +44,7 @@ class MaterialController extends Controller
      */
     public function store(MaterialRequest $request)
     {
-      $this->materialService->create($request->validated());
+      $this->materialService->store($request->validated());
       return redirect()->back();
     }
 
@@ -67,7 +67,7 @@ class MaterialController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.materials.edit', ["material" => $this->materialService->find($id)]);
+      return view('admin.pages.materials.edit', ["material" => $this->materialService->edit($id)]);
     }
 
     /**
@@ -91,7 +91,7 @@ class MaterialController extends Controller
      */
     public function destroy($id)
     {
-      $this->materialService->delete($id);
+      $this->materialService->destroy($id);
       return redirect()->back();
     }
 }
