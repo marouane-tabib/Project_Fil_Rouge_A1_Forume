@@ -3,43 +3,14 @@
 namespace App\Services;
 
 use App\Interfaces\RoomRepositoryInterface;
+use App\Interfaces\ServiceInterfaces\RoomServiceInterface;
 
-class RoomService
+class RoomService extends BaseResourceService implements RoomServiceInterface
 {
-  protected RoomRepositoryInterface $roomRepository;
+  protected $repository;
 
-  public function __construct(RoomRepositoryInterface $roomRepository)
+  public function __construct(RoomRepositoryInterface $repository)
   {
-    $this->roomRepository = $roomRepository;
-  }
-
-  public function all()
-  {
-    return $this->roomRepository->all();
-  }
-
-  public function get(array $select = ['*'], array $with = [])
-  {
-    return $this->roomRepository->get($select, $with);
-  }
-
-  public function find(int $id)
-  {
-    return $this->roomRepository->find($id);
-  }
-
-  public function create(array $data)
-  {
-    return $this->roomRepository->create($data);
-  }
-
-  public function update(int $id, array $data)
-  {
-    return $this->roomRepository->update($id, $data);
-  }
-
-  public function delete(int $id)
-  {
-    return $this->roomRepository->delete($id);
+    $this->repository = $repository;
   }
 }
