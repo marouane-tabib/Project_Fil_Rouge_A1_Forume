@@ -3,53 +3,44 @@
 namespace App\Services;
 
 use App\Interfaces\ProductRepositoryInterface;
+use App\Interfaces\ServiceInterfaces\ProductServiceInterface;
 
-class ProductService
+class ProductService extends BaseResourceService implements ProductServiceInterface
 {
-  protected ProductRepositoryInterface $productRepository;
+  protected $repository;
   protected FileUploadService $fileUpload;
   protected $storageDerictory = "public/images/products/";
 
-  public function __construct(ProductRepositoryInterface $productRepository, FileUploadService $fileUpload)
+  public function __construct(ProductRepositoryInterface $repository, FileUploadService $fileUpload)
   {
-    $this->productRepository = $productRepository;
+    $this->repository = $repository;
     $this->fileUpload = $fileUpload;
   }
 
-  public function all()
+  public function index(array $select = ['*'], array $with = [])
   {
-    return $this->productRepository->all();
+      return $this->repository->get($select, $with);
   }
 
-  public function get(array $select = ['*'], array $with = [])
-  {
-    return $this->productRepository->get($select, $with);
-  }
-
-  public function find(int $id)
-  {
-    return $this->productRepository->find($id);
-  }
-
-  public function create(array $data)
+  public function store(array $data)
   {
     $data['image'] = $this->fileUpload->uploadFile($data['image'], $this->storageDerictory);
-    return $this->productRepository->create($data);
+    return $this->repository->create($data);
   }
 
   public function update(int $id, array $data)
   {
-    $product = $this->productRepository->find($id);
+    $product = $this->repository->find($id);
     if (isset($data['image'])) {
       $data['image'] = $this->fileUpload->updateFile($product->image, $data['image'], $this->storageDerictory);
     }
-    return $this->productRepository->update($id, $data);
+    return $this->repository->update($id, $data);
   }
 
-  public function delete(int $id)
+  public function destroy(int $id)
   {
-    $product = $this->productRepository->find($id);
+    $product = $this->repository->find($id);
     $this->fileUpload->deleteFile($this->storageDerictory.$product->image);
-    return $this->productRepository->delete($id);
+    return $this->repository->delete($id);
   }
 }
