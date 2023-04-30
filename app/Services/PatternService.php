@@ -3,43 +3,14 @@
 namespace App\Services;
 
 use App\Interfaces\PatternRepositoryInterface;
+use App\Interfaces\ServiceInterfaces\PatternServiceInterface;
 
-class PatternService
+class PatternService extends BaseResourceService implements PatternServiceInterface
 {
-  protected PatternRepositoryInterface $patternRepository;
+  protected $repository;
 
-  public function __construct(PatternRepositoryInterface $patternRepository)
+  public function __construct(PatternRepositoryInterface $repository)
   {
-    $this->patternRepository = $patternRepository;
-  }
-
-  public function all()
-  {
-    return $this->patternRepository->all();
-  }
-
-  public function get(array $select = ['*'], array $with = [])
-  {
-    return $this->patternRepository->get($select, $with);
-  }
-
-  public function find(int $id)
-  {
-    return $this->patternRepository->find($id);
-  }
-
-  public function create(array $data)
-  {
-    return $this->patternRepository->create($data);
-  }
-
-  public function update(int $id, array $data)
-  {
-    return $this->patternRepository->update($id, $data);
-  }
-
-  public function delete(int $id)
-  {
-    return $this->patternRepository->delete($id);
+    $this->repository = $repository;
   }
 }
