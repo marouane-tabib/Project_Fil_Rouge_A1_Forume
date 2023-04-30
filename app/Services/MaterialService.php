@@ -3,43 +3,14 @@
 namespace App\Services;
 
 use App\Interfaces\MaterialRepositoryInterface;
+use App\Interfaces\ServiceInterfaces\MaterialServiceInterface;
 
-class MaterialService
+class MaterialService extends BaseResourceService implements MaterialServiceInterface
 {
-  protected MaterialRepositoryInterface $materialRepository;
+  protected $repository;
 
-  public function __construct(MaterialRepositoryInterface $materialRepository)
+  public function __construct(MaterialRepositoryInterface $repository)
   {
-    $this->materialRepository = $materialRepository;
-  }
-
-  public function all()
-  {
-    return $this->materialRepository->all();
-  }
-
-  public function get(array $select = ['*'], array $with = [])
-  {
-    return $this->materialRepository->get($select, $with);
-  }
-
-  public function find(int $id)
-  {
-    return $this->materialRepository->find($id);
-  }
-
-  public function create(array $data)
-  {
-    return $this->materialRepository->create($data);
-  }
-
-  public function update(int $id, array $data)
-  {
-    return $this->materialRepository->update($id, $data);
-  }
-
-  public function delete(int $id)
-  {
-    return $this->materialRepository->delete($id);
+    $this->repository = $repository;
   }
 }
