@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.products.index', ['products' => $this->productService->get(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
+      return view('admin.pages.products.index', ['products' => $this->productService->index(['*'], ['category', 'primaryColor', 'secondaryColor', 'homeStyle'])]);
     }
 
     /**
@@ -43,7 +43,7 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-      $this->productService->create($request->validated());
+      $this->productService->store($request->validated());
       return redirect()->route('products.index');
     }
 
@@ -66,7 +66,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.products.edit', ["product" => $this->productService->find($id)]);
+      return view('admin.pages.products.edit', ["product" => $this->productService->edit($id)]);
     }
 
     /**
@@ -90,7 +90,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-      $this->productService->delete($id);
+      $this->productService->destroy($id);
       return redirect()->back();
     }
 }
