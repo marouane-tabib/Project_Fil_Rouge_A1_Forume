@@ -22,7 +22,7 @@ class ShapeController extends Controller
      */
     public function index()
     {
-      return view('admin.pages.shapes.index', ['shapes' => $this->shapeService->get()]);
+      return view('admin.pages.shapes.index', ['shapes' => $this->shapeService->index()]);
     }
 
     /**
@@ -43,7 +43,7 @@ class ShapeController extends Controller
      */
     public function store(ShapeRequest $request)
     {
-      $this->shapeService->create($request->validated());
+      $this->shapeService->store($request->validated());
       return redirect()->back();
     }
 
@@ -66,7 +66,7 @@ class ShapeController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.pages.shapes.edit', ["shape" => $this->shapeService->find($id)]);
+      return view('admin.pages.shapes.edit', ["shape" => $this->shapeService->edit($id)]);
     }
 
     /**
@@ -90,7 +90,7 @@ class ShapeController extends Controller
      */
     public function destroy($id)
     {
-      $this->shapeService->delete($id);
+      $this->shapeService->destroy($id);
       return redirect()->back();
     }
 }
