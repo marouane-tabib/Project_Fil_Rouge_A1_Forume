@@ -8,12 +8,14 @@ use App\Interfaces\ServiceInterfaces\ColorServiceInterface;
 use App\Interfaces\ServiceInterfaces\HomeStyleServiceInterface;
 use App\Interfaces\ServiceInterfaces\MaterialServiceInterface;
 use App\Interfaces\ServiceInterfaces\PatternServiceInterface;
+use App\Interfaces\ServiceInterfaces\ProductServiceInterface;
 use App\Services\BaseResourceService;
 use App\Services\CategoryService;
 use App\Services\ColorService;
 use App\Services\HomeStyleService;
 use App\Services\MaterialService;
 use App\Services\PatternService;
+use App\Services\ProductService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
    */
   public function register()
   {
+    $this->app->bind(ProductServiceInterface::class, ProductService::class);
     $this->app->bind(PatternServiceInterface::class, PatternService::class);
     $this->app->bind(MaterialServiceInterface::class, MaterialService::class);
     $this->app->bind(HomeStyleServiceInterface::class, HomeStyleService::class);
