@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\MaterialRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\MaterialRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\MaterialServiceInterface;
 
 class MaterialService extends BaseResourceService implements MaterialServiceInterface

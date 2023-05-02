@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Interfaces\ServiceInterfaces\TagServiceInterface;
-use App\Interfaces\TagRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\TagRepositoryInterface;
 
 class TagService extends BaseResourceService implements TagServiceInterface
 {

@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\PatternRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\PatternRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\PatternServiceInterface;
 
 class PatternService extends BaseResourceService implements PatternServiceInterface

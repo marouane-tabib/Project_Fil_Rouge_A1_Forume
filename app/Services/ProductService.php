@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\ProductRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ProductRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\ProductServiceInterface;
 
 class ProductService extends BaseResourceService implements ProductServiceInterface

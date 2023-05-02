@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\CategoryRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\CategoryRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\CategoryServiceInterface;
 
 class CategoryService extends BaseResourceService implements CategoryServiceInterface

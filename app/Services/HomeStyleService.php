@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\HomeStyleRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\HomeStyleRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\HomeStyleServiceInterface;
 
 class HomeStyleService extends BaseResourceService implements HomeStyleServiceInterface

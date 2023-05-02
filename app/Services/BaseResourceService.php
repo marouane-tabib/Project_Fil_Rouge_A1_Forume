@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Interfaces\BaseRepositoryInterface;
-use App\Interfaces\ServiceInterfaces\BaseResourceServiceInterface;
+use App\Interfaces\BaseResourceServiceInterface;
 use App\Repositories\BaseRepository;
 
 class BaseResourceService implements BaseResourceServiceInterface

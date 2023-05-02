@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\ColorRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ColorRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\ColorServiceInterface;
 
 class ColorService extends BaseResourceService implements ColorServiceInterface

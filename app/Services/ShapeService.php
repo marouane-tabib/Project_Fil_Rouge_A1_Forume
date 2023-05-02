@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Interfaces\ServiceInterfaces\ShapeServiceInterface;
-use App\Interfaces\ShapeRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ShapeRepositoryInterface;
 
 class ShapeService extends BaseResourceService implements ShapeServiceInterface
 {

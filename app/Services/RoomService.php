@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Interfaces\RoomRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\RoomRepositoryInterface;
 use App\Interfaces\ServiceInterfaces\RoomServiceInterface;
 
 class RoomService extends BaseResourceService implements RoomServiceInterface
