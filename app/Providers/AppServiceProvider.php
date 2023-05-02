@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Interfaces\ServiceInterfaces\BaseResourceServiceInterface;
+use App\Interfaces\BaseResourceServiceInterface;
 use App\Interfaces\ServiceInterfaces\CategoryServiceInterface;
 use App\Interfaces\ServiceInterfaces\ColorServiceInterface;
 use App\Interfaces\ServiceInterfaces\HomeStyleServiceInterface;
