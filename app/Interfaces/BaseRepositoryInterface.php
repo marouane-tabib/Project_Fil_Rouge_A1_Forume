@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Interfaces;
-
+namespace App\RepositoryInterfaces\Interfaces;
 interface BaseRepositoryInterface
 {
   public function all();
