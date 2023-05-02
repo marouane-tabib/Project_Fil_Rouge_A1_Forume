@@ -1,24 +1,25 @@
 <?php
 
 namespace App\Providers;
-use App\Interfaces\ColorRepositoryInterface;
-use App\Repositories\ColorRepository;
-use App\Interfaces\HomeStyleRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ColorRepositoryInterface;
+use App\Repositories\ColorRepository;
+
+use App\Interfaces\RepositoryInterfaces\HomeStyleRepositoryInterface;
 use App\Repositories\HomeStyleRepository;
-use App\Interfaces\MaterialRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\MaterialRepositoryInterface;
 use App\Repositories\MaterialRepository;
-use App\Interfaces\PatternRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\PatternRepositoryInterface;
 use App\Repositories\PatternRepository;
-use App\Interfaces\RoomRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\RoomRepositoryInterface;
 use App\Repositories\RoomRepository;
-use App\Interfaces\ShapeRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ShapeRepositoryInterface;
 use App\Repositories\ShapeRepository;
-use App\Interfaces\TagRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\TagRepositoryInterface;
 use App\Repositories\TagRepository;
-use App\Interfaces\CategoryRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\CategoryRepositoryInterface;
 use App\Repositories\CategoryRepository;
-use App\Interfaces\BaseRepositoryInterface;
-use App\Interfaces\ProductRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\BaseRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ProductRepositoryInterface;
 use App\Repositories\BaseRepository;
 use App\Repositories\ProductRepository;
 use Illuminate\Support\ServiceProvider;

@@ -1,6 +1,7 @@
 <?php
 
-namespace App\RepositoryInterfaces\Interfaces;
+namespace App\Interfaces\RepositoryInterfaces;
+
 interface ColorRepositoryInterface extends BaseRepositoryInterface
 {
     //
