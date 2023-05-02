@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\CategoryRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\CategoryRepositoryInterface;
 use App\Models\Category;
 
 class CategoryRepository extends BaseRepository implements CategoryRepositoryInterface

@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\PatternRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\PatternRepositoryInterface;
 use App\Models\Pattern;
 
 class PatternRepository extends BaseRepository implements PatternRepositoryInterface

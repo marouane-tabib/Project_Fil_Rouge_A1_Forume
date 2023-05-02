@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\HomeStyleRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\HomeStyleRepositoryInterface;
 use App\Models\HomeStyle;
 
 class HomeStyleRepository extends BaseRepository implements HomeStyleRepositoryInterface

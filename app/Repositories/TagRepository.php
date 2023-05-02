@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\TagRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\TagRepositoryInterface;
 use App\Models\Tag;
 
 class TagRepository extends BaseRepository implements TagRepositoryInterface

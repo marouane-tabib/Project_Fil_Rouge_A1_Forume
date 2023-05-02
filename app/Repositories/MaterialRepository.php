@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\MaterialRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\MaterialRepositoryInterface;
 use App\Models\Material;
 
 class MaterialRepository extends BaseRepository implements MaterialRepositoryInterface

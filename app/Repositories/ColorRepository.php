@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\ColorRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ColorRepositoryInterface;
 use App\Models\Color;
 
 class ColorRepository extends BaseRepository implements ColorRepositoryInterface

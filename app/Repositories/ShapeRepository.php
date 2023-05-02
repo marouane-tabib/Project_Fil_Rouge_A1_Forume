@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\ShapeRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\ShapeRepositoryInterface;
 use App\Models\Shape;
 
 class ShapeRepository extends BaseRepository implements ShapeRepositoryInterface

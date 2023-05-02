@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\RoomRepositoryInterface;
+use App\Interfaces\RepositoryInterfaces\RoomRepositoryInterface;
 use App\Models\Room;
 
 class RoomRepository extends BaseRepository implements RoomRepositoryInterface
