@@ -22,3 +22,13 @@ Route::resource('/patterns', PatternController::class);
 Route::resource('/materials', MaterialController::class);
 Route::resource('/home-styles', HomeStyleController::class);
 Route::resource('/colors', ColorController::class);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
