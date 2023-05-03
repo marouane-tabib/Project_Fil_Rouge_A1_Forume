@@ -53,22 +53,22 @@ $configData = Helper::appClasses();
         <h3 class=" mb-1 fw-bold">Welcome to {{config('variables.templateName')}}! 👋</h3>
         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-        <form id="formAuthentication" class="mb-3" action="{{url('/')}}" method="POST">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email or Username</label>
-            <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus>
+        <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+          @method('POST')
+          @csrf
+          <div class="col mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email" name="email" placeholder="Add your category email" />
+            @error('email')
+              <span class="text-danger">{{$message}}</span>
+            @enderror
           </div>
-          <div class="mb-3 form-password-toggle">
-            <div class="d-flex justify-content-between">
-              <label class="form-label" for="password">Password</label>
-              <a href="{{url('auth/forgot-password-cover')}}">
-                <small>Forgot Password?</small>
-              </a>
-            </div>
-            <div class="input-group input-group-merge">
-              <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-              <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
-            </div>
+          <div class="col mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}" id="password" name="password" placeholder="Add your category password" />
+            @error('password')
+              <span class="text-danger">{{$message}}</span>
+            @enderror
           </div>
           <div class="mb-3">
             <div class="form-check">
