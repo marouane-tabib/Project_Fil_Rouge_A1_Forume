@@ -24,7 +24,8 @@ $configData = Helper::appClasses();
 @endsection
 
 @section('page-script')
-<script src="{{asset('assets/js/pages-auth.js')}}"></script>
+{{-- <script src="{{asset('assets/js/pages-auth.js')}}"></script> --}}
+<script src="{{asset('admin/assets/js/auth/login-data-form-validation.js')}}"></script>
 @endsection
 
 @section('content')
@@ -53,12 +54,12 @@ $configData = Helper::appClasses();
         <h3 class=" mb-1 fw-bold">Welcome to {{config('variables.templateName')}}! 👋</h3>
         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-        <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+        <form class="mb-3" action="{{ route('login') }}" method="POST" id="loginFromValidation">
           @method('POST')
           @csrf
           <div class="col mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="text" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email" name="email" placeholder="Add your category email" />
+            <input type="text" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" placeholder="Add your category email" />
             @error('email')
               <span class="text-danger">{{$message}}</span>
             @enderror
@@ -72,7 +73,7 @@ $configData = Helper::appClasses();
           </div>
           <div class="mb-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="remember-me">
+              <input class="form-check-input" type="checkbox" id="remember-me" name="remember">
               <label class="form-check-label" for="remember-me">
                 Remember Me
               </label>
