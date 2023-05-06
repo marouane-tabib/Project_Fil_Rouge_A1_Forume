@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
               stringLength: {
                 min: 8,
                 max: 150,
-                message: 'The pattern name must be between 8 and 150 characters in length.'
+                message: 'The password must be between 8 and 150 characters in length.'
               }
             }
           }
