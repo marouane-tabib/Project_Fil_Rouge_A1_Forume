@@ -38,6 +38,17 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
+  'mindscms/entrust' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Mindscms\\Entrust\\EntrustServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Entrust' => 'Mindscms\\Entrust\\EntrustFacade',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
