@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ShapeSeeder::class);
         $this->call(TagSeeder::class);
         $this->call(ProductSeeder::class);
+        $this->call(EntrustSeeder::class);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
