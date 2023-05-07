@@ -165,12 +165,13 @@ return [
     Illuminate\View\ViewServiceProvider::class,
 
     /*
-         * Package Service Providers...
-         */
+      * Package Service Providers...
+    */
+        Mindscms\Entrust\EntrustServiceProvider::class,
 
     /*
-         * Application Service Providers...
-         */
+      * Application Service Providers...
+    */
     App\Providers\AppServiceProvider::class,
     App\Providers\AuthServiceProvider::class,
     // App\Providers\BroadcastServiceProvider::class,
@@ -194,6 +195,7 @@ return [
 
   'aliases' => Facade::defaultAliases()->merge([
     // ...
+    'Entrust'   => Mindscms\Entrust\EntrustFacade::class,
     'Helper' => App\Helpers\Helpers::class
   ])->toArray(),
 
