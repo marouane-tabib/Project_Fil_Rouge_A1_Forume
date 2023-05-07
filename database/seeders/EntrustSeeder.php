@@ -4,8 +4,10 @@ namespace Database\Seeders;
 
 use App\Models\Role;
 use App\Models\User;
+use Faker\Factory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class EntrustSeeder extends Seeder
 {
@@ -16,6 +18,7 @@ class EntrustSeeder extends Seeder
      */
     public function run()
     {
+      $faker = Factory::create();
 
         // User Roles
         $adminRole = Role::create(['name' => 'admin' , 'display_name' => 'Administration' , 'description' => 'Administrator' , 'allowed_route' => 'admin']);
@@ -34,5 +37,20 @@ class EntrustSeeder extends Seeder
         $customer = User::create([ 'first_name' => 'marwan' , 'last_name' => 'tabib' ,'username' => 'marwan_tabib', 'email' =>'marwan@gmail.com' ,'email_verified_at' => now() , 'mobile' => '99049585999' , 'password' => bcrypt('marwan789') , 'user_image' => 'avatar.svg' , 'status' => 1, 'remember_token' => Str::random(10) ]);
         $customer->attachRole($customerRole);
 
+        for($i=1 ; $i<=20 ; $i++){
+          $random_customer = User::create([
+              'first_name' =>  $faker->firstName,
+              'last_name' => $faker->lastName,
+              'username' => $faker->unique()->userName,
+              'email' => $faker->unique()->safeEmail,
+              'email_verified_at' => now(),
+              'mobile' => $faker->phoneNumber,
+              'password' => bcrypt('123123123'),
+              'user_image' => null,
+              'remember_token' => Str::random(10)
+          ]);
+          $random_customer->attachRole($customerRole);
+
+      }
     }
 }
